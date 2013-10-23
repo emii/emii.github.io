@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>//sndbx.be is not science</title>
+        <style type="text/css" title="layout" media="all">
+		  @import "../../static/css/solarized_dark.css";
+          @import "../../static/css/style.css";
+@import "../../static/css/jquery.fancybox.css";        </style>
+    <script src="../../static/scripts/jquery-1.7.2.min.js"></script>
+        <script src="../../static/scripts/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.fancybox').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                padding : 0,
+                helpers : {
+                    title : null            
+                    }  
+                });
+            });
+        </script>
+
+    </head>
+    <body> 
+        <div id="container">
+            <div id="header-wrapper">
+				<div id="header">
+					<h1><a href="../.." title="home">//sndbx.be</a></h1>
+				</div>
+				<div id='nav'>
+					 <ul>
+						
+						<li style="border-left: none;" ><a  class="active"  href="../../">blog</a></li>
+						<li><a  href="../../showcase/">showcase</a></li>
+						<li><a  href="../../about/">about</a></li>
+						
+						
+					</ul>
+				</div>
+            </div>
+            <div id="my_fixable_header">...</div>
+            <div id="mainContent2"><h1>Test Sigma</h1>
+	<h2 id="testing-sigma">Testing sigma</h2>
+<div class="sigma-parent">
+<div class="sigma-expand" id="sigma-example">
+</div>
+</div>
+
+<script src="/static/sigma/sigma.min.js"></script>
+
+<script src="/static/sigma/sigma.parseGexf.js"></script>
+
+<script type="text/javascript">
+function init() {
+  // Instanciate sigma.js and customize rendering :
+  var sigInst = sigma.init(document.getElementById('sigma-example')).drawingProperties({
+    defaultLabelColor: '#333',
+    defaultLabelSize: 12,
+    edgeColor: '#fdf6e3',
+    defaultLabelBGColor: '#fff',
+    defaultLabelHoverColor: '#000',
+    labelThreshold: 5,
+    defaultEdgeType: 'curve'
+  }).graphProperties({
+    minNodeSize: 0.5,
+    maxNodeSize: 5,
+    minEdgeSize: 2,
+    maxEdgeSize: 2,
+    sideMargin: 50
+  }).mouseProperties({
+    maxRatio: 32
+  });
+
+  // Parse a GEXF encoded file to fill the graph
+  // (requires "sigma.parseGexf.js" to be included)
+  sigInst.parseGexf('/static/D3/test2.gexf');
+
+  (function(){
+    var popUp;
+
+    // This function is used to generate the attributes list from the node attributes.
+    // Since the graph comes from GEXF, the attibutes look like:
+    // [
+    //   { attr: 'Lorem', val: '42' },
+    //   { attr: 'Ipsum', val: 'dolores' },
+    //   ...
+    //   { attr: 'Sit',   val: 'amet' }
+    // ]
+    function attributesToString(attr) {
+      return '<ul>' +
+        attr.map(function(o){
+          return '<li>Names: ' + o.val + '</li>';
+        }).join('') +
+        '</ul>';
+    }
+
+    function showNodeInfo(event) {
+      popUp && popUp.remove();
+
+      var node;
+      sigInst.iterNodes(function(n){
+        node = n;
+      },[event.content[0]]);
+
+      popUp = $(
+        '<div class="node-info-popup"></div>'
+      ).append(
+        // The GEXF parser stores all the attributes in an array named
+        // 'attributes'. And since sigma.js does not recognize the key
+        // 'attributes' (unlike the keys 'label', 'color', 'size' etc),
+        // it stores it in the node 'attr' object :
+        attributesToString( node['attr']['attributes'] )
+      ).attr(
+        'id',
+        'node-info'+sigInst.getID()
+      ).css({
+        'display': 'inline-block',
+        'border-radius': 3,
+        'padding': 5,
+        'background': '#fff',
+        'color': '#000',
+        'box-shadow': '0 0 4px #666',
+        'position': 'absolute',
+        'left': node.displayX,
+        'top': node.displayY+15
+      });
+
+      $('ul',popUp).css('margin','0 0 0 20px');
+
+      $('#sigma-example').append(popUp);
+    }
+
+    function hideNodeInfo(event) {
+      popUp && popUp.remove();
+      popUp = false;
+    }
+
+    sigInst.bind('overnodes',showNodeInfo).bind('outnodes',hideNodeInfo).draw();
+  })();
+}
+
+if (document.addEventListener) {
+  document.addEventListener("DOMContentLoaded", init, false);
+} else {
+  window.onload = init;
+}
+</script>
+
+<style type="text/css">
+  /* sigma.js context : */
+  .sigma-parent {
+    position: relative;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: #fafafa;
+    height: 800px;
+    border:1px #bbb solid;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .sigma-expand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .buttons-container{
+    padding-bottom: 8px;
+    padding-top: 12px;
+  }
+</style>
+	<div id="toTop">
+	  <a href="#mainContent"><img src="/static/images/totop2.png" alt="return to top"></a>
+	</div>
+</div>
+			<div id="posts-footer">	<p>This entry is under category: <a href="../../projects/" title="category">projects</a>
+</br>and was tagged as: <a href="../../tag/misc.html" title="tag">misc</a>.</p>
+</div>
+		</div>
+		<div id="footer">
+			<p>sndbx.be &#169; <a href="../../about/" title="Interested in learning more about this site?">2013</a> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a></br>handcrafted by Emiliano Izquierdo</br>Last modified on 2013-10-22</p>
+		</div>
+<script type="text/javascript">
+
+
+var myHeader = $('#my_fixable_header');
+myHeader.data( 'position', myHeader.position() );
+$(window).scroll(function(){
+    var hPos = myHeader.data('position'), scroll = getScroll();
+    $('#header-wrapper').css("-webkit-transform","translateY("+ (scroll.top/3) +"px)");
+    $('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
+    if ( hPos.top < scroll.top ){
+        myHeader.addClass('fixed');
+        $('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
+        $('#mainContainer').css("margin","margin: 5px auto;");
+    }
+    else {
+        myHeader.removeClass('fixed');
+        $('#mainContainer').css("margin","margin: 0 auto;");
+    }
+    
+    if (scroll.top < 200) {
+      $('#my_fixable_header').css("opacity", (scroll.top * 0.005) );
+      $('#header').css("opacity", ( 1- (scroll.top * 0.005)) );
+       $('#nav').css("opacity", ( 1- (scroll.top * 0.005)) );
+      $('#header-wrapper').css("background-color","rgba(204,255,0," + (scroll.top * 0.005) + ")");
+    } else {
+      $('#my_fixable_header').css("opacity", 1);
+        $('#header-wrapper').css("background-color","rgba(204,255,0,1)");
+    }
+   
+    
+    if ( scroll.top == 0 ){
+        $('#my_fixable_header').css("box-shadow", "none");
+        $('#my_fixable_header').css("opacity", 0);
+        $('#header').css("opacity", 1 );
+       $('#nav').css("opacity", 1 );
+        $('#header-wrapper').css("background-color","#fafafa");
+    }
+    
+    
+    
+});
+
+function getScroll () {
+    var b = document.body;
+    var e = document.documentElement;
+    return {
+        left: parseFloat( window.pageXOffset || b.scrollLeft || e.scrollLeft ),
+        top: parseFloat( window.pageYOffset || b.scrollTop || e.scrollTop )
+    };
+}
+    
+
+</script>
+    </body>
+</html>
