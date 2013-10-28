@@ -8,7 +8,7 @@
         <style type="text/css" title="layout">
 		  @import "../static/css/solarized_dark.css";
           @import "../static/css/style.css";
-		          </style>
+        </style>
         <script src="../static/scripts/jquery-1.7.2.min.js"></script>
 		<!-- Using MathJax, with the delimiters $ -->
 		<!-- Conflict with pygments for the .mo and .mi -->
@@ -24,21 +24,44 @@
 		</script>
 
 	   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-                        <script src="../static/scripts/jquery.fancybox.pack.js"></script>
+        <script src="../static/scripts/jquery.fancybox.pack.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.fancybox').fancybox({
                 openEffect  : 'none',
                 closeEffect : 'none',
                 padding : 0,
+                beforeLoad: function() {
+                    var el, id = $(this.element).data('title-id');
+
+                    if (id) {
+                        el = $('#' + id);
+                    
+                        if (el.length) {
+                            this.title = el.html();
+                        }
+                    }
+                },
+                afterShow: function() {
+                    $(".fancybox-title").wrapInner('<div />').show();
+                    
+                    $(".fancybox-wrap").hover(function() {
+                        $(".fancybox-title").show();
+                    }, function() {
+                        $(".fancybox-title").hide();
+                    });
+                },
                 helpers : {
-                    title : null            
-                    }  
+                    title: {
+                        type: 'over'
+                    }
+                }
+
                 });
             });
         </script>
-            </head>
-    	    <body>
+    </head>
+    <body>
 
         <div id="container">
         	<div id="header-wrapper">
@@ -48,24 +71,33 @@
 				</div>
 				<div id='nav'>
 					 <ul>
-												<li style="border-left: none;" ><a  href="../">blog</a></li>
-												<li><a  href="../showcase/">showcase</a></li>
-												<li><a  class="active"  href="../about/">about</a></li>
-											</ul>
+						<li style="border-left: none;" ><a  href="../">blog</a></li>
+						<li><a  href="../showcase/">showcase</a></li>
+						<li><a  class="active"  href="../about/">about</a></li>
+					</ul>
 				</div>
 			</div>
 			<div id="my_fixable_header">...</div>
             <div id="mainContent"><div id="printheader"><h2>Emiliano Izquierdo</h2></div><div id="wdate"></div>	<h1>About</h1>
-	<p><h2><a href="https://soundcloud.com/theassociationremixed/never-gonna-give-you-up-rick#t=0:57">It works!</a></h2></p>
+	<p>The name is Emiliano, 8 characters, too long. I am studying small living stuff (the one which is amazing, variable, beautiful, functionally superb). When I am not doing crazy experiments at the lab, I am moonlighting as a cheese burglar, and positioning my last loot on the Dutch-gouda black market. And when I am not saying nonsense, I am mostly playing the ukulele in an amateur  band of one-handed scarecrows in a bar for deaf chinese turtles.</p>
+<p>Apart from coffee, my everyday recipe includes biology and scientific computing which I try to do passionately and fiercely.</p>
+<p>Sometimes I find myself (...literally) handcrafting code in  in Python, other times doing image and data analysis in MATLAB; other times I simply do HTML/CSS. </p>
+<p>Occasionally I also do real experiments, now I am learning single-molecule RNA FISH on mouse embryonic stem cells.</p>
+<p>I like simple things, like sandwiches and coffee (always nice opportunities to get to know people), I always squeeze up from the bottom on a tube of toothpaste, whatever that means, either trying to get the most of every day, or just as an obsessive-compulsive habit. I travel lite, toothbrush and towel. </p>
+<p>I am unlucky in cards.</p>
+<p>I tend to be verbose.</p>
+<h2 id="sndbxbe-is-not-science"><a href="http://cafeirreal.alicewhittenburg.com/review5.htm">sndbx.be is not science</a></h2>
+<p>I made sndbx.be just as an experiment, a sandbox to draft and release thoughts to the outside, to find a place for this voice in the densely populated cloud of ideas. A creative outlet and a personal dominion.</p>
+<p>Behind the HTML/CSS, there are markdown archives processed by Pelican, a static blog generator written in Python. The typefaces are Quicksand and Open Sans provided by Google fonts API.</p>
 	<div id="toTop">
 		<a href="#mainContent"><img src="/static/images/totop2.png" alt="return to top"></a>
 	</div>
 </div>
-                        <div class="clear"></div>
+            <div class="clear"></div>
 			<div id="posts-footer"></div>
 		</div>
 		<div id="footer">
-			<p>sndbx.be &#169; <a href="../about/" title="Interested in learning more about this site?">2013</a> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a></br>handcrafted by Emiliano Izquierdo</br>Last modified on 2013-09-13</p>
+			<p>sndbx.be &#169; <a href="../about/" title="Interested in learning more about this site?">2013</a> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a></br>handcrafted by Emiliano Izquierdo</br>Last modified on 2013-10-28</p>
 		</div>
 <script type="text/javascript">
 

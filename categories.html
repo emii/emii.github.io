@@ -8,7 +8,7 @@
         <style type="text/css" title="layout">
 		  @import "./static/css/solarized_dark.css";
           @import "./static/css/style.css";
-		          </style>
+        </style>
         <script src="./static/scripts/jquery-1.7.2.min.js"></script>
 		<!-- Using MathJax, with the delimiters $ -->
 		<!-- Conflict with pygments for the .mo and .mi -->
@@ -24,21 +24,44 @@
 		</script>
 
 	   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-                        <script src="./static/scripts/jquery.fancybox.pack.js"></script>
+        <script src="./static/scripts/jquery.fancybox.pack.js"></script>
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.fancybox').fancybox({
                 openEffect  : 'none',
                 closeEffect : 'none',
                 padding : 0,
+                beforeLoad: function() {
+                    var el, id = $(this.element).data('title-id');
+
+                    if (id) {
+                        el = $('#' + id);
+                    
+                        if (el.length) {
+                            this.title = el.html();
+                        }
+                    }
+                },
+                afterShow: function() {
+                    $(".fancybox-title").wrapInner('<div />').show();
+                    
+                    $(".fancybox-wrap").hover(function() {
+                        $(".fancybox-title").show();
+                    }, function() {
+                        $(".fancybox-title").hide();
+                    });
+                },
                 helpers : {
-                    title : null            
-                    }  
+                    title: {
+                        type: 'over'
+                    }
+                }
+
                 });
             });
         </script>
-            </head>
-    	    <body>
+    </head>
+    <body>
 
         <div id="container">
         	<div id="header-wrapper">
@@ -48,27 +71,27 @@
 				</div>
 				<div id='nav'>
 					 <ul>
-												<li style="border-left: none;" ><a  class="active"  href="./">blog</a></li>
-												<li><a  href="./showcase/">showcase</a></li>
-												<li><a  href="./about/">about</a></li>
-											</ul>
+						<li style="border-left: none;" ><a  class="active"  href="./">blog</a></li>
+						<li><a  href="./showcase/">showcase</a></li>
+						<li><a  href="./about/">about</a></li>
+					</ul>
 				</div>
 			</div>
 			<div id="my_fixable_header">...</div>
             <div id="mainContent"><h1>Categories</h1><div id="printheader"><h2>Emiliano Izquierdo</h2></div><div id="wdate"></div><div id="posts">
 
 	<ul style="list-style-type:none;">
-			<li style="float: left; margin-left: 10px;"><h2><a href="./showcase/" id="permalink">showcase</a></h2></li>
-		</ul>
+		<li style="float: left; margin-left: 10px;"><h2><a href="./showcase/" id="permalink">showcase</a></h2></li>
+	</ul>
 
 </div>
 </div>
-                        <div class="clear"></div>
+            <div class="clear"></div>
 			<div id="posts-footer"><p>Browse posts by: <a href="." title="latest">Latest</a>, <a href="./categories.html" title="categories">Categories</a>, <a href="./tags.html" title="tags">Tags</a>, <a href="./archives.html" title="archives">Archives</a></p>
 </div>
 		</div>
 		<div id="footer">
-			<p>sndbx.be &#169; <a href="./about/" title="Interested in learning more about this site?">2013</a> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a></br>handcrafted by Emiliano Izquierdo</br>Last modified on 2013-09-13</p>
+			<p>sndbx.be &#169; <a href="./about/" title="Interested in learning more about this site?">2013</a> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a></br>handcrafted by Emiliano Izquierdo</br>Last modified on 2013-10-28</p>
 		</div>
 <script type="text/javascript">
 

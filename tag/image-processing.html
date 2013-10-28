@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>//sndbx.be is not science</title>
+        <style type="text/css" title="layout">
+		  @import "../static/css/solarized_dark.css";
+          @import "../static/css/style.css";
+        </style>
+        <script src="../static/scripts/jquery-1.7.2.min.js"></script>
+		<!-- Using MathJax, with the delimiters $ -->
+		<!-- Conflict with pygments for the .mo and .mi -->
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		  "HTML-CSS": {
+		  styles: {
+		  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+		  },
+		  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true},
+		  TeX: { equationNumbers: { autoNumber: "AMS" } }
+		  });
+		</script>
+
+	   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <script src="../static/scripts/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.fancybox').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                padding : 0,
+                beforeLoad: function() {
+                    var el, id = $(this.element).data('title-id');
+
+                    if (id) {
+                        el = $('#' + id);
+                    
+                        if (el.length) {
+                            this.title = el.html();
+                        }
+                    }
+                },
+                afterShow: function() {
+                    $(".fancybox-title").wrapInner('<div />').show();
+                    
+                    $(".fancybox-wrap").hover(function() {
+                        $(".fancybox-title").show();
+                    }, function() {
+                        $(".fancybox-title").hide();
+                    });
+                },
+                helpers : {
+                    title: {
+                        type: 'over'
+                    }
+                }
+
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <div id="container">
+        	<div id="header-wrapper">
+
+				<div id="header">
+					<h1><a href=".." title="home">//sndbx.be</a></h1>
+				</div>
+				<div id='nav'>
+					 <ul>
+						<li style="border-left: none;" ><a  class="active"  href="../">blog</a></li>
+						<li><a  href="../showcase/">showcase</a></li>
+						<li><a  href="../about/">about</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="my_fixable_header">...</div>
+            <div id="mainContent"><h1>Tag: image processing</h1>
+<div id="printheader"><h2>Emiliano Izquierdo</h2></div><div id="wdate"></div><div id="posts">
+ 
+		<p><h2>&gt;26.10.2013</h2>
+		<h2>// <a href="../showcase/image-analysis-of-organoid-primary-cell-culture/" title="permalink to Image analysis of Organoid primary cell culture">Image analysis of Organoid primary cell culture</a></h2> &mdash; Analysis and segmentation of tissue culture organoids<h3> // </h3> Category: <a href="../showcase/" title="category">showcase</a>
+<h3> // </h3>Tags: <a href="../tag/research.html" title="tag">research</a>, <a href="../tag/organoid.html" title="tag">organoid</a>, <a href="../tag/image-processing.html" title="tag">image processing</a>, <a href="../tag/hci.html" title="tag">HCI</a></p>
+</div>
+</div>
+            <div class="clear"></div>
+			<div id="posts-footer"><p>		&laquo; Previous
+    &mdash; 1 / 1 &mdash;
+		Next &raquo;
+</br>Browse posts by: <a href=".." title="latest">Latest</a>, <a href="../categories.html" title="categories">Categories</a>, <a href="../tags.html" title="tags">Tags</a>, <a href="../archives.html" title="archive">Archives</a></p>
+</div>
+		</div>
+		<div id="footer">
+			<p>sndbx.be &#169; <a href="../about/" title="Interested in learning more about this site?">2013</a> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a></br>handcrafted by Emiliano Izquierdo</br>Last modified on 2013-10-28</p>
+		</div>
+<script type="text/javascript">
+
+
+var myHeader = $('#my_fixable_header');
+myHeader.data( 'position', myHeader.position() );
+$(window).scroll(function(){
+    var hPos = myHeader.data('position'), scroll = getScroll();
+    $('#header-wrapper').css("-webkit-transform","translateY("+ (scroll.top/3) +"px)");
+    $('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
+    if ( hPos.top < scroll.top ){
+        myHeader.addClass('fixed');
+        $('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
+        $('#mainContainer').css("margin","margin: 5px auto;");
+    }
+    else {
+        myHeader.removeClass('fixed');
+        $('#mainContainer').css("margin","margin: 0 auto;");
+    }
+    
+    if (scroll.top < 200) {
+      $('#my_fixable_header').css("opacity", (scroll.top * 0.005) );
+      $('#header').css("opacity", ( 1- (scroll.top * 0.005)) );
+       $('#nav').css("opacity", ( 1- (scroll.top * 0.005)) );
+      $('#header-wrapper').css("background-color","rgba(204,255,0," + (scroll.top * 0.005) + ")");
+    } else {
+      $('#my_fixable_header').css("opacity", 1);
+        $('#header-wrapper').css("background-color","rgba(204,255,0,1)");
+    }
+   
+    
+    if ( scroll.top == 0 ){
+        $('#my_fixable_header').css("box-shadow", "none");
+        $('#my_fixable_header').css("opacity", 0);
+        $('#header').css("opacity", 1 );
+       $('#nav').css("opacity", 1 );
+        $('#header-wrapper').css("background-color","#fafafa");
+    }
+    
+    
+    
+});
+
+function getScroll () {
+    var b = document.body;
+    var e = document.documentElement;
+    return {
+        left: parseFloat( window.pageXOffset || b.scrollLeft || e.scrollLeft ),
+        top: parseFloat( window.pageYOffset || b.scrollTop || e.scrollTop )
+    };
+}
+    
+
+</script>
+		
+
+    </body>
+</html>
