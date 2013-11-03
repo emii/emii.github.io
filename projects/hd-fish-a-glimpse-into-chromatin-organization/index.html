@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <title>//sndbx.be is not science</title>
+        <style type="text/css" title="layout">
+		  @import "../../static/css/solarized_dark.css";
+          @import "../../static/css/style.css";
+@import "../../static/css/jquery.fancybox.css";        </style>
+        <script src="../../static/scripts/jquery-1.7.2.min.js"></script>
+		<!-- Using MathJax, with the delimiters $ -->
+		<!-- Conflict with pygments for the .mo and .mi -->
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+		  "HTML-CSS": {
+		  styles: {
+		  ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+		  },
+		  tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']],processEscapes: true},
+		  TeX: { equationNumbers: { autoNumber: "AMS" } }
+		  });
+		</script>
+
+	   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+        <script src="../../static/scripts/jquery.fancybox.pack.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.fancybox').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+                padding : 0,
+                beforeLoad: function() {
+                    var el, id = $(this.element).data('title-id');
+
+                    if (id) {
+                        el = $('#' + id);
+                    
+                        if (el.length) {
+                            this.title = el.html();
+                        }
+                    }
+                },
+                afterShow: function() {
+                    $(".fancybox-title").wrapInner('<div />').show();
+                    
+                    $(".fancybox-wrap").hover(function() {
+                        $(".fancybox-title").show();
+                    }, function() {
+                        $(".fancybox-title").hide();
+                    });
+                },
+                helpers : {
+                    title: {
+                        type: 'over'
+                    }
+                }
+
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+        <div id="container">
+        	<div id="header-wrapper">
+
+				<div id="header">
+					<h1><a href="../.." title="home">//sndbx.be</a></h1>
+				</div>
+				<div id='nav'>
+					 <ul>
+						<li style="border-left: none;" ><a  class="active"  href="../../">blog</a></li>
+						<li><a  href="../../showcase/">showcase</a></li>
+						<li><a  href="../../about/">about</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="my_fixable_header">...</div>
+            <div id="mainContent"><h1>HD-FISH, a glimpse into chromatin organization</h1>
+<div id="printheader"><h2>Emiliano Izquierdo</h2></div><div id="wdate">&mdash; written on Monday, July 01, 2013</div>		<blockquote class="break"><p><em><strong>Abstract:</strong> Chromosomes change their  topology throughout the cell cycle varying its position and degree of compaction. This features have been observed to influence gene expression. Furthermore, repeated patterns in chromatin organization have been observed, suggesting a direct link between the three-dimensional architecture of the genome and gene activity. Recent approaches to chromatin organization start to combine both experimental and computational models, allowing a more holistic view of the variability in structure and function of the genome. New advancements to microscopy methods like DNA-FISH allow for the direct measurement of the nuclear three-dimensional topology. In this work we advance this recent improvements to DNA-FISH by developing a semi-automated workflow that facilitates the identification of genomic regions accurately in the three-dimensional space of the nucleus. Finally we assess this workflow to determine the organization of the human chromosome 17.</em></p></blockquote>
+	<p><a href="/static/documents/pdfs/pdf-hd-fish.pdf">PDF Version (NOT OPTIMIZED)</a></p>
+<div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#theoretical-approaches-to-chromatin-organization">Theoretical approaches to chromatin organization</a></li>
+<li><a href="#experimental-techniques-capturing-chromatin-structure">Experimental techniques capturing chromatin structure</a></li>
+<li><a href="#motivation">Motivation</a></li>
+<li><a href="#objectives">Objectives</a></li>
+<li><a href="#system-under-investigation">System under investigation</a></li>
+</ul>
+</li>
+<li><a href="#experimetal-approach">Experimetal Approach</a><ul>
+<li><a href="#cell-culture-and-fluorescence-in-situ-hybridization">Cell culture and fluorescence in situ hybridization.</a></li>
+<li><a href="#image-acquisition">Image acquisition</a></li>
+<li><a href="#image-analysis">Image analysis</a></li>
+</ul>
+</li>
+<li><a href="#results-and-discussion">Results and discussion</a><ul>
+<li><a href="#precise-spot-localization">Precise spot localization</a></li>
+<li><a href="#chromatic-aberration-corrections">Chromatic aberration corrections</a></li>
+<li><a href="#spotterui">SpotterUI</a></li>
+<li><a href="#4-loci-experiment">4 loci experiment</a></li>
+</ul>
+</li>
+<li><a href="#concluding-remarks">Concluding remarks</a></li>
+<li><a href="#aknowledgements">Aknowledgements</a></li>
+</ul>
+</div>
+<h1 id="introduction">Introduction</h1>
+<!First we try to emphasize the idea of chromosome organization by connecting it to gene expression, hence to funciton>
+
+<p>The control of gene expression in eukaryotes can be viewed as the integrated response of mechanisms working at different hierarchical levels. Gene transcription is regulated from the sequence level to the chromatin level, to the nuclear level (<a href="#VanDriel2003">van Driel et al. 2003</a>) (see <strong>Figure 1. Top</strong>). At this top-most layer, the higher order topology of the genome has proven to play an important role, as meaningful patterns of organization have been identified; after mitosis, chromosomes decondense into fibers which remain confined into well defined and isolated compartments called <em>chromosome territories</em> (<a href="#Cremer2010">Cremer et al. 2010</a>). Generally gene-poor chromosomes are more frequently positioned in the outer regions of the nucleus, where as gene-rich chromosomes adopt a more internal localization (<a href="#Croft1999b">Croft et al. 1999</a>, see <strong>Figure 1-1</strong>). Moreover, motion of genes along the radial axis of the nucleus has been observed upon gene activation, movements either toward the nuclear interior or toward the nuclear periphery, however, other observations show that the former is not exclusively a repressive location (<a href="#Andrulis1998">Andrulis et al. 1998</a>, <a href="#Casolari2005">Casolari et al. 2005</a>, <a href="#Meister2010">Meister et al. 2010</a>). Alongside, distributed throughout the nucleus, sets of activated genes are spatially arranged into discrete foci termed <em>transcription factories</em> &mdash;dedicated to the expression of specific combinations of genes, even from distinct chromosomes&mdash; (<a href="#Spilianakis2005">Spilianakis et al. 2005</a>, <a href="#Osborne2007">Osborne et al. 2007</a>, <a href="#Schoenfelder2010">Schoenfelder et al. 2010</a>). These particular arrangements indicate that the associations at the transcriptional hot spots does not happen at random, but genes have preferential partners, commonly in a tissue specific manner (<a href="#Osborne2007">Osborne et al. 2007</a>, see <strong>Figure 1-2</strong>). In addition, significant changes in spatial organization of genomes are triggered during cellular differentiation reflecting a dramatic change in gene expression (<a href="#Kim2004">Kim et al. 2004</a>).</p>
+<p><img alt="figure 1" src="/static/images/slides/chromatin-organization/slide1_2.png" />
+<p class="caption"><strong>Figure 1. Top:</strong> Schematic illustration of the different layers of organization in the mammalian nucleus. From left to right: Chromosomes are organized in chromosome territories which are composed of smaller globular structures that intermingle at some extent. These globules are compacted loops of a 30 nm fiber with a solenoid, zigzag or polymer melt configuration. At the lowest level, chromatin is organized in a 10 nm, <em>beads on a string</em> fiber consisting of nucleosomes. <strong>Bottom: 1.</strong> A highly compartmented nucleus with non-random chromatin organization. Chromosomes are organized into territories in the interphase nucleus. They are further arranged such that active regions are more commonly localized towards the nuclear interior whereas inactive portions tend to adopt a more external position <strong>2.</strong> Actively transcribed genes associate at the periphery of chromosome territories. Intra and interchromosomal contacts bridge coregulated genes as well as enhancer and promoter pairs.</p></p>
+<!Once I make the point of the importance of chromatin organization, I start talking about how is it organized, from structure, and the features that can be abstacted into biophysical models>
+
+<p>The higher-order structure of chromatin offers an extra level of epigenetic regulation. Many factors may be involved in the modulation of nuclear conformations. Both local and long-range biochemical interactions between specific genomic regions, as well as the anchoring of chromatin domains to the nuclear lamina, shape and constrain the available topologies for the fiber to fold into, emphasizing the link between the linear structure and the spatial chromatin arrangement (<a href="#Marshall1997">Marshall et al. 1997</a>, <a href="#Chubb2002">Chubb et al. 2002</a>, <a href="#Bickmore2013">Bickmore &amp; van Steensel 2013</a>).</p>
+<h2 id="theoretical-approaches-to-chromatin-organization">Theoretical approaches to chromatin organization</h2>
+<!then I will introduce a bit of the polymer models to approach and answer physical properties of chromatin structure>
+
+<p>The overall nuclear structure can be characterized by a set of features that range from cell cycle stage, spatial compartmentalization, degree of compaction, radial positioning within the nucleus, extent of intermingling, genomic to physical distance scaling, among others. These characteristics, together with the view of the chromatin fiber as an ensemble of nucleosomes &mdash;assuming a non-random spatial configuration &mdash; are suitable to be approached with polymer models, a unifying quantitative framework (<a href="#Tark-Dame2011">Tark-Dame et al. 2011</a>). These models represent chromosome fibers made up of monomer units connected by a flexible connector, this <em>beads-on-a-string</em> representation is <em>coarse-grained</em> at the three-dimensional level, where descriptions for the small scale details are eliminated in favor of an overall structure (<a href="#Heermann2012">Heermann et al. 2012</a>).</p>
+<p>Computer simulations from polymer models demonstrate that some features of organization can be reproduced, such as the organization into chromosome territories (<a href="#Lieberman-Aiden2009a">Lieberman-Aiden et al. 2009</a>). However, other model predictions deviate from experimental observations (i.e. the leveling-off of the linear to spatial scaling or the different scaling regimes at varying genomic lengths). This discrepancies provide evidence for additional molecular mechanisms contributing to chromatin folding which can be taken into account by accordingly extending the model assumptions.</p>
+<! here I emphasize the concept of scailing and then itroduce experimental approaches to quantify the distance, then remark fish as better since it also captures cell-to-cell variability, esential to bed-hedging or diferences in gene expression?>
+
+<p>One characteristic feature of a polymer model is the mean-squared spatial end-to-end distance $\langle R^{2}\rangle$ which as a function of its genomic distance $g$ scales $\langle R^{2}\rangle \sim g^{2\nu}$, the exponent $\nu$ varies given the dynamics of each polymer representation, such as random walk, self-avoiding walk, or globular state (<a href="#Tark-dame2012">Tark-Dame et al. 2012</a>); $R$ is the spatial distance between two genomic regions linearly separated by $g$ (see <strong>Figure 2-1. Top</strong>). For example, in the most simple random-walk model, the physical distance scales monotonically with increasing genomic separation, therefore, unable to match any of the experimentally observed nuclear patterns of organization (see <strong>Figure 2-2. Top</strong>). More recent polymer models already started to integrate further improvements to extend rather basic polymer models as are the <em>swollen coil</em> or the <em>equilibrium globule</em> (see <strong>Figure 2-3. Top</strong>). Models like the <em>fractal globule</em> (<a href="#Lieberman-Aiden2009a">Lieberman-Aiden et al. 2009</a>), the <em>random loop</em> model (<a href="#Mateos-Langerak2009">Mateos-Langerak et al. 2009</a>), and the recent <em>string and binders switch</em> model (<a href="#Barbieri2012">Barbieri et al. 2013</a>) are able to reproduce different aspects of the observed nuclear organization. </p>
+<p>To be tested for prediction accuracy, all these approximations require precise measurements of the scaling relation between the genomic and the physical distance. Hence, it is worth stressing out the importance of better and more extensive experimental techniques to acquire quantitative data and to supply support to adapt the previously mentioned theoretical representations.</p>
+<!After talking about the chromatin structure I would start talking about the current methods to study it, a brief intro to C3 and DNA FISH>
+
+<h2 id="experimental-techniques-capturing-chromatin-structure">Experimental techniques capturing chromatin structure</h2>
+<p>Recently, the development and refinement of techniques that allow the mapping of genomic regions onto the spatial context of the nucleus &mdash;both in bulk and up to the single cell level&mdash; has allowed to have quantitative measures to describe the principles of chromatin organization. High-coverage methods derived from 3C (Chromatin Conformation Capture, <a href="#Dekker2002">Dekker et al. 2002</a>) use formaldehyde crosslinking snapshots on the bulk to quantify distance between genomic loci, interpreted from contact probabilities; closely localized regions are found to be crosslinked more frequently.</p>
+<p>In a more direct strategy, single-cell distance measurements can be acquired from the imaging of DNA-FISH experiments (DNA fluorescensce <em>in situ</em> hybridization), where fluorescently labeled probes are designed to target specific genomic loci. Their positions are identified by means of 3D fluorescensce-based microscopy, and subsequently, the distances between loci are measured (<strong>see Figure 2 bottom panel.</strong>). </p>
+<p>Both approaches are complementary, and both provide useful information in terms of nuclear topology which can be unified and reconciled with theoretical models. One advantadge of DNA-FISH experiments is that cell-to-cell variability can be captured in a population of fixed cells as snapshots of different chromatin configurations crucial for characterizing the differences in chromosomal conformations and locations. </p>
+<p><img alt="techniques" src="/static/images/slides/chromatin-organization/slide2.png" />
+<p class="caption"><strong>Figure 2. Top:</strong> Relationship between physical distance and genomic distance for different polymer models. Schematic of the relation between $R$ which is the physical distance between two points on an interphase chromosome, and the genomic distance $g$. Random walk model, predicts that the mean squared distance $\langle R^{2}\rangle$ increases linearly with increasing genomic distance $g$. While the looped chromatin model, in contrast, predicts that $\langle R^{2}\rangle$ reaches a plateau at large genomic distances. <strong>Bottom:</strong> Light microscopy by fluorescent in situ hybridization; in our approach, <em>HD-FISH</em>, genomic regions are targeted by labeled amplicons of about 200 nt covering a region between 3 and 10 Kbp. In FISH experiments, chromatin folding shows a behavior where $\langle R^{2}\rangle$ reaches a plateau indicating the folding of chromosomes into territories.</p></p>
+<!here use info from fudenberg & mirny  gen dev 2012 and from Bickmore and van steensel 2013, and Tark-Dame 2011>
+
+<!Then i will finish with a short summary, sort of a motivation >
+
+<h2 id="motivation">Motivation</h2>
+<p>In a recent advancement, named <em>HD-FISH</em>, Bienko and collaborators (<a href="#Bienko2012">Bienko et al. 2012</a>) reduced by one order of magnitude the effective target size of DNA-FISH probes thereby increasing the resolution up to the diffraction limit, this <em>spotting</em> strategy allows the position localization to be estimated with higher accuracy. </p>
+<p>Here we propose the refinement of the current 3D DNA-FISH techniques and its extension by Bienko and collaborators by accurately localizing single genomic regions up to the sub-pixel resolution. This comprehensive measurements on the landscape of interacting genomic regions  will further help us to gain deeper insight into the heterogeneity and functional organizing principles of the genome.</p>
+<!Finishing with the especific objectives.>
+
+<h2 id="objectives">Objectives</h2>
+<p>The main objective of this study was to use images generated from <em>HD-FISH</em> experiments to precisely mesaure the distance between various genomically separated loci up to the sub-pixel resolution. More specifically:</p>
+<ol>
+<li>Generate a data analysis pipeline in MATLAB for feature localization and image processing of <em>HD-FISH</em> experiments</li>
+<li>Once the coarse localization of the  loci is identified, the effect of chromatic aberrations should be corrected, allowing the precise localization of the targeted regions</li>
+<li>Distances are then calculated from corrected loci positions</li>
+</ol>
+<!System under investigation is a section which would describe the problem you want to resolve in the context of the experimenyal setup  or the especific experimental subject, in this case it would be the type of tissue and why is it this specific model selected, meaning advantages or special features and limitations>
+
+<h2 id="system-under-investigation">System under investigation</h2>
+<p>DNA has to be optimally folded to fit in the reduced volume of the nucleus conserving functional three-dimensional structure. This arrangement of chromosomes shows to be highly dynamic, changes arrangement throughout the cell cycle but despite the variability in organization among cells, chromatin  preserves common spatial patterns at some layers of organization. The chromosomes change from a highly condensed structures during mitosis, to form the more or less condensed <em>chromosome territories</em> during interphase.</p>
+<p>Here we approached the distribution of distances between genomic regions during interphase regardless of the cell type, in this manner obviating tissue specific differences.</p>
+<p>For a population of cells we performed <em>HD-FISH</em>, image acquisition of several <em>fields-of-view</em> and carried out image and statistical data analysis. Moreover, we integrated the data analysis workflow in a custom based semi-automated graphical implementation using MATLAB.</p>
+<h1 id="experimetal-approach">Experimetal Approach</h1>
+<hr />
+<h2 id="cell-culture-and-fluorescence-in-situ-hybridization">Cell culture and fluorescence in situ hybridization.</h2>
+<p>We grew both <em>human mammary ephitelial cells</em> (hTERT-HME1 mammary) and <em>primary human foreskin fibroblasts</em> (ATCC CRL 2097) in Dulbecco's modified Eagle's medium with Glutamax (DMEM, Life Technologies) supplemented with penicillin/streptomycin and 10% FBS. To fix the cells, we followed the protocol of <a href="#Raj2008a">Raj et al. 2008</a>. We fixed the cells for 10 min at room temperature using 4% formaldehyde/10% formalin in 1× phosphate buffered saline solution (PBS) and followed the fixation by two rinses in 1× PBS, after which we permeabilized the cells with 70% EtOH and stored them at 4 °C overnight.</p>
+<p>The <em>HD-FISH</em> probe sets used here were generated by real-time PCR reactions from genomic DNA with primers designed as previously described  by <a href="#Bienko2013">Bienko et al. 2013</a>, delimiting amplicons of length 200–220 nucleotides. The resulting  total of 50 to 80 unique fragments per region were subsequently labeled with the fluorophore of interest with the commercial kit for <em>Universal Linkage System</em>.</p>
+<p>To perform DNA-FISH, 20 ng of <em>HD-FISH</em> probe were ethanol precipitated using 20 µg of glycogen as carrier and dissolved in 20 µl of 1.7× SSC, 70% formamide, 50 mM Na<sub>2</sub>HPO<sub>4</sub>/NaH<sub>2</sub>PO<sub>4</sub>, 10% dextran sulfate and 5× Denhardt’s solution, pH 7.5. The three-dimensional <em>HD-FISH</em> procedure on nuclei was adapted from <a href="#Solovei2010">Solovei et al. 2010</a> preserving the three-dimensional nuclear structure. After hibridization, cover glasses were washed twice at 30 °C for 30 min in wash buffer, additionally 20 ng/ml DAPI were added to the second wash. After washes, the cover glasses were rinsed with 2× SSC.</p>
+<p>For microscopy, samples were covered with a mounting solution containing 2× SSC buffer, 10 mM Tris, 0.4% glucose, 100 µg/ml catalase, 37 µg/ml glucose oxidase and 2 mM Trolox.</p>
+<h2 id="image-acquisition">Image acquisition</h2>
+<p>All images were acquired at 100× magnification (oil immersion, high numerical aperture Nikon objective) on an inverted epi-fluorescence microscope (Nikon) equipped with a high-resolution charge-coupled device (CCD) camera (Pixis, Princeton Instruments) and controlled by MetaMorph software.</p>
+<p>We sequentially acquired three-dimensional stacks of fluorescence images in four different fluorescence channels using filter sets for DAPI, TMR, Cy5, and Alexa 594. Our exposure times were roughly 2–3 s for most of the dyes except for DAPI (which we exposed for ~100 ms). The pixel size was 0.125μm, and the spacing between consecutive planes in our stacks was 0.25 μm.</p>
+<h2 id="image-analysis">Image analysis</h2>
+<p>Custom MATLAB software was implemented for the serial semi-automated identification of <em>HD-FISH</em> fluorescent spots (see <a href="#results-and-discussion">Results and discussion</a>), the general pipeline included the below described steps.</p>
+<p><strong>Nuclei segmentation</strong></p>
+<p>Using DAPI staining fluorescence signal, two criteria were used for segmentation. First the nuclei were segmented using Otsu´s method for finding the optimal threshold which minimizes the intra-class variance for intensity pixel values (under the assumption of a bimodal distribution), resulting in a binary image were most of the nuclei were correctly segmented (see <strong>Figure 10.</strong>). Following this step, a second criterium was taken into account for regions with an area above the average nuclei area (undersegmentation). For these regions, a subsequent segmentation using the watershed method was applied, this allowed us to recover the overlapping nuclei. Furthermore, nuclei adjacent to the edges of the <em>field-of-view</em> were discarded. Each of the resulting regions was dilated, suitably preventing segmentation beneath the nuclei edges. The resulting binary mask served to extract different nuclear features: area, mean intensity, perimeter, center of mass, etc. as well as for assigning the spots to cells.</p>
+<p><strong>Spot identification</strong></p>
+<p>For each fluorescence-channel image stack, non-uniform background was removed, and signal-to-noise ratio was enhanced by applying 3D Laplacian of Gaussian convolution. The optimal size of this filter (corresponding to the width of the Gaussian) depends on the size of the observed particle and was empirically adjusted to maximize the signal of the particles. </p>
+<p>Due to residual uniform noise, further use of a threshold is needed. First the number of spots is calculated as a function of monotonically increasing thresholds, then a single threshold was manually chosen from a normally observed plateau corresponding to a range of thresholds over which the total number of detected spots in the field-of-view does not vary.Thresholds chosen in this plateau yielded spot detections that matched the spots identified by eye (see <strong>Figure 10.</strong>). Finally, the volume, mean intensity and <em>coarse center position</em> (as the center of mass of the intensities in the identified connected component) was determined for individual spots.<br />
+</p>
+<h1 id="results-and-discussion">Results and discussion</h1>
+<hr />
+<h2 id="precise-spot-localization">Precise spot localization</h2>
+<p>Once the <em>coarse center position</em> of the spots was determined, we proceeded with the estimation of the precise position of the spots. The 2D image intensity $(x,y)$ profile can be well represented by a 2D Gaussian function (<strong>eq. <em>(1)</em></strong>).</p>
+<p><img alt="Dot image" src="/static/images/slides/chromatin-organization/dot_image.png" />
+<p class="caption"><strong>Figure 3.</strong> Distribution of image intensities can be approached with Gaussian functions. In the figure, a smoothened surface of fluorescence intensities in 2D, and 2D images of maximum projection across the depth axis for different planes</p></p>
+<p>Based on the eq. <em>(1)</em>, the 2D intensity model parameters are obtained to fit the $xy$-plane maximum-projection image intensity distribution in a window of a 6 pixels radius from the calculated coarse position (see <strong>Figure 4-A,C</strong>); $A$ is the maximum intensity, $x$ and $y$ are the center of the 2D Gaussian and $\sigma_*$ is the width of the spots, additionally we can also estimate the intensity background $b$ for which we later get an average and correct for the whole slide.</p>
+<p>\begin{equation}
+    f(x,y) = A \exp\left(- \left(\frac{(x-x_o)^2}{2\sigma_x^2} + \frac{(y-y_o)^2}{2\sigma_y^2} \right)\right) + b
+\end{equation}</p>
+<p>After getting the precise $(x,y)$ position, the intensity profile of this position along the z-axis was used to fit the following 1D Gaussian function (<strong>see figure 4B</strong>):</p>
+<p>\begin{equation}
+    f(z) = A \exp \left( -\frac{(z-z_o)^2}{2\sigma_z^2}\right)
+\end{equation}</p>
+<p>Both models are fitted using maximum likelihood estimates. The starting values for the model parameters are determined as follows: $A$ as the maximum intensity value in the spot window, $x$, $y$, $z$ from the coarse center positions, $\sigma$ fixed to 1.5. We assume that the spot is spherical in 3D, thus. $\sigma$ is equally initialized in all dimensions. </p>
+<p><img alt="Gaussian Fit" src="/static/images/slides/chromatin-organization/2D_Gaussian_1D_gaussian.png" />
+<p class="caption"><strong>Figure 4.</strong> Precise localization is estimated from parametric fitting of 2D and 1D Gaussian functions for individual spots. <strong>A.</strong> Surface fit from the maximum projection over the <em>xy</em>-plane z-depth intensity profile. <strong>B.</strong> Gaussian fit from the maximum projection over the <em>xz</em>-plane <em>y</em>-depth intensity profile. <strong>C.</strong> Overlay of the resulting Gaussian surface over the image. <strong>D.</strong> Precise spot localization is shown in red while the blue circle shows the estimated spot size with a diameter corresponding to the <em>FWHM</em> (full width half maximum) of the Gaussian function; additionally, position of the same bead in other channels is shown.</p></p>
+<p>As a result, we got new coordinates for the precise spot localization, background corrected intensity distribution, and estimated spot size from the <em>FWHM</em> (<a href="http://en.wikipedia.org/wiki/Full_width_at_half_maximum">full width half maximum</a>). Additionally we used the <em>goodness of fit</em> to infer for the appearance of multiple spots within one 13px $\times$ 13px window; those occurrences were discarded for subsequent analysis; however, further improvement can be achieved by fitting a mixture of multi-variate Gaussians to estimate the localization of multiple spots within a spot window.</p>
+<p>Despite that these measurements enhance the accuracy for the target position estimation, due to time constrains, an estimation of the error and extent of precision was not performed. From previous experience we know that the resolution is within 20 and 30 nm (<a href="#Semrau2011">Semrau et al. 2011</a>) , however this might vary across microscope setups. The experiment for the precision assessment would be as follows: Iterative imaging and estimation of the precise spot localization should yield a distribution of $x,y,z$ localization coordinates for which the variance would serve as a measure for resolution.</p>
+<h2 id="chromatic-aberration-corrections">Chromatic aberration corrections</h2>
+<p>The wavelength-dependency of the refraction indexes in optical systems involves <em>chromatic aberrations</em>: one object point is not projected on exactly one image point on the sensor plane, but dispersed depending on its wavelength. When precise estimation of the three-dimensional position of a point is necessary —as in HD–FISH experiments— the distortions have to be compensated.</p>
+<p>To this end, commercial fluorescent beads where imaged and detected in different channels. For each channel, the acquired image stack of 15 planes in depth was filtered and thresholded to automatically detect the <em>coarse position</em> of the single beads in a 3D space (1024px $\times$ 1024px $\times$ 15 planes). The threshold was set automatically for a reference channel as the intensity value for which the inverse of the coefficient of variation was the highest. The threshold for the remaining channels was selected such that the detected beads was close in number, if not the same, to the number of beads detected on the reference channel. For each channel, the detected coarse positions $(x,y,z)$ where enhanced for precision by fitting Gaussian functions as previously described in <a href="#precise-spot-localization">precise spot localization</a> section.</p>
+<p><strong>Registration and shift measurement</strong></p>
+<p>Since the corresponding intensity signals of a bead in different channels do not co-localize, first we had to find the signals corresponding to the same single bead. This might be trivial for low density of beads in the <em>field-of-view</em>, however it proved to be difficult on high density of beads due to mis-assignment and to other factors as debris or bead movement between channel acquisition rounds. We approached this by assigning correspondences between the selected reference bead and its closest neighboring intensity signal regardless of the channel, under the assumption that the distance between channel signals is minimal, thus, the closest signals should correspond to the same bead. Then we used this information to build an undirected adjacency matrix where an edge was assigned every time we found a neighboring connection between two bead signals. This criteria allowed us to build independent and completely connected graphs called <em>cliques</em>, which correspond to single beads (see <strong>Figure 5. Top</strong>). High density of beads allowed to better capture the shift distribution within the <em>field-of-view</em>.</p>
+<p><img alt="Beads identification" src="/static/images/slides/chromatin-organization/beads_identification.png" /></p>
+<p><img alt="Beads dense" src="/static/images/slides/chromatin-organization/beads_dense_panels.png" /></p>
+<p class="caption"><strong>Figure 5.</strong> Beads registration. <b>Top:</b> Commercial beads are imaged in different channels, and processed for their exact locations, then assigned to a single bead (<em>registration</em>). <b>A.</b> Fluorescence intensity image of one channel for low density of beads within a <em>field-of-view</em>. <b>B.</b> Labeled beads with it corresponding identified signals in different channels. <b>C.</b> Each registered bead is the result of finding complete connected components (<em>cliques</em>) of degree four (corresponding to the number of imaged channels) in a graph. <b>Bottom: A.</b> Fluorescence intensity image of one channel for high density of beads. <b>B.</b> (detail) From a reference channel, neighboring signals are assigned as potential corresponding fluorescent signals for the same bead (blue edges connecting fluorescent signals, in black). Connections are recorded in an adjacency matrix. <b>C.</b> Bead <em>registration</em> is solved by searching <em>cliques</em> in the adjacency matrix.</p>
+
+<p>With this method we achieved the correct identification of most of the beads; outliers for the distance between signals associated with a single bead were discarded for further analysis. Once the beads where <em>registered</em>, the shift $\Delta$ (extent of <em>chromatic aberration</em>) from a reference channel $ref$, was calculated in each direction ($x$,$y$ or $z$) for each bead $i$ in each channel $ch$ as follows:</p>
+<p>\begin{equation*}
+\Delta^{ch}_{xi} = x^{ch}_i - x^{ref}_i \\
+\Delta^{ch}_{yi} = y^{ch}_i - y^{ref}_i \\
+\Delta^{ch}_{zi} = z^{ch}_i - z^{ref}_i \\
+\end{equation*}</p>
+<p>Then for each channel we formulated the shift $\Delta$ as a function of the three-dimesional localization:</p>
+<p>\begin{equation*}
+\Delta^{ch}_{x}= f(x,y,z)\\
+\Delta^{ch}_{y} = f(x,y,z)\\
+\Delta^{ch}_{z} = f(x,y,z)
+\end{equation*}</p>
+<p>As expected, we observed that the extent of distortions was wavelength dependent, and the shift magnitudes vary for distinct fluorescence channel (<strong>se figure 6</strong>)</p>
+<p><img alt="uncorrected" src="/static/images/slides/chromatin-organization/uncorrected.png" />
+<p class="caption"><strong>Figure 6.</strong> Once the fluorescence intensity signals are registered, (before correction) the shift $\Delta$ is measured in each direction $x$, $y$, $z$. For visualization proposes, the shift &mdash; y-axis [px] &mdash; for each channel (A594, Cy5, GFP and TMR) from a reference channel (DAPI) is ploted as a function of a single dimension in one of each three directions ($x$, $y$ and $z$) &mdash; x-axis [px] &mdash;. The magnitude of the shift varies from channel to channel at the different dimensions, showing the wavelength dependency of the <em>chromatic aberration</em>.</p></p>
+<p><strong>Shift correction model fitting</strong></p>
+<p>To interpolate the shift for the whole volume we selected polynomial functions due to their smoothness, thereby reducing the irregularities due to thermal noise which could still be captured by using other interpolating approaches. Along this line, fifth-order polynomials were fit to the measured shifts (separately for each dimension, see eq. 3). The order of the polynomial was empirically selected such that the residual shift was the least.</p>
+<p>\begin{equation}
+    \Delta^{ch}_{dim}(x,y,z) = a_{n,n,n}x^ny^nz^n + a_{n,,n,n-1}x^ny^nz^{n-1} + a_{n,n-1,n}x^ny^{n-1}z^n + \ldots + a_{1,0,0}x + a_{0,1,0}y + + a_{0,0,1}z + a_{0,0,0}
+\end{equation}</p>
+<p>The resulting polynomial functions were at some extent similar for different channels. For both $x$ and $y$ directions, the shift magnitudes were mostly in a lateral gradient, being positive on one extreme, and negative on the other (see <strong>Figure 7.</strong>). Meanwhile, the interpolating function corresponding to the $z$ direction was observed to be focal, with a grater displacement at the outer regions of the <em>field-of-view</em>. </p>
+<p><img alt="shiftw" src="/static/images/slides/chromatin-organization/shoftw.png" />
+<p class="caption"><strong>Figure 7.</strong> Color plots showing the extent of the shift $\Delta$ interpolated using polynomial functions. For a single plane at $z = 5$, the shift for different positions at $(x,y,z=5)$ is plotted for different channels (A594, Cy5, GFP and TMR) at the different directions ($x$, $y$ and $z$).</p></p>
+<p>By using fluorescent beads, in this first approach for interpolating the shift, we failed to capture the contribution of the distortion along the $z$ dimension since the totality of the beads were localized at the same z-depth (data not shown). Alternatively, and more optimally, we performed a second experiment where we used <em>primary human foreskin fibroblasts</em> to capture the range in z-depth at which the genomic regions could be localized. To this end, interleaved probes distinctively label were designed to target a single genomic region. To achieve a high density of localizations, after hybridization, the coverslip was imaged by moving the <em>field-of-view</em>, thus a single region was imaged at different positions throughout one single focal area and afterwards, shift magnitudes were calculated as described on the previous section. The resulting interpolating functions for all channels in the different directions are shown above on <strong>Figure 7.</strong>. </p>
+<p><img alt="corrected" src="/static/images/slides/chromatin-organization/corrected.png" />
+<p class="caption"><strong>Figure 8.</strong> Shift measurements after correction with polynomial functions. The magnitude of the shift is corrected to be less than 1px. Some variation is still observed due to slight variations in movement between acquisition rounds, additionally to the fact that it is a projection and the three-dimensional shift is captured in a single dimension.</p></p>
+<p><img alt="TMR shift" src="/static/images/slides/chromatin-organization/tmr_calibXY.jpg" /></p>
+<p class="caption"><strong>Figure 9.</strong> Overlay of fluorescent beads imaged in different channels, before and after correction.</p>
+
+<p>Our approach resulted in a set of polynomial functions which served to correct the shift for each fluorescent channel, in every direction as a function of its three-dimensional position_ (see <strong>Figure 6.</strong>). A reduction in the shift up to less that 1px was achieved. We observed a better result when correcting for shifts in the planar directions than in the depth direction (see <strong>Figure 8.</strong>). </p>
+<p>One drawback of the correction for <em>chromatic aberrations</em> is that they depend on the experimental setup, where small changes in variables, as are the imaging medium and slight movements of the objective are prone to change the shift pattern, accordingly, the measurement of the shift magnitudes have to be performed on an individual experiment basis, as a consequence, increasing the time and labor required for each image acquisition step.</p>
+<h2 id="spotterui">SpotterUI</h2>
+<p>The previously described approaches to the precise localization of genomic regions were integrated into a custom Graphical User Interphase (<em>SpotterUI</em>) written in MATLAB (see <strong>Figure 10.</strong>). This semi-automated software includes various features that simplify the identification and estimation of the precise spot localizations from <em>HD-FISH</em> experiments. Automatic and manual segmentation, annotations for single nuclei, and overlayed figure creation are some of the general tools featured in the program. Moreover, quantitative measures like nuclei section area, DAPI average intensity measures, background correction and also measurements for individual spots are estimated. Among the few settings that have to be tuned and specified in a configuration file are the width and size of the filters, number of thresholds for finding the threshold plateau, average nuclei sectional area, voxel size, etc. </p>
+<p>Within the same user interface, the shift-interpolating functions can be generated from images with fiducial probes like fluorescent beads or multi-labeled genomic regions. These polynomial functions are stored in a file which can be later used to batch correct actual experiment spot locations.</p>
+<p><a class="fancybox" rel="hdfish" href="/static/images/slides/chromatin-organization/spotterUI.png" title="4 loci experiment" target="_blank"><img src="/static/images/slides/chromatin-organization/spotterUI.png" style="background-color:#fafafa; border: none;" alt="" /></a>
+<p class="caption"><strong>Figure 10.</strong> <em>SpotterUI</em> is a Graphical User Interface that integrates the workflow for the analysis of <em>HD-FISH</em> experiments into a software in a semi-automated manner. Configuration settings are given in a configuration file, while a simple user interface allows for the automatic segmentation and the interactive identification of the spots. Interaction with the <em>regions-of-interest</em> allows for selecting and annotating or deleting single cells, the interaction with single spot also allows to correct for misidentification. Polynomial functions can be re-used for batch correction of several <em>fields-of-view</em> as they are included from MATLAB native data files as an input setting. The workflow returns at the end several quantitative measures including the precise position of the <em>HD-FISH</em> spots for further statistical analysis.</p></p>
+<h2 id="4-loci-experiment">4 loci experiment</h2>
+<p>In a proof of concept experiment, <em>HD-FISH</em> probes were designed to evenly target 4 regions within the chromosome 17 of <em>HME cells</em>. <em>Spotted</em> regions were visualized by genomically-equidistant set of fluorescently-labeled probes. Both Alexa594 and Cy5 labeled probes were interleaved with a distance of about 10Mb between each other (see <strong>Figure 11.</strong>).</p>
+<p><img alt="4 loci" src="/static/images/slides/chromatin-organization/4_loci.png" />
+<p class="caption"><strong>Figure 11.</strong> Proof of concept experiment. Chromosome 17 was simultaneously <em>spotted</em> with 4 interleaved sets of <em>HD-FISH</em> probes targeting genomic regions separated by 10 Mb. We can visually identify separate groups of four spots corresponding to separated homolog chromosomes. This feature was later exploited to automatically cluster single chromosomes.</p></p>
+<p>After hybridization, we acquired 21 <em>fields-of-view</em> comprising a total of 324 nuclei in varying cell-cycle stages (see <strong>Figure 12.</strong>). With the help of the <em>SpotterUI</em> we segmented, identified, corrected, and processed the set of acquired image stacks. </p>
+<p><a class="fancybox" rel="hdfish" href="/static/images/slides/chromatin-organization/OL_008.png" title="4 loci experiment" target="_blank">
+<img src="/static/images/slides/chromatin-organization/OL_008.png" style="background-color:#fafafa; border: none;" alt=""/></a>
+<p class="caption"><strong>Figure 12.</strong> Sample overlay of the 4 loci experiment. Image of DAPI in the nuclei (blue) of <em>HME</em> cells and the identified spots in both Cy5 (green) and Alexa594 (magenta).</p></p>
+<p>In most of the nuclei, we can visually identify separate groups of spots from which we assumed they belong to single chromosomes (see <strong>Figure 12.</strong>). To exploit this feature of organization, we first filtered for nuclei in which the total number of spots was 8, corresponding to only 2 copies of the chromosome 17 during interphase. Furthermore we used K-means (k=2) clustering algorithm to group the single copies of chromosome 17. Among all the possible spot configurations within a cluster, we selected for those clusters with 4 spots (2 Cy5 spots and 2 Alexa594 spots, each (see <strong>Figure 13.</strong>). Roughly 33% of the nuclei showed to be in interphase, as we found 107 nuclei with interphase spot counts, and 105 satisfying the further required configuration, thus, yielding 105 spot clusters. On these clusters we proceeded to measure the three different euclidean distances between them: i) distance between Alexa594 spots, ii) distance between Cy5 spots and iii) distance between Alexa594 and Cy5 spots (see <strong>Figure 14.</strong>).</p>
+<p><a class="fancybox" rel="hdfish" href="/static/images/slides/chromatin-organization/4_loci_conf.png" title="k-means clustering" target="_blank"><img src="/static/images/slides/chromatin-organization/4_loci_conf.png" style="background-color:#fff; max-width: 50%;" alt="" /></a>
+<p class="caption" style="width: 50%;"><strong>Figure 13.</strong> K-means clustering strategy to identify separate groups of spots corresponding to single chromosomes. First we selected interphase nuclei using the spot counts as an indicator, those with 4 spots on each channel. We performed K-means clustering to identify 2 groups of spots, from all possible grouping configurations we selected those corresponding to a single chromosome, meaning 2 spots per channel.</p></p>
+<p>For a single spot cluster there is a single distance between two probes of the same channel, which corresponds to a distance of 20 Mb. However, for the 4 possible distances separating spots of different channels, we cannot directly identify the physical correspondence to the genomic separation, i.e. distance between a genomic separation of 10 Mb and 30 Mb. We approached the estimation of each distance by fitting a mixture of two Gaussians, where each distribution corresponds to one distance at each genomic separation (see <strong>Figure 14. Bottom right</strong>) under the assumption of normally distributed physical distances.</p>
+<p><a class="fancybox" rel="hdfish" href="/static/images/slides/chromatin-organization/distHIST.png" title="distance histograms" target="_blank"><img src="/static/images/slides/chromatin-organization/distHIST.png" style="background-color:#fff; max-width: 70%;" alt="" /></a>
+<p class="caption" style="width: 70%;"><strong>Figure 14.</strong> Histograms showing the distribution of calculated physical distances for varying genomic distances. <b>Top left: </b> All measured pairwise distances between spots. <b>Top right/Bottom left:</b> Distances corresponding to 20 Mb (spots from the same channel). <b>Bottom right:</b> Distribution of physical pairwise distances measured between spots from different channels corresponding to a genomic separation of 10 and 30 Mb approached by mixture of Gaussians.</p></p>
+<p>With this proof of concept experiment we were able to estimate the physical distance for three equidistant genomic regions. Likewise, our results meet the previous observations where the leveling-off of the linear to spatial scaling can already be observed for genomic distances of 10Mb (<a href="#Mateos-Langerak2009">Mateos-Langerak et al. 2009</a>, see <strong>Figure 15.</strong>). As a result, we demonstrate the scope of our methodology to capture the chromosome topology. </p>
+<p><img alt="r" src="/static/images/slides/chromatin-organization/slide6.png" />
+<p class="caption"><strong>Figure 15.</strong>Leveling-off of the  linear to spatial scaling in the organization of the genome. In agreement with previous experimental measurements, our results also show the leveling-off of the physical distance for genomic regions separated by more then 10Mb.  This observations support the view of interphase chromatin organizing in globular structures termed <em>chromosome territories</em>.</p></p>
+<p>For the sake of simplicity and to demonstrate the applications of our methodology, we limited our probe set to simply target 4 regions interleaved between two fluorophores. However in follow up experiments we are planning to use combinations of fluoreophores to target and identify individual regions without having to struggle with the fitting mixtures of Gaussians. Moreover we can also decrease the separation between regions up to the Kb resolution, thus having a better quantitative measures for the scaling behavior of the mammalian nucleus.</p>
+<h1 id="concluding-remarks">Concluding remarks</h1>
+<hr />
+<p>Model ensembles of polymer conformations together with DNA-FISH experimental measures, provide a natural framework for understanding the nature of the emerging link between structure, composition, and function; they also serve as a starting point for understanding cell-to-cell variability in gene expression (<a href="#Ozbudak2002">Ozbudak et al. 2002</a>, <a href="#Elowitz2002">Elowitz et al. 2002</a>), (i.e. enhancer-dependent gene activation would be promoted from transient spatial proximity of two genomically distant loci). </p>
+<p>To this end, <em>HD-FISH</em> provides the required scope by capturing variations within chromatin conformations by the measurements in single cells. Our developed methodology and tools allow for the rapid and precise quantification of FISH experiments targeted to the understanding of genome organization. Furthermore, <em>HD-FISH</em> can be coupled with <em>single molecule RNA-FISH</em> to gain more insight into the link between structure and function. </p>
+<h1 id="aknowledgements">Aknowledgements</h1>
+<hr />
+<p>This project was closely and jointly developed with Magda Bienko &mdash; without her enthusiasm, dedication and experimental dexterity, none of the experiments above could have been realized &mdash;. We would like to further acknowledge Stefan Semrau for fruitful discussion for the correction of the <em>chromatic aberrations</em>. Moreover we would like to thank Alexander van Oudenaarden for his support and for sharing space, time and expertise in addition to guidance. Finally we thank the van Odenaarden Lab members which suggestions, small talk, and daily interaction made a great deal of addition to the development of this project.</p>
+<!##Some Definitions
+* **Structure:** The arrangement of and relations between the parts or elements of something complex.
+* **Topology:** The study of geometric properties and spatial relations unaffected by the continuous change of shape or size of figures.
+* **Architecture:** The conceptual structure and logical organization of something.>
+	<h1>References</h1>
+		<div id="bibliography" style="font-size:0.9em;">
+		    <ol>
+			    <li id="Andrulis1998">Andrulis E D, Neiman a M, Zappulla D C, Sternglanz R. (1998) <a href=http://www.ncbi.nlm.nih.gov/pubmed/9707122>Perinuclear localization of chromatin facilitates transcriptional silencing.</a> <em>Nature</em> 394: 592--5.
+			    </li>
+			    <li id="Barbieri2012">Barbieri Mariano, Chotalia Mita, Fraser James, Lavitas Liron-Mark, Dostie Josee, Pombo Ana, Nicodemi Mario. (2012) <a href=http://www.ncbi.nlm.nih.gov/pubmed/22988072>Complexity of chromatin folding is captured by the strings and binders switch model.</a> <em>Proceedings of the National Academy of Sciences of the United States of America</em> 109: 16173--8.
+			    </li>
+			    <li id="Bickmore2013">Bickmore Wendy a, van Steensel Bas. (2013) <a href=http://www.ncbi.nlm.nih.gov/pubmed/23498936>Genome architecture domain organization of interphase chromosomes.</a> <em>Cell</em> 152: 1270--84.
+			    </li>
+			    <li id="Bienko2012">Bienko Magda, Crosetto Nicola, Teytelman Leonid, Klemm Sandy, Itzkovitz Shalev, van Oudenaarden Alexander. (2012) <a href=http://www.ncbi.nlm.nih.gov/pubmed/23263692>A versatile genomescale PCRbased pipeline for highdefinition DNA FISH.</a> <em>Nature methods</em> &nbsp;: 1--5.
+			    </li>
+			    <li id="Casolari2005">Casolari Jason M, Brown Christopher R, Drubin David A, Rando Oliver J, Silver Pamela A. (2005) <a href=&nbsp;>Developmentally induced changes in transcriptional program alter spatial organization across chromosomes.</a> <em>Genes and Development</em> &nbsp;: 1188--1198.
+			    </li>
+			    <li id="Chubb2002">Chubb Jonathan R, Boyle Shelagh, Perry Paul, Bickmore Wendy A. (2002) <a href=http://www.sciencedirect.com/science/article/pii/S0960982202006954>Chromatin Motion Is Constrained by Association with Nuclear Compartments in Human Cells.</a> <em>Current Biology</em> 12: 439 - 445.
+			    </li>
+			    <li id="Cremer2010">Cremer Thomas, Cremer Marion. (2010) <a href=http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2829961\&tool=pmcentrez\&rendertype=abstract>Chromosome territories.</a> <em>Cold Spring Harbor perspectives in biology</em> 2: a003889.
+			    </li>
+			    <li id="Croft1999b">Croft J a, Bridger J M, Boyle S, Perry P, Teague P, Bickmore W a. (1999) <a href=http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2133153\&tool=pmcentrez\&rendertype=abstract>Differences in the localization and morphology of chromosomes in the human nucleus.</a> <em>The Journal of cell biology</em> 145: 1119--31.
+			    </li>
+			    <li id="Dekker2002">Dekker Job, Rippe Karsten, Dekker Martijn, Kleckner Nancy. (2002) <a href=http://www.ncbi.nlm.nih.gov/pubmed/11847345>Capturing chromosome conformation.</a> <em>Science (New York, N.Y.)</em> 295: 1306--11.
+			    </li>
+			    <li id="Elowitz2002">Elowitz Michael B, Levine Arnold J, Siggia Eric D, Swain Peter S. (2002) <a href=http://www.ncbi.nlm.nih.gov/pubmed/12183631>Stochastic gene expression in a single cell.</a> <em>Science</em> 297: 1183--6.
+			    </li>
+			    <li id="Heermann2012">Heermann Dieter W, Jerabek Hansjoerg, Liu Lei, Li Yixue. (2012) <a href=http://www.ncbi.nlm.nih.gov/pubmed/22677104>A model for the 3D chromatin architecture of pro and eukaryotes.</a> <em>Methods (San Diego, Calif.)</em> &nbsp;: &nbsp;.
+			    </li>
+			    <li id="Kim2004">Kim S H, McQueen P G, Lichtman M K, Shevach E M, Parada L a, Misteli T. (2004) <a href=http://www.ncbi.nlm.nih.gov/pubmed/15237218>Spatial genome organization during Tcell differentiation.</a> <em>Cytogenetic and genome research</em> 105: 292--301.
+			    </li>
+			    <li id="Lieberman-Aiden2009">Lieberman-Aiden Erez, van Berkum Nynke L, Williams Louise, Imakaev Maxim, Ragoczy Tobias, Telling Agnes, Amit Ido, Lajoie Bryan R, Sabo Peter J, Dorschner Michael O, Sandstrom Richard, Bernstein Bradley, Bender M a, Groudine Mark, Gnirke Andreas, Stamatoyannopoulos John, Mirny Leonid a, Lander Eric S, Dekker Job. (2009) <a href=http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2858594\&tool=pmcentrez\&rendertype=abstract>Comprehensive mapping of longrange interactions reveals folding principles of the human genome.</a> <em>Science (New York, N.Y.)</em> 326: 289--93.
+			    </li>
+			    <li id="Marshall1997">Marshall W.F, Straight A, Marko J.F, Swedlow J, Dernburg A, Belmont A, Murray A.W, Agard D.A, Sedat J.W. (1997) <a href=http://www.sciencedirect.com/science/article/pii/S096098220600412X>Interphase chromosomes undergo constrained diffusional motion in living cells.</a> <em>Current Biology</em> 7: 930 - 939.
+			    </li>
+			    <li id="Mateos-Langerak2009">Mateos-Langerak Julio, Bohn Manfred, de Leeuw Wim, Giromus Osdilly, Manders Erik M M, Verschure Pernette J, Indemans Mireille H G, Gierman Hinco J, Heermann Dieter W, van Driel Roel, Goetze Sandra. (2009) <a href=http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=2656162\&tool=pmcentrez\&rendertype=abstract>Spatially confined folding of chromatin in the interphase nucleus.</a> <em>Proceedings of the National Academy of Sciences of the United States of America</em> 106: 3812--7.
+			    </li>
+			    <li id="Meister2010">Meister Peter, Towbin Benjamin D, Pike Brietta L, Ponti Aaron, Gasser Susan M. (2010) <a href=&nbsp;>The spatial dynamics of tissuespecific promoters during C  elegans development.</a> <em>Genes and Development</em> &nbsp;: 766--782.
+			    </li>
+			    <li id="Osborne2007">Osborne Cameron S, Chakalova Lyubomira, Mitchell Jennifer a, Horton Alice, Wood Andrew L, Bolland Daniel J, Corcoran Anne E, Fraser Peter. (2007) <a href=http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=1945077\&tool=pmcentrez\&rendertype=abstract>Myc dynamically and preferentially relocates to a transcription factory occupied by Igh.</a> <em>PLoS biology</em> 5: e192.
+			    </li>
+			    <li id="Ozbudak2002">Ozbudak Ertugrul M, Thattai Mukund, Kurtser Iren, Grossman Alan D, van Oudenaarden Alexander. (2002) <a href=http://www.ncbi.nlm.nih.gov/pubmed/11967532>Regulation of noise in the expression of a single gene.</a> <em>Nature genetics</em> 31: 69--73.
+			    </li>
+			    <li id="Raj2008a">Raj Arjun, Bogaard Patrick Van Den, Rifkin Scott A, Oudenaarden Alexander Van, Tyagi Sanjay. (2008) <a href=&nbsp;>Imaging individual mRNA molecules using multiple singly labeled probes.</a> <em>Nature Methods</em> 5: 877--879.
+			    </li>
+			    <li id="Schoenfelder2010">Schoenfelder Stefan, Sexton Tom, Chakalova Lyubomira, Cope Nathan F, Horton Alice, Andrews Simon, Kurukuti Sreenivasulu, Mitchell Jennifer a, Umlauf David, Dimitrova Daniela S, Eskiw Christopher H, Luo Yanquan, Wei Chia-Lin, Ruan Yijun, Bieker James J, Fraser Peter. (2010) <a href=http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3237402\&tool=pmcentrez\&rendertype=abstract>Preferential associations between coregulated genes reveal a transcriptional interactome in erythroid cells.</a> <em>Nature genetics</em> 42: 53--61.
+			    </li>
+			    <li id="Semrau2011">Semrau Stefan, Pezzarossa Anna, Schmidt Thomas. (2011) <a href=http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3037721\&tool=pmcentrez\&rendertype=abstract>Microsecond singlemolecule tracking musSMT.</a> <em>Biophysical journal</em> 100: L19--21.
+			    </li>
+			    <li id="Solovei2010">Solovei Irina, Cremer Marion. (2010) <a href=http://dx.doi.org/10.1007/978-1-60761-789-1_8>3DFISH on Cultured Cells Combined with Immunostaining.</a> <em>Methods in Molecular Biology: Fluorescence in situ Hybridization (FISH)</em> 659: 117-126.
+			    </li>
+			    <li id="Spilianakis2005">Spilianakis Charalampos G, Lalioti Maria D, Town Terrence, Lee Gap Ryol, Flavell Richard a. (2005) <a href=http://www.ncbi.nlm.nih.gov/pubmed/15880101>Interchromosomal associations between alternatively expressed loci.</a> <em>Nature</em> 435: 637--45.
+			    </li>
+			    <li id="Tark-Dame2011">Tark-Dame Mariliis, van Driel Roel, Heermann Dieter W. (2011) <a href=http://www.ncbi.nlm.nih.gov/pubmed/21378305>Chromatin foldingfrom biology to polymer models and back.</a> <em>Journal of cell science</em> 124: 839--45.
+			    </li>
+			    <li id="VanDriel2003">van Driel Roel, Fransz Paul F, Verschure Pernette J. (2003) <a href=http://www.ncbi.nlm.nih.gov/pubmed/12972500>The eukaryotic genome a system regulated at different hierarchical levels.</a> <em>Journal of cell science</em> 116: 4067--75.
+			    </li>
+		    </ol>
+		</div>
+	<div id="toTop">
+	  <a href="#mainContent"><img src="/static/images/totop2.png" alt="return to top"></a>
+	</div>
+</div>
+            <div class="clear"></div>
+			<div id="posts-footer">	<p>This entry is under category: <a href="../../projects/" title="category">projects</a>
+</br>and was tagged as: <a href="../../tag/biology.html" title="tag">biology</a>, <a href="../../tag/research.html" title="tag">research</a>, <a href="../../tag/hd-dna-fish.html" title="tag">hd dna-fish</a>, <a href="../../tag/master.html" title="tag">master</a>,  and <a href="../../tag/report.html" title="tag">report</a>.</p>
+</div>
+		</div>
+		<div id="footer">
+			<p>sndbx.be &#169; <a href="../../about/" title="Interested in learning more about this site?">2013</a> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a></br>handcrafted by Emiliano Izquierdo</br>Last modified on 2013-11-03</p>
+		</div>
+<script type="text/javascript">
+
+
+var myHeader = $('#my_fixable_header');
+myHeader.data( 'position', myHeader.position() );
+$(window).scroll(function(){
+    var hPos = myHeader.data('position'), scroll = getScroll();
+    $('#header-wrapper').css("-webkit-transform","translateY("+ (scroll.top/3) +"px)");
+    $('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
+    if ( hPos.top < scroll.top ){
+        myHeader.addClass('fixed');
+        $('#my_fixable_header').css("box-shadow", "0 5px 10px 0 #bbb");
+        $('#mainContainer').css("margin","margin: 5px auto;");
+    }
+    else {
+        myHeader.removeClass('fixed');
+        $('#mainContainer').css("margin","margin: 0 auto;");
+    }
+    
+    if (scroll.top < 200) {
+      $('#my_fixable_header').css("opacity", (scroll.top * 0.005) );
+      $('#header').css("opacity", ( 1- (scroll.top * 0.005)) );
+       $('#nav').css("opacity", ( 1- (scroll.top * 0.005)) );
+      $('#header-wrapper').css("background-color","rgba(204,255,0," + (scroll.top * 0.005) + ")");
+    } else {
+      $('#my_fixable_header').css("opacity", 1);
+        $('#header-wrapper').css("background-color","rgba(204,255,0,1)");
+    }
+   
+    
+    if ( scroll.top == 0 ){
+        $('#my_fixable_header').css("box-shadow", "none");
+        $('#my_fixable_header').css("opacity", 0);
+        $('#header').css("opacity", 1 );
+       $('#nav').css("opacity", 1 );
+        $('#header-wrapper').css("background-color","#fafafa");
+    }
+    
+    
+    
+});
+
+function getScroll () {
+    var b = document.body;
+    var e = document.documentElement;
+    return {
+        left: parseFloat( window.pageXOffset || b.scrollLeft || e.scrollLeft ),
+        top: parseFloat( window.pageYOffset || b.scrollTop || e.scrollTop )
+    };
+}
+    
+
+</script>
+		
+
+    </body>
+</html>
