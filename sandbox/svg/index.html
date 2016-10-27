@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<title>sndbx.be is not science</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../../static/css/third-party/sanitize.css">
+	<link rel="stylesheet" href="../../static/css/content_responsive.css">
+	<link rel="stylesheet" href="../../static/css/solarized_dark.css">
+	<link rel="stylesheet" href="../../static/css/third-party/font-awesome.css">
+	<script src="../../static/js/third-party/jquery.min.js"></script>
+	<script src="../../static/js/main.js"></script>
+
+</head>
+
+	<body>
+		<div class="page">
+				<header class="content head hlike">
+					<nav  class="rigth">
+						<ul class="semantic">
+							<li class="h3like"  style="border-left: none;" ><a  class="active"  href="../../">index</a></li>
+							<li class="h3like" ><a  href="../../about/">about</a></li>
+						</ul>
+					</nav>
+				</header>
+				<aside class="content bar">
+				</aside>
+
+			<main class="content">
+	<aside class="meta hlike">
+				<ul class="semantic">
+
+				<li class="h2like">28.03.2013</li>
+
+				<li class="h3like"><a href="../../sandbox/" title="category">sandbox</a></li>
+				</ul>
+					
+	</aside><hgroup  class="toCenter" style="margin-bottom: 8rem;">
+	<h1>SVG</h1>
+	<span class="dim"><p>by Emiliano Izquierdo</p></span>
+</hgroup>
+<article>
+		<blockquote><p>SVG are a very nice way to insert graphics in a web page or presentation</p></blockquote>
+
+	<hr />
+<h2 id="the-svg"><a href="http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html#SVG_in_HTML">The svg</a></h2>
+<h3 id="this-is-created-using-just-xml-svg-tag">This is created using just xml svg tag:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">svg</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="na">version</span><span class="o">=</span><span class="s">&quot;1.1&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;300&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;100&quot;</span><span class="p">&gt;</span>
+   <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;50&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;40&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;black&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;2&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;red&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<h3 id="the-result">The result:</h3>
+<p><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="100">
+    <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+</svg> </p>
+<hr />
+<h2 id="svg-embedded-in-object-tag">SVG embedded in object tag</h2>
+<p style="text-align:center"><object type="image/svg+xml" data="/static/images/slides/chromatin-organization/diagram.svg" width="400px" height="400px"></object></p>
+
+<h3 id="the-source">The source:</h3>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-align:center;&quot;</span><span class="p">&gt;&lt;</span><span class="nt">object</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;image/svg+xml&quot;</span> <span class="na">data</span><span class="o">=</span><span class="s">&quot;/static/images/slides/chromatin-organization/diagram.svg&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;700px&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;700px&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">object</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<hr />
+<h2 id="a-small-wasp">A small wasp!</h2>
+<p style="text-align:center"><object type="image/svg+xml" data="/static/images/slides/chromatin-organization/wasp.svg" width="100px" height="100px"></object></p>
+
+<h2 id="a-big-wasp">A big wasp!</h2>
+<p style="text-align:center"><object type="image/svg+xml" data="/static/images/slides/chromatin-organization/wasp.svg" width="500px" height="500px"></object></p>
+
+<h3 id="for-other-tools-for-svg-see-more-here">For other tools for SVG see: <a href="http://selection.datavisualization.ch/">more here</a></h3>
+<ul>
+<li><a href="http://raphaeljs.com/">raphaël</a></li>
+<li><a href="http://d3js.org/">D3.js</a></li>
+<li><a href="http://processingjs.org/">processing.js</a></li>
+<li><a href="http://sigmajs.org/">sigma.js</a></li>
+<li><a href="http://paperjs.org/">paper.js</a></li>
+</ul>
+<h2 id="other-frameworks">Other frameworks</h2>
+<ul>
+<li><a href="http://flare.prefuse.org/">Flare</a> </li>
+</ul>
+<h2 id="generate-scg-in-d3-and-download-it">Generate SCG in D3 and download it</h2>
+<p><a href="http://bl.ocks.org/biovisualize/1209499">here</a></p>
+<h2 id="solution-in-matlab">Solution in matlab</h2>
+<p><a href="http://www.mathworks.es/matlabcentral/fileexchange/7401">here</a> </p>
+
+	</article>
+
+			</main>
+			
+	<aside class="content hlike"> 
+				<ul class="semantic center">
+					<li style="display: inline-block;"><a href="../../tag/web-dev.html" title="tag">#web dev</a></li>
+					<li style="display: inline-block;"><a href="../../tag/htmlcss.html" title="tag">#html/css</a></li>
+					<li style="display: inline-block;"><a href="../../tag/figures.html" title="tag">#figures</a></li>
+					<li style="display: inline-block;"><a href="../../tag/svg.html" title="tag">#svg</a></li>
+					<li style="display: inline-block;"><a href="../../tag/graphics.html" title="tag">#graphics</a></li>
+				</ul>
+	</aside>
+			
+
+
+		</div>
+		
+
+		<footer  class="content footer center hlike">
+			<p>sndbx.be &#169; <a href="#" title="Interested in learning more about this site?">2016</a> Emiliano Izquierdo <br> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a>
+		</footer>
+	</body>
+</html>

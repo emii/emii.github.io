@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+	<title>sndbx.be is not science</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../../static/css/third-party/sanitize.css">
+	<link rel="stylesheet" href="../../static/css/content_responsive.css">
+	<link rel="stylesheet" href="../../static/css/solarized_dark.css">
+	<link rel="stylesheet" href="../../static/css/third-party/font-awesome.css">
+	<script src="../../static/js/third-party/jquery.min.js"></script>
+	<script src="../../static/js/main.js"></script>
+
+</head>
+
+	<body>
+		<div class="page">
+				<header class="content head hlike">
+					<nav  class="rigth">
+						<ul class="semantic">
+							<li class="h3like"  style="border-left: none;" ><a  class="active"  href="../../">index</a></li>
+							<li class="h3like" ><a  href="../../about/">about</a></li>
+						</ul>
+					</nav>
+				</header>
+				<aside class="content bar">
+				</aside>
+
+			<main class="content">
+	<aside class="meta hlike">
+				<ul class="semantic">
+
+				<li class="h2like">12.09.2016</li>
+
+				<li class="h3like"><a href="../../Webdev/" title="category">Webdev</a></li>
+				</ul>
+					
+	</aside><hgroup  class="toCenter" style="margin-bottom: 8rem;">
+	<h1>HTML Road Map</h1>
+	<span class="dim"><p>by Emiliano Izquierdo</p></span>
+</hgroup>
+<article>
+
+	<div class="toc">
+<ul>
+<li><a href="#the-idea-style-agnostic-layout">The idea: style agnostic layout</a></li>
+<li><a href="#a-mini-introductory-tutorials">A mini introductory tutorials:</a></li>
+<li><a href="#list-of-things">List of things</a></li>
+<li><a href="#sectioning">Sectioning</a></li>
+<li><a href="#the-box-model-and-element-positioning">The box model and element positioning</a><ul>
+<li><a href="#the-css">The CSS</a></li>
+</ul>
+</li>
+<li><a href="#responsive-and-breakpoints">Responsive and breakpoints</a><ul>
+<li><a href="#mediaqueries">mediaqueri.es</a></li>
+<li><a href="#uikit">Uikit</a></li>
+<li><a href="#bulma">BULMA</a></li>
+<li><a href="#spectre">spectre</a></li>
+<li><a href="#ink">Ink</a></li>
+<li><a href="#sekeleton">Sekeleton</a></li>
+</ul>
+</li>
+<li><a href="#javascript-frameworks">Javascript frameworks</a></li>
+<li><a href="#giving-class-nemae-and-writting-css-selectors">Giving class nemae and writting CSS selectors</a></li>
+<li><a href="#using-relative-sizing">Using relative sizing</a></li>
+<li><a href="#the-clear-fix-solutions">THe clear fix solutions</a></li>
+<li><a href="#the-sticky-footer-problem">The sticky footer problem</a></li>
+<li><a href="#color">Color</a></li>
+<li><a href="#css-resets">CSS REsets</a></li>
+<li><a href="#drop-down-menus">Drop down menus</a></li>
+<li><a href="#service-worker">Service worker</a></li>
+</ul>
+</div>
+<p>In this article I will docuemnt a bit my journey to master HTML &amp; CSS, more specifically HTML5 and CSS3 or wahterver is now the latest version.</p>
+<p>During the journey I'll be reveiwing and referencing to the multiple resources one can find on the internet:</p>
+<ul>
+<li><a href="http://diveintohtml5.info/">Dive into html5</a></li>
+</ul>
+<p>The basic HTML document looks like this:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        ...
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        ...
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>However when I observe most of the source code around it mostly looks like:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">chartset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My creative title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;x-ua-compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;ie=edge&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Emiliano Izquierdo&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/style_screen.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;screen&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/style_print.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;print&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/vendor/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="c">&lt;!--Here we can put a lot more related to web browser support polyfill and such     --&gt;</span>
+        <span class="c">&lt;!--Here we can put a lot more related to social media etc.--&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>/
+├── index.html
+├── favicon.ico  
+│ 
+└── js/
+│   ├── main.js
+│   │ 
+│   └── vendor/
+│       └── jquery.min.js
+│ 
+└── css/
+    ├── screen.css
+    └── print.css
+</pre></div>
+
+
+<h3 id="the-idea-style-agnostic-layout">The idea: style agnostic layout</h3>
+<p>*<a href="https://www.smashingmagazine.com/2012/03/device-agnostic-approach-to-responsive-web-design/">from smashing magazine</a></p>
+<h2 id="a-mini-introductory-tutorials">A mini introductory tutorials:</h2>
+<ul>
+<li><a href="http://htmldog.com/guides/html/">HTML Dog</a></li>
+<li><a href="http://learn.shayhowe.com/">shay howe</a></li>
+</ul>
+<h2 id="list-of-things">List of things</h2>
+<ul>
+<li>headings</li>
+<li>paragraphs</li>
+<li>lists</li>
+<li>links</li>
+<li>images</li>
+<li>tables</li>
+<li>forms</li>
+<li>grouping tags</li>
+</ul>
+<h2 id="sectioning">Sectioning</h2>
+<p>A lot of the first things here can be found explained intomore detail in <a href="https://www.sitepoint.com/a-basic-html5-template/">here</a>
+Some important issues regarding developing for mobole first is the meta viewport declaration:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en/docs/Mozilla/Mobile/Viewport_meta_tag">Meta viewport (MDN)</a></li>
+<li>
+<p><a href="https://css-tricks.com/snippets/html/responsive-meta-tag/">Meta viewport (CSS-Tricks)</a></p>
+</li>
+<li>
+<p><a href="https://html.spec.whatwg.org/multipage/dom.html">Kinds of content (DOM)</a></p>
+</li>
+</ul>
+<h2 id="the-box-model-and-element-positioning">The box model and element positioning</h2>
+<p>https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/
+https://css-tricks.com/absolute-positioning-inside-relative-positioning/</p>
+<h3 id="the-css">The CSS</h3>
+<ul>
+<li><a href="http://learnlayout.com/toc.html">CSS layout (learnlayout)</a></li>
+<li><a href="https://bradfrost.github.io/this-is-responsive/patterns.html">layout patterns</a></li>
+<li><a href="https://css-tricks.com/use-cases-fixed-backgrounds-css/">fixed bg layout</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started">CSS (MDN)</a></li>
+<li><a href="https://css-tricks.com/css-modules-part-1-need/">CSS modules (CSS-tricks)</a></li>
+<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox (CSS-tricks)</a></li>
+<li><a href="https://philipwalton.github.io/solved-by-flexbox/">flexbox2</a></li>
+<li><a href="https://bocoup.com/weblog/dive-into-flexbox">flexbox3</a></li>
+<li><a href="http://learn.shayhowe.com/html-css/positioning-content/">positioning</a></li>
+<li><a href="http://alistapart.com/article/css-positioning-101">positionin2</a></li>
+<li><a href="https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/">positioning3</a></li>
+<li><a href="https://css-tricks.com/absolute-positioning-inside-relative-positioning/">positioning4</a> </li>
+<li><a href="http://www.barelyfitz.com/screencast/html-training/css/positioning/">positioning5</a></li>
+<li><a href="http://stackoverflow.com/questions/17976995/how-to-center-absolute-div-horizontally-using-css">positioning6</a></li>
+<li><a href="https://www.smashingmagazine.com/2007/05/css-float-theory-things-you-should-know/">float</a></li>
+<li><a href="http://learnlayout.com/display.html">display</a></li>
+<li><a href="https://css-tricks.com/almanac/properties/d/display/">display (CSS tricks)</a></li>
+<li><a href="https://www.w3.org/wiki/Inheritance_and_cascade">cascading and inheritance</a></li>
+<li><a href="https://www.w3.org/TR/CSS22/">CSS2 Specification</a></li>
+<li><a href="https://css-tricks.com/math-css-locks/">sizing</a></li>
+<li><a href="https://css-tricks.com/tale-width-max-width/"><code>width</code> and <code>max-witdh</code></a></li>
+<li><a href="https://jsfiddle.net/fndy8r14/">width and max-width2</a></li>
+<li><a href="https://css-tricks.com/the-css-overflow-property/">overflow</a></li>
+<li><a href="https://css-tricks.com/full-width-containers-limited-width-parents/">overflow2</a></li>
+<li><a href="https://css-tricks.com/almanac/properties/t/text-overflow/">text overflow</a></li>
+<li><a href="https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/">text overflow2</a></li>
+<li><a href="https://css-tricks.com/flexbox-truncated-text/">text-overflow3</a></li>
+<li><a href="https://css-tricks.com/css-font-size/">size measures</a></li>
+<li><a href="https://css-tricks.com/the-lengths-of-css/">size measures2</a></li>
+<li>[size- measures3])(https://j.eremy.net/confused-about-rem-and-em/)</li>
+<li><a href="https://css-tricks.com/comprehensive-guide-font-loading-strategies/">font-loading</a></li>
+<li><a href="http://mediaqueri.es/about/">responsive1</a></li>
+<li><a href="http://alistapart.com/article/responsive-web-design">responsive2</a></li>
+<li><a href="http://alistapart.com/article/fluidgrids">responsive3</a></li>
+<li><a href="http://unstoppablerobotninja.com/entry/fluid-images">responsive4</a></li>
+<li><a href="http://www.w3schools.com/css/css_rwd_intro.asp">responsive5</a></li>
+<li><a href="https://dev.opera.com/articles/an-introduction-to-meta-viewport-and-viewport/">VIEWPORT</a></li>
+<li><a href="https://www.sitepoint.com/solving-layout-problems-css-table-property/">DISPLAY TABLE</a></li>
+<li><a href="http://colintoh.com/blog/display-table-anti-hero">display table2</a></li>
+<li><a href="https://css-tricks.com/full-width-containers-limited-width-parents/">negative margins</a></li>
+<li>
+<p><a href="http://blog.w3conversions.com/2011/09/css3-spread-value-and-box-shadow-on-one-side-only/">shadows</a></p>
+</li>
+<li>
+<p><a href="https://css-tricks.com/the-css-box-model/">the box</a></p>
+<ul>
+<li><a href="https://css-tricks.com/almanac/properties/b/box-sizing/">sizing model: content-box,padding-box,border-box;</a></li>
+<li>color</li>
+<li>border</li>
+<li>margin</li>
+<li>padding</li>
+<li>width</li>
+<li>height</li>
+<li>min-height</li>
+<li>max-width</li>
+<li><a href="https://css-tricks.com/the-css-overflow-property/">overflow</a></li>
+<li>z-index</li>
+</ul>
+</li>
+<li>
+<p>the layout</p>
+<ul>
+<li>size units</li>
+<li>text layout</li>
+<li>float</li>
+<li>position<ul>
+<li>relative</li>
+<li>fixed</li>
+<li>absolute</li>
+<li>static</li>
+</ul>
+</li>
+<li><a href="http://www.w3schools.com/cssref/pr_class_display.asp">display</a><ul>
+<li>inline</li>
+<li>block</li>
+<li>flex</li>
+<li>grid</li>
+<li>table</li>
+<li>etc</li>
+</ul>
+</li>
+<li><a href="https://css-tricks.com/almanac/properties/b/box-sizing/">box-sizing</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><a href="http://www.jonathantneal.com/blog/simple-stacks-and-panels/">stacks and panels</a></p>
+</blockquote>
+<ul>
+<li>behaviour
+    -</li>
+</ul>
+<h2 id="responsive-and-breakpoints">Responsive and breakpoints</h2>
+<ul>
+<li><a href="https://developers.google.com/web/fundamentals/design-and-ui/responsive/">google dev</a></li>
+<li><a href="http://alistapart.com/article/redesign-with-css-shapes">A list apart</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries MDN</a></li>
+<li><a href="http://futurefriendlyweb.com/index.html">future friendly</a></li>
+</ul>
+<p>Breakpoints</p>
+<p>UIkit includes a number of responsive classes to style your content for different viewport widths. This table gives you an overview of the available breakpoints and the associated devices. You can adjust all breakpoints through the Customizer.</p>
+<h3 id="mediaqueries"><a href="http://mediaqueri.es/">mediaqueri.es</a></h3>
+<p>Smartphone
+320px
+Tablet
+768px
+Netbook
+1024px
+Desktop
+1600px</p>
+<h3 id="uikit">Uikit</h3>
+<ul>
+<li>Size    Breakpoints         Device</li>
+<li>Mini    up to 479px         Phones portrait</li>
+<li>Small   480px to 767px      Phones landscape</li>
+<li>Medium  768px to 959px      Tablets portrait</li>
+<li>Large   960px to 1199px     Desktops &amp; tablets landscape</li>
+<li>Xlarge  1200px and larger   Large Desktops</li>
+</ul>
+<h3 id="bulma">BULMA</h3>
+<p>Breakpoints</p>
+<p>Bulma has 4 breakpoints:</p>
+<ul>
+<li>mobile: up to 768px</li>
+<li>tablet: from 769px</li>
+<li>desktop: from 980px</li>
+<li>widescreen: from 1180px</li>
+<li>
+<p>Bulma uses 7 responsive mixins:</p>
+</li>
+<li>
+<p>=mobile
+until 768px</p>
+</li>
+<li>=tablet
+from 769px</li>
+<li>=tablet-only
+from 769px and until 979px</li>
+<li>=touch
+until 979px</li>
+<li>=desktop
+from 980px</li>
+<li>=desktop-only
+from 980px and until 1179px</li>
+<li>=widescreen
+from 1180px</li>
+</ul>
+<h3 id="spectre">spectre</h3>
+<p>For window width less than 480px, all columns will show as a single row.
+<em> col-xs-[1-12] apply to window width smaller than or equal to 480px.
+</em> col-sm-[1-12] apply to window width smaller than or equal to 600px.
+<em> col-md-[1-12] apply to window width smaller than or equal to 840px.
+</em> col-lg-[1-12] apply to window width smaller than or equal to 960px.</p>
+<h3 id="ink">Ink</h3>
+<p>Our default layout breakpoints are:</p>
+<p>tiny for screens widths up to 320px.
+small for screen widths between 321 and 640 pixels.
+medium for screen widths between 641 and 960 pixels.
+large for screen widths between 961 and 1260 pixels.
+xlarge for screen widths above 1261 pixels.</p>
+<h3 id="sekeleton">Sekeleton</h3>
+<div class="highlight"><pre><span></span><span class="c">/* Mobile first queries */</span>
+
+<span class="c">/* Larger than mobile */</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">400px</span><span class="o">)</span> <span class="p">{}</span>
+
+<span class="c">/* Larger than phablet */</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">550px</span><span class="o">)</span> <span class="p">{}</span>
+
+<span class="c">/* Larger than tablet */</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">750px</span><span class="o">)</span> <span class="p">{}</span>
+
+<span class="c">/* Larger than desktop */</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1000px</span><span class="o">)</span> <span class="p">{}</span>
+
+<span class="c">/* Larger than Desktop HD */</span>
+<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1200px</span><span class="o">)</span> <span class="p">{}</span>
+</pre></div>
+
+
+<h2 id="javascript-frameworks">Javascript frameworks</h2>
+<ul>
+<li><a href="http://colintoh.com/blog/getting-up-to-speed-with-angularjs-in-one-day">AngularJS</a></li>
+</ul>
+<h2 id="giving-class-nemae-and-writting-css-selectors">Giving class nemae and writting CSS selectors</h2>
+<ul>
+<li><a href="https://css-tricks.com/semantic-class-names/">CSS tricks</a></li>
+</ul>
+<h2 id="using-relative-sizing">Using relative sizing</h2>
+<ul>
+<li><a href="https://css-tricks.com/building-resizeable-components-relative-css-units/">csstricks</a></li>
+</ul>
+<h2 id="the-clear-fix-solutions">THe clear fix solutions</h2>
+<p>http://stackoverflow.com/questions/8554043/what-is-a-clearfix
+http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use/1633170#1633170
+http://nicolasgallagher.com/micro-clearfix-hack/
+http://cssmojo.com/the-very-latest-clearfix-reloaded/</p>
+<h2 id="the-sticky-footer-problem">The sticky footer problem</h2>
+<p>https://css-tricks.com/couple-takes-sticky-footer/</p>
+<h2 id="color">Color</h2>
+<p>http://htmlcolorcodes.com/tutorials/
+https://css-tricks.com/nerds-guide-color-web/</p>
+<h2 id="css-resets">CSS REsets</h2>
+<p><a href="https://perishablepress.com/a-killer-collection-of-global-css-reset-styles/">various</a>
+<a href="http://meyerweb.com/eric/tools/css/reset/index.html">meyers</a>
+<a href="http://nicolasgallagher.com/about-normalize-css/">normalize</a>
+<a href="http://html5doctor.com/html-5-reset-stylesheet/">html5doctor</a></p>
+<h2 id="drop-down-menus">Drop down menus</h2>
+<p>http://www.w3schools.com/howto/howto_js_dropdown.asp
+http://codepen.io/bradfrost/full/jtdvf
+http://codepen.io/bradfrost/full/sjiCv
+http://codepen.io/bradfrost/full/sHvaz</p>
+<h2 id="service-worker">Service worker</h2>
+<p><a href="https://css-tricks.com/serviceworker-for-offline/">1</a></p>
+
+	</article>
+
+			</main>
+			
+	<aside class="content hlike"> 
+				<ul class="semantic center">
+					<li style="display: inline-block;"><a href="../../tag/html.html" title="tag">#html</a></li>
+					<li style="display: inline-block;"><a href="../../tag/css.html" title="tag">#css</a></li>
+					<li style="display: inline-block;"><a href="../../tag/reference.html" title="tag">#reference</a></li>
+					<li style="display: inline-block;"><a href="../../tag/learning.html" title="tag">#learning</a></li>
+				</ul>
+	</aside>
+			
+
+
+		</div>
+		
+
+		<footer  class="content footer center hlike">
+			<p>sndbx.be &#169; <a href="#" title="Interested in learning more about this site?">2016</a> Emiliano Izquierdo <br> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a>
+		</footer>
+	</body>
+</html>

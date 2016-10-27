@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+	<title>sndbx.be is not science</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../../static/css/third-party/sanitize.css">
+	<link rel="stylesheet" href="../../static/css/content_responsive.css">
+	<link rel="stylesheet" href="../../static/css/solarized_dark.css">
+	<link rel="stylesheet" href="../../static/css/third-party/font-awesome.css">
+	<script src="../../static/js/third-party/jquery.min.js"></script>
+	<script src="../../static/js/main.js"></script>
+
+</head>
+
+	<body>
+		<div class="page">
+				<header class="content head hlike">
+					<nav  class="rigth">
+						<ul class="semantic">
+							<li class="h3like"  style="border-left: none;" ><a  class="active"  href="../../">index</a></li>
+							<li class="h3like" ><a  href="../../about/">about</a></li>
+						</ul>
+					</nav>
+				</header>
+				<aside class="content bar">
+				</aside>
+
+			<main class="content">
+	<aside class="meta hlike">
+				<ul class="semantic">
+
+				<li class="h2like">28.03.2013</li>
+
+				<li class="h3like"><a href="../../projects/" title="category">projects</a></li>
+				</ul>
+					
+	</aside><hgroup  class="toCenter" style="margin-bottom: 8rem;">
+	<h1>Shift correction by fitting a least-squares polynomial</h1>
+	<span class="dim"><p>by Emiliano Izquierdo</p></span>
+</hgroup>
+<article>
+		<blockquote><p>From the image data of fluorescent beads we can estimate the shift (z) depending on the x,y position, like-wise we can estimate the shift w, from its x,y,z position?</p></blockquote>
+
+	<h2 id="various-useful-concepts">Various useful concepts:</h2>
+<ul>
+<li>least squares</li>
+</ul>
+<h2 id="splines">Splines</h2>
+<p>In mathematics, a spline is a sufficiently smooth polynomial function that is piecewise-defined, and possesses a high degree of smoothness at the places where the polynomial pieces connect (which are known as knots).</p>
+<h2 id="matrix-decomposition">Matrix Decomposition</h2>
+<p>In the mathematical discipline of linear algebra, a matrix decomposition is a factorization of a matrix into a product of matrices. There are many different matrix decompositions; each finds use among a particular class of problems. They are used tosolve systems of linear equations</p>
+<h2 id="multivariate-polynomial">Multivariate polynomial</h2>
+<p>\begin{equation}
+    P(x,y) = a_{22}x^2y^2 + a_{21}x^2y + a_{12}xy^2 + a_{11}xy + a_{10}x + a_{01}y + a_{00}
+\end{equation}</p>
+<p>\begin{equation*}
+    P(x,y) = a_{n,n}x^ny^n + a_{n,n-1}x^ny^{n-1} + a_{n-1,n}x^{n-1}y^n + \ldots + a_{1,0}x + a_{0,1}y + a_{0,0}
+\end{equation*}</p>
+<p>Searching in internet I found a couple of aproximations to the problem of fitting a function of the type $z = f(x,y)$, like the following:</p>
+<h2 id="some-ramdom-pdfs">Some ramdom PDFs</h2>
+<ul>
+<li><a href="http://perso.ensg.ign.fr/mambap-fokouong/cours_lidar/doc_biblio/articles/georef/92.pdf">this thesis</a></li>
+<li><a href="http://www.geometrictools.com/Documentation/LeastSquaresFitting.pdf">this other script</a></li>
+<li><a href="http://www2.isikun.edu.tr/personel/akca/devrim/2005__ls3d_isprsj59_3.pdf">this article</a></li>
+</ul>
+<h2 id="some-discussion-threads">Some discussion threads</h2>
+<ul>
+<li><a href="http://www.mathworks.com/matlabcentral/newsreader/view_thread/76384">this discussion</a></li>
+<li><a href="http://www.mathworks.com/matlabcentral/newsreader/view_thread/134076">this thread</a></li>
+<li><a href="http://www.mathworks.com/matlabcentral/newsreader/view_thread/166596">This other thread2</a></li>
+</ul>
+<h2 id="from-matlab-central">From MATLAB central</h2>
+<ul>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/26336-two-dimensional-surface-fitting-program/content/fit2.m">here1</a> by using nlinfit</li>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/24062-3d-least-squares-polynomial-fit-in-x-and-y/content/least_square_polyfit_xyz.m">here2</a> by decomposition</li>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/22865-general-least-squares-regression">other script</a> Multi Dimensional Multivariable Least Squares Regression</li>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/13719-2d-weighted-polynomial-fitting-and-evaluation/content/polyfitweighted2/polyfitweighted2.m">the one Stefan uses</a> using decomposition</li>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/34918-multivariable-polynomial-regression">this 4th script</a> using regress</li>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/34765-polyfitn/content/PolyfitnTools/polyfitn.m">apparently the one i am going to use</a> also by QR decomposition</li>
+<li><a href="http://www.mathworks.com/matlabcentral/fileexchange/8998-surface-fitting-using-gridfit">and one also from the previous author</a></li>
+</ul>
+<h2 id="built-in-matlab-functions">Built-in MATLAB functions</h2>
+<ul>
+<li><a href="http://www.mathworks.nl/help/matlab/ref/triscatteredinterp.html">TriScatteredInterp</a></li>
+<li><a href="http://www.mathworks.nl/help/matlab/ref/griddata.html">griddata</a></li>
+<li><a href="http://www.mathworks.nl/help/curvefit/fit.html">fit</a><ul>
+<li>Visualization<ul>
+<li><a href="http://www.mathworks.nl/help/matlab/ref/quiver.html">quiver</a></li>
+<li><a href="https://www.mathworks.com/matlabcentral/fileexchange/28211-quiver3dpatch">quiver3D</a></li>
+<li><a href="http://www2.math.umd.edu/~immortal/241spring13/matlab/matlab3.html">examples</a></li>
+<li><a href="http://www.mathworks.nl/help/matlab/ref/slice.html">slice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="http://www.mathworks.nl/help/matlab/ref/interp2.html">interp2</a></li>
+<li><a href="http://www.mathworks.nl/help/matlab/ref/interp3.html">interp3</a></li>
+<li><a href="http://www.mathworks.nl/help/matlab/ref/interpn.html">interpn</a></li>
+<li><a href="http://www.mathworks.nl/help/curvefit/example-interactive-surface-fitting.html">using curve fitting toolbox</a></li>
+<li><a href="http://www.mathworks.nl/help/stats/nlinfit.html">nlinfit</a></li>
+<li><a href="http://www.mathworks.nl/help/matlab/math/interpolating-scattered-data.html">interp scattered data</a></li>
+</ul>
+<h2 id="other-random-scripts">Other random scripts</h2>
+<ul>
+<li><a href="http://www.ime.usp.br/~rt/mmfina/POLYFIT2.M">this m script</a> by using decomposition</li>
+</ul>
+<h2 id="some-material-to-understand-multivariate-polynomial-interpolation">Some material to understand multivariate polynomial interpolation</h2>
+<ul>
+<li><a href="https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/05Interpolation/">here</a></li>
+</ul>
+<h2 id="google-seaches">google seaches</h2>
+<ul>
+<li>matlab fit function f(x,y,z) </li>
+</ul>
+
+	</article>
+
+			</main>
+			
+	<aside class="content hlike"> 
+				<ul class="semantic center">
+					<li style="display: inline-block;"><a href="../../tag/biology.html" title="tag">#biology</a></li>
+					<li style="display: inline-block;"><a href="../../tag/research.html" title="tag">#research</a></li>
+					<li style="display: inline-block;"><a href="../../tag/hd-dna-fish.html" title="tag">#hd dna-fish</a></li>
+					<li style="display: inline-block;"><a href="../../tag/matlab.html" title="tag">#MATLAB</a></li>
+					<li style="display: inline-block;"><a href="../../tag/fitting.html" title="tag">#fitting</a></li>
+					<li style="display: inline-block;"><a href="../../tag/image-processing.html" title="tag">#image processing</a></li>
+				</ul>
+	</aside>
+			
+
+
+		</div>
+		
+
+		<footer  class="content footer center hlike">
+			<p>sndbx.be &#169; <a href="#" title="Interested in learning more about this site?">2016</a> Emiliano Izquierdo <br> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a>
+		</footer>
+	</body>
+</html>
