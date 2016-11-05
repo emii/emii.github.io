@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -6,12 +7,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" href="./static/css/third-party/sanitize.css">
-	<link rel="stylesheet" href="./static/css/content_responsive.css">
-	<link rel="stylesheet" href="./static/css/solarized_dark.css">
-	<link rel="stylesheet" href="./static/css/third-party/font-awesome.css">
-	<script src="./static/js/third-party/jquery.min.js"></script>
-	<script src="./static/js/main.js"></script>
+	<link rel="stylesheet" href="../static/css/third-party/sanitize.css">
+	<link rel="stylesheet" href="../static/css/content_responsive.css">
+	<link rel="stylesheet" href="../static/css/solarized_dark.css">
+	<link rel="stylesheet" href="../static/css/third-party/font-awesome.css">
+	<script src="../static/js/third-party/jquery.min.js"></script>
+	<script src="../static/js/main.js"></script>
 
 </head>
 
@@ -22,22 +23,33 @@
 						<ul class="semantic">
  
 									<li class="h2like dropdown" style="border-left: none;">
-									<a  class="active dropbtn"  href="./">index<span style="color: #d33682; font-size: 1rem; border: none;"> ▾</span></a>
+									<a  class="active dropbtn"  href="../">index<span style="color: #d33682; font-size: 1rem; border: none;"> ▾</span></a>
 										<ul class="semantic dropdown-content" id="index">
-											<li><a href="." title="latest">latest</a></li>
-											<li><a href="./categories.html" title="categories">categories</a></li>
-											<li><a href="./tags.html" title="tags">tags</a></li>
-											<li><a href="./archives.html" title="archive">archive</a></li>
+											<li><a href=".." title="latest">latest</a></li>
+											<li><a href="../categories.html" title="categories">categories</a></li>
+											<li><a href="../tags.html" title="tags">tags</a></li>
+											<li><a href="../archives.html" title="archive">archive</a></li>
 										</ul>
 									</li>
 								
 								<li class="h2like">
-								<a  href="./about/">about</a></li>
+								<a  href="../about/">about</a></li>
 								
 						</ul>
 					</nav>
 				</header>
 				<aside class="content menu-bar">
+	
+					<div class="wide center hlike">
+							<span class="menu-link h3like">@showcase ▾</span>
+							<nav id="menu" role="navigation">
+								<ul class="semantic">
+
+										<li class="h3like dim"><a href="../showcase/" id="permalink">showcase</a></li>
+
+								</ul>
+							</nav>
+					</div>
 				</aside>
 
 			<main class="content">
@@ -50,13 +62,13 @@
 
 				<li class="h2like">05.11.2016</li>
 
-				<li class="h2like"><a href="./showcase/" title="category">showcase</a></li>
+				<li class="h2like"><a href="../showcase/" title="category">showcase</a></li>
 				</ul>
 					
 	</aside>
 					
 			<section class="tofloatRight">
-				<h1 class="toCenter hlike"><a href="./showcase/pelican-example/" title="permalink to Pelican example">Pelican example</a></h1>
+				<h1 class="toCenter hlike"><a href="../showcase/pelican-example/" title="permalink to Pelican example">Pelican example</a></h1>
 				
 <p class="sidenote framed">With this markdown extension it is even possible to have classes for certain elements</p>
 <p><img alt="pelican" src="/static/img/pelican.jpg" /></p>
@@ -90,10 +102,10 @@
 	<p>	
 	<p>Browse posts by:</p>
 	<ul class="semantic browse">
-		<li><a href="." title="latest">Latest</a></li>, 
-		<li><a href="./categories.html" title="categories">Categories</a></li>, 
-		<li><a href="./tags.html" title="tags">Tags</a></li>, 
-		<li><a href="./archives.html" title="archive">Archive</a></li>
+		<li><a href=".." title="latest">Latest</a></li>, 
+		<li><a href="../categories.html" title="categories">Categories</a></li>, 
+		<li><a href="../tags.html" title="tags">Tags</a></li>, 
+		<li><a href="../archives.html" title="archive">Archive</a></li>
 	</ul></p>
 </aside>
 			

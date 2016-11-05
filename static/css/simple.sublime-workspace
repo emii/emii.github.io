@@ -1,0 +1,1034 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"magi",
+				"margin-top"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"sem",
+				"semantic"
+			],
+			[
+				"ma",
+				"mark\tTag"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"to",
+				"tofloatRight"
+			],
+			[
+				"co",
+				"content"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"sp",
+				"space-between"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"margni",
+				"margin-bottom"
+			],
+			[
+				"wr",
+				"flex-wrap"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"boxs",
+				"box-sizing"
+			],
+			[
+				"bo",
+				"border-right-style"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"mag",
+				"margin-left"
+			],
+			[
+				"si",
+				"sidenote"
+			],
+			[
+				"sideno",
+				"sidenote2"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"fra",
+				"framed"
+			],
+			[
+				"su",
+				"sup\tTag"
+			],
+			[
+				"paddin",
+				"padding"
+			],
+			[
+				"box-s",
+				"box-sizing"
+			],
+			[
+				"i",
+				"inline"
+			],
+			[
+				"fi",
+				"figure\tTag"
+			],
+			[
+				"coun",
+				"counter-reset"
+			],
+			[
+				"a",
+				"alt\tAttr"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"ove",
+				"overflow-y"
+			],
+			[
+				"e",
+				"em\tTag"
+			],
+			[
+				"t",
+				"text-align"
+			],
+			[
+				"o",
+				"ol\tTag"
+			],
+			[
+				"box-",
+				"box-sizing"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"tr",
+				"transform"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"b",
+				"bottom"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"h",
+				"h1\tTag"
+			],
+			[
+				"he",
+				"header\tTag"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"hex",
+				"hex_coords"
+			],
+			[
+				"angle",
+				"angle_shift"
+			],
+			[
+				"d",
+				"d"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"l",
+				"li\tTag"
+			],
+			[
+				"data",
+				"dataset"
+			],
+			[
+				"re",
+				"red"
+			],
+			[
+				"A",
+				"Array"
+			],
+			[
+				"al",
+				"alphabet"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"site",
+				"sites_num"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"abou",
+				"about-background"
+			],
+			[
+				"ra",
+				"random"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"fot",
+				"font-size"
+			],
+			[
+				"embl",
+				"embl_red"
+			],
+			[
+				"embl_",
+				"embl_green"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"im",
+				"imshow"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/emiliano/Streams/Webdev/sndbxbe_template/contents/articles/160912-HTML-road-map.md",
+			"settings":
+			{
+				"buffer_size": 10570,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/emiliano/Streams/Webdev/webdev_resources.md",
+			"settings":
+			{
+				"buffer_size": 4668,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/emiliano/Streams/Webdev/simple/entries_list.html",
+			"settings":
+			{
+				"buffer_size": 7968,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "simple_content_complete.css",
+			"settings":
+			{
+				"buffer_size": 841,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "content_responsive.css",
+			"settings":
+			{
+				"buffer_size": 11331,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/emiliano/Streams/Webdev/simple/content_complete.html",
+			"settings":
+			{
+				"buffer_size": 39602,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/emiliano/Streams/Webdev/emii.github.io/static/css/style.css",
+			"settings":
+			{
+				"buffer_size": 9125,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/emiliano/Streams/Webdev/new_layout/test/static/css/screen.css",
+			"settings":
+			{
+				"buffer_size": 12130,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/emiliano/Streams/Webdev/simple/simple.html",
+		"/Users/emiliano/Streams/Webdev/simple/content_complete.html",
+		"/Users/emiliano/Streams/Webdev/simple/static/css/entries_list.css",
+		"/Users/emiliano/Streams/Webdev/simple/static/css/content_responsive.css",
+		"/Users/emiliano/Streams/Webdev/simple/static/css/content.css",
+		"/Users/emiliano/Streams/Webdev/simple/simple_content.html",
+		"/Users/emiliano/Streams/Webdev/simple/entries_list.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/olijp/oli.css",
+		"/Users/emiliano/Streams/Webdev/simple/static/css/solarized_dark.css",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/Skeleton/css/skeleton.css",
+		"/Users/emiliano/Streams/Webdev/emii.github.io/static/css/solarized_dark.css",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/chrisCoyier/style.css",
+		"/Users/emiliano/Streams/Webdev/simple/static/css/simple.css",
+		"/Users/emiliano/Streams/Webdev/simple/static/css/simple2.css",
+		"/Users/emiliano/Desktop/Nature Comm_To Review/REV_EMILIANO_IZQUIERDO.md",
+		"/Users/emiliano/Streams/PhD_EMBL/Drosophila/05_Doc/review/Munjal_et_al_2016/supp/README.md",
+		"/Users/emiliano/Streams/Webdev/new_layout/output/index.html",
+		"/Users/emiliano/Streams/PhD_EMBL/Drosophila/workpath/fiji/concat_seq",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/experiment_base.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/base2.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/article.html",
+		"/Users/emiliano/Streams/Webdev/sndbxbe/contents/articles/130328-fit-2d-gaussian.md",
+		"/Users/emiliano/Streams/Webdev/sndbxbe_template/contents/articles/160912-HTML-road-map.md",
+		"/Users/emiliano/Streams/Webdev/base/style.css",
+		"/Users/emiliano/Streams/Webdev/base/index.html",
+		"/Users/emiliano/Desktop/selected rule.txt",
+		"/Users/emiliano/Streams/PhD_EMBL/Symposium2015/www/static/css/style.css",
+		"/Users/emiliano/Streams/PhD_EMBL/Symposium2015/www/index.html",
+		"/Users/emiliano/Streams/PhD_EMBL/Drosophila/01_Cloning/seq/RhoGEF2/AAB88816.fasta",
+		"/Users/emiliano/Streams/Webdev/labbook/index.html",
+		"/Users/emiliano/Streams/PhD_EMBL/Drosophila/07_Paper/Guide_01.md",
+		"/Users/emiliano/Streams/Mediadev/mac-decals/untitled.svg",
+		"/Users/emiliano/Streams/PhD_EMBL/Drosophila/workpath/fiji/Crop_sequence_to_minimum.txt",
+		"/Users/emiliano/Workpath/misc_scripts/fiji_macros/fiji macros",
+		"/Users/emiliano/Desktop/ids_cont_single.txt",
+		"/Users/emiliano/Streams/Webdev/webdev_resources.md",
+		"/Users/emiliano/Streams/Webdev/sndbxbe/theme/static/css/style.css",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/static/holy-grail.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/templates/base.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/static/css/screen.css",
+		"/Users/emiliano/Streams/Webdev/sndbxbe/contents/articles/160725-List_of_fly_stocks.md",
+		"/Users/emiliano/Streams/Webdev/sndbxbe/contents/articles/160727-cells-analysis.md",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/index.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/static/css/style.css",
+		"/Users/emiliano/Streams/Webdev/editable.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/static/css/grid.css",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/tufte-css/LICENSE",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/tufte-css/README.md",
+		"/Users/emiliano/Streams/Webdev/new_layout/test/base.html",
+		"/Users/emiliano/Streams/Webdev/new_layout/theme/tufte-css/tufte.css",
+		"/Users/emiliano/Streams/Org/nyr.md",
+		"/Users/emiliano/Streams/Org/Projects_Draft.md",
+		"/Users/emiliano/Streams/Webdev/embl_logo_d3/shift_hex_final_pulses.html",
+		"/Users/emiliano/Streams/PhD_EMBL/Drosophila/02_Flywork/List_of_fly_stocks",
+		"/Users/emiliano/Desktop/Trip itinerary",
+		"/Users/emiliano/Downloads/cvstrap/css/style.css",
+		"/Users/emiliano/Downloads/cvstrap/index.html",
+		"/Users/emiliano/Streams/Webdev/sndbxbe/contents/articles/131119-progess-seminar.md",
+		"/Users/emiliano/Desktop/embl_logo_d3/shift_hex.html",
+		"/Users/emiliano/Streams/Org/lista para viaje",
+		"/Users/emiliano/Desktop/embl_logo_d3/shift_hex_final_pulses.html",
+		"/Users/emiliano/Desktop/embl_logo_d3/embl_logo.html",
+		"/Users/emiliano/Desktop/abstract.md",
+		"/Users/emiliano/Desktop/embl_logo_d3/shift_hex_final_center.html",
+		"/Users/emiliano/Streams/Webdev/testdir/Three.js_Metaballs.html",
+		"/Users/emiliano/Streams/Webdev/sndbxbe/contents/data/testD3_2.html",
+		"/Users/emiliano/Streams/Webdev/treehouse_icon.svg",
+		"/Users/emiliano/Downloads/1454084750345-pgbmos98ua211tro.json",
+		"/Users/emiliano/Downloads/vertex_model-master/Vertex.m",
+		"/Users/emiliano/Downloads/scholar-20150915063219111NoD3gJ.enw",
+		"/Users/emiliano/Downloads/gr2.sml",
+		"/Users/emiliano/Downloads/flybase (1).ris",
+		"/Users/emiliano/Workpath/README",
+		"/Users/emiliano/Desktop/cibnMCH_local/index_lists.txt",
+		"/Users/emiliano/Streams/Mediadev/text/Food",
+		"/Users/emiliano/Streams/PhD_EMBL/Learning/Calculus/thesarus.txt",
+		"/Users/emiliano/Streams/PhD_EMBL/Drosophila/05_Doc/template_html.html",
+		"/Users/emiliano/Desktop/The world of things living, like the world of thin",
+		"/Users/emiliano/Desktop/131014-EMBL.txt",
+		"/Users/emiliano/Streams/Mediadev/text/von_Arnim_letter",
+		"/Users/emiliano/Streams/Mediadev/text/F•ck the itinerary",
+		"/Users/emiliano/Streams/Webdev/sndbxbe/index.html",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Bernado.html",
+		"/Users/emiliano/Projects/Drosophila/doc/writtings/TAC_report_1.md",
+		"/Users/emiliano/Projects/Drosophila/doc/writtings/intro_extra.md",
+		"/Users/emiliano/Projects/Drosophila/doc/writtings/Abstract.md",
+		"/Users/emiliano/Projects/Drosophila/doc/TAC_EI/TAC_report.md",
+		"/Users/emiliano/Desktop/screenplay.txt",
+		"/Users/emiliano/Desktop/The question htat I want to answer",
+		"/Users/emiliano/Desktop/RhoGEF(-ph)/Line30_1_MAX_hist.txt",
+		"/Users/emiliano/Desktop/RhoGEF(-ph)/Line13_1_MAX_hist.txt",
+		"/Users/emiliano/Desktop/RhoGEF(-ph)/Line12_2_MAX_hist.txt",
+		"/Users/emiliano/Desktop/local/global/deltaT=26s",
+		"/Users/emiliano/Projects/Drosophila/doc/writtings/How is it that the long range synchronization of b",
+		"/Users/emiliano/Projects/Drosophila/seq/RhoGEF2/RhoGEF2_w:o_PH-Cry2-mCh/RhoGEF2_w:o_PH-Cry2-mCh.nucl",
+		"/Users/emiliano/Projects/Symposium2015/www/transportation/css/style.css",
+		"/Users/emiliano/Projects/Symposium2015/www/transportation/index_min.html",
+		"/Users/emiliano/Projects/Symposium2015/www/index.html",
+		"/Users/emiliano/Projects/Symposium2015/www/transportation/index.html",
+		"/Users/emiliano/Projects/sndbxbe/contents/articles/151012-new twst.md",
+		"/Users/emiliano/Projects/sndbxbe/conf.py",
+		"/Users/emiliano/Projects/sndbxbe/theme/templates/base.html",
+		"/Users/emiliano/Projects/sndbxbe/theme/templates/base_category.html",
+		"/Users/emiliano/Projects/sndbxbe/output/index.html",
+		"/Users/emiliano/Desktop/TMP.matlab",
+		"/Users/emiliano/Projects/Symposium2015/www/static/js/main.js",
+		"/Users/emiliano/Projects/Drosophila/doc/Abstract.mdown",
+		"/Users/emiliano/Projects/Symposium2015/www/static/css/style.css",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Smidler.html",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Helms.html",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Tachibana-Konwalsky.html",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Martinez-Arias.html",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Gamble.html",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Norden.html",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Fraser.html",
+		"/Users/emiliano/Projects/Drosophila/doc/writtings/Abstract.mdown",
+		"/Users/emiliano/Projects/Symposium2015/Alfonso Martínez Arias_transcript.md",
+		"/Users/emiliano/Projects/Drosophila/doc/writtings/Abstract.txt",
+		"/Users/emiliano/Desktop/tmp.txt",
+		"/Users/emiliano/Projects/Drosophila/workpath/fiji/lsm2tif2.txt",
+		"/Users/emiliano/Projects/Drosophila/workpath/fiji/lsm2tif.txt",
+		"/Users/emiliano/Projects/Drosophila/doc/writtings/Some interesting fellows:",
+		"/Users/emiliano/Projects/Symposium2015/www/speakers/Levine.html",
+		"/Users/emiliano/Projects/Drosophila/workpath/fiji/stack_PIV.txt",
+		"/Users/emiliano/Projects/Drosophila/doc/slides/Individuals in the collective.md",
+		"/Users/emiliano/Projects/Drosophila/workpath/fiji/Crop_sequence_to_minimum.txt",
+		"/Users/emiliano/Projects/Drosophila/workpath/fiji/crop_lsm2tif.txt",
+		"/Users/emiliano/Projects/Drosophila/workpath/fiji/expot.txt"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tag",
+			"<div",
+			"<div>",
+			"#b4d5fe",
+			"table",
+			"aside",
+			".callout",
+			"#fffff8",
+			"weather",
+			"wether",
+			"hero",
+			";\n",
+			"containder",
+			"lin",
+			"lins",
+			"td",
+			"th",
+			"thead",
+			"section",
+			"callout",
+			"pre",
+			"#fffff8",
+			"\"></",
+			"El",
+			"L",
+			"secci",
+			"</td>",
+			"<td>",
+			"</li>",
+			"<li>",
+			"m",
+			"(Short talk) \\d+",
+			"(Lecture) \\d+",
+			"(Lecture) \\d",
+			"(Lecture)\\w ",
+			"(Lecture)\\w\\d ",
+			"lecture",
+			"prog",
+			"speak",
+			"cont",
+			"conte",
+			"mutations",
+			"array",
+			".conten",
+			"blank",
+			"foo",
+			"}\n",
+			"td",
+			"arr",
+			"hide",
+			"show",
+			"home",
+			"tit",
+			"logo",
+			"title-",
+			"logo",
+			"con",
+			"header-",
+			"header",
+			"=\"/",
+			"fafafa",
+			"font-f",
+			"pre",
+			"code"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"#8E44AD",
+			"#fafafa",
+			"#888",
+			"</td></tr>",
+			"<tr><td>",
+			"</td>",
+			"<td>",
+			"$1"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/emiliano/Streams/Webdev/sndbxbe_template/contents/articles/160912-HTML-road-map.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10570,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								131,
+								131
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 6,
+								"count": 766,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/emiliano/Streams/Webdev/webdev_resources.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								991,
+								985
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 130,
+								"count": 308,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/emiliano/Streams/Webdev/simple/entries_list.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7968,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6060,
+								6060
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 2443,
+								"count": 526,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2485.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "simple_content_complete.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 841,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "css"
+							},
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "content_responsive.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "css"
+							},
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 11.0,
+						"translation.y": 532.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/emiliano/Streams/Webdev/simple/content_complete.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 39602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								148,
+								148
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 1,
+								"count": 2806,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/emiliano/Streams/Webdev/emii.github.io/static/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "css"
+							},
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/emiliano/Streams/Webdev/new_layout/test/static/css/screen.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10493,
+								10079
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "css"
+							},
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "/Users/emiliano/Streams/Webdev/simple/simple_content.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Streams/PhD_EMBL/Drosophila/02_Flywork/List_of_fly_stocks.txt"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
