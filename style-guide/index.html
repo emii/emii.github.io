@@ -1,0 +1,656 @@
+<!doctype html>
+<html>
+<head>
+	<title>sndbx.be is not science</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="icon" type="image/png" href="../../static/img/favicon.png" />
+	<link rel="stylesheet" href="../../static/css/third-party/sanitize.css">
+	<link rel="stylesheet" href="../../static/css/content_responsive.css">
+	<link rel="stylesheet" href="../../static/css/solarized_dark.css">
+	<link rel="stylesheet" href="../../static/css/third-party/font-awesome.css">
+	<script src="../../static/js/third-party/jquery.min.js"></script>
+	<script src="../../static/js/main.js"></script>
+<!-- 	<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script> -->
+
+</head>
+
+	<body>
+		<div class="page">
+				<div  class="masthead" style="position: fixed; top: 0; left:0; width: 100%; height: 5px; z-index: 1;"></div>
+				<header>
+				<nav  class="head content hlike center">
+					
+	<!-- 		
+							<div style="width: 47%; display: inline-block; text-align: left;">
+							
+  								<object type="image/svg+xml" data="http://localhost:8000/static/img/sndbx_logo.svg" class="logo" style="width: 5rem; height: 5rem; display: inline-block; padding: 0 0.6rem; margin:1em auto; vertical-align: middle;">
+  							
+								</object>
+							</div> -->
+		
+						<ul class="semantic" style="display: inline-block;">
+
+ 
+									<li class="h2like dropdown" style="border-left: none;">
+									<a  class="active dropbtn"  href="../../">index<span style="color: #d33682; font-size: 1rem; border: none;"> +</span></a>
+										<ul class="semantic dropdown-content" id="index">
+											<li><a href="../.." title="latest">latest</a></li>
+											<li><a href="../../categories.html" title="categories">categories</a></li>
+											<li><a href="../../tags.html" title="tags">tags</a></li>
+											<li><a href="../../archives.html" title="archive">archive</a></li>
+										</ul>
+									</li>
+								
+								<li class="h2like">
+								<a  href="../../about/">about</a></li>
+								
+						</ul>
+					</nav>
+				</header>
+				<aside class="content menu-bar">
+				</aside>
+
+	
+			<main class="content">
+<article>
+	
+	<aside class="meta">
+				<ul class="semantic">
+				<li class="hlike"><a href="../../leftovers/" title="category"><b>leftovers</b></a></li>
+				<!-- <li>written on Friday, September 29, 2017</li> -->
+				<li>2017 Sep 29</li>
+				</ul>
+					
+	</aside>
+<!-- <aside class="meta hlike social ">
+			<ul class="semantic ">
+						<li><a href="#"><i class="fa fa-twitter-square fa-2x"></i> </li></a>
+						<li><a href="#"><i class="fa fa-facebook-square fa-2x"></i> </li></a>
+						<li><a href="#"><i class="fa fa-pinterest-square fa-2x"></i> </li></a>
+			</ul>
+</aside> -->
+	
+		<hgroup  class="toCenter">
+
+		<h1>Style guide ...</h1>
+
+		<!--<span class="dim"><p>by Emiliano Izquierdo</p></span>-->
+		<!--<<div class="bottom-bar wide"></div>-->
+	</hgroup>
+	
+
+
+	<!--aside class="toCenter">&mdash;written on Saturday, October 22, 2017</aside-->
+
+<blockquote cite="http://www.harpersbazaar.com/fashion/designers/a2818/50-famous-fashion-quotes-part-two/"><p class="hlike h4like"><em>Style</em> wasn't what you wore someplace anymore; it was the whole reason for going.</p>
+<footer><p><i> - Andy Warhol</i></p></footer></blockquote>
+
+<p>This is a condensed guide for the styling, semantics, and flow of elements within this website. In a sense I try to orient with the help of the <a href="https://developers.whatwg.org/">WHATWG specification</a> for the different <a href="https://html.spec.whatwg.org/dev/dom.html#kinds-of-content">kinds of content</a>. One of the motivations is mainly to be used as a personal reference; a bit is inspired by other <a href="http://oli.jp/2011/style-guide/">style guides</a> around. </p>
+<p><img alt="leo" src="/static/img/source.gif" /></p>
+<h2>The layout, scaffolding and breakpoints</h2>
+
+<div class="bottom-bar"></div>
+
+<aside class="sidenote">
+<p>Broadly, the different kinds of content are:
+<ul>
+<li><a href="https://html.spec.whatwg.org/dev/dom.html#metadata-content">Metadata</li>
+<li><a href="https://html.spec.whatwg.org/dev/dom.html#flow-content">Flow</a></li>
+<li><a href="https://html.spec.whatwg.org/dev/dom.html#sectioning-content">Sectioning</a></li>
+<li><a href="https://html.spec.whatwg.org/dev/dom.html#heading-content">Heading</a></li>
+<li><a href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">Phrasing</a></li>
+<li><a href="https://html.spec.whatwg.org/dev/dom.html#embedded-content-2">Embedded</a></li>
+<li><a href="https://html.spec.whatwg.org/dev/dom.html#interactive-content">Interactive</a></li>
+</ul>
+</p>
+</aside>
+
+<blockquote>
+<p><em>Because HTML conveys meaning, rather than presentation, the same page can also be used by a small browser on a mobile phone, without any change to the page. Instead of headings being in large letters as on the desktop, for example, the browser on the mobile phone might use the same size text for the whole page, but with the headings in bold. [&hellip;]</em><footer><p><i><a href="https://html.spec.whatwg.org/dev/dom.html#elements"> - WHATWG</a></i></p></footer></p>
+</blockquote>
+<h3 id="the-layout">The layout</h3>
+<aside class="meta framed-border"><p>This is a metadata marginal note<pre><code>width:11rem;
+margin-left:-11.6rem;</code></pre></p>
+</aside>
+
+<aside class="sidenote framed-border"><p>This is a sidenote marginal note<pre><code>width:18rem;
+margin-rigth:-18.5rem;</code></pre></p></aside>
+
+<p class="framed-border">The layout is composed of one main central column of <code>54.85rem</code>. It maintains a left margin of <code>16rem</code> and a right padding of <code>18.6rem</code>. The measures used here are based on rems (<a href="https://j.eremy.net/confused-about-rem-and-em/">confused about rem and em?</a>), and allows for the easy rescaling of the whole page by changing a single parameter, namely the font size of the root element <code>&lt;html&gt;</code>. This configuration allows to have room for marginalia; <em>metadata</em> to the left and <em>sidenotes</em> right.</p>
+<p class="wide framed-gray">This is a wide container that spans the whole width of the <code>content</code> container: <code>margin-rigth: -18rem</code></p>
+<p class="sans"><strong>These four elements are dynamic, and respond to a change in the viewport or the screen width of the divice. </strong></p>
+<p>The breakpoints are the following:</p>
+<ul>
+<li>732: main changes for appearance, from centered to main and sidenote</li>
+<li>769: only a change in font size</li>
+<li>1292: change content margin, and place meta to the left</li>
+<li>1600: only centering the main content</li>
+</ul>
+<!--Table of Contents end-->
+
+<!--Headings-->
+
+<h2>Phrasing content</h2>
+
+<div class="bottom-bar wide"></div>
+
+<p class="wide mono">In this section I just kind of ennumerate the prasing elements that could possibly appear in a text, next to it, its corresponding code.</p>
+
+<div class="wide">
+<div class="Grid Grid--gutters Grid--full large-Grid--fit">
+<div class="Grid-cell">
+
+    <h3>The input</h3>
+<div class="framed">
+    <p>I would like to be <b>bold</b> and <i>italize</i> the <strong>strong</strong> importance of creating a guide with <em>emphasis</em> on the style by <ins>inserting</ins> the <code>code</code> that <dfn>defines</dfn> the <span>span</span> of the phrasing elements. With some of  these <mark>remarks</mark>  breaking the flow<br>for this I would like to <q>quote</q> a friend and <cite>cite</cite> some references[^1]. No need of <small>small</small> talk. Althoguht this can be very <var>$variable</var> or <u>unarticulated</u>, with<sup>ups</sup> and<sub>downs</sub>, the aim is to <abbr title="abbreviation">abbr.</abbr> a <a href="#">link</a> between the <kbd>input</kbd> content and the message, sometimes even if this means self-<del>censorship</del> [^1]: [This reference](#)</p>
+</div>
+</div>
+
+<div class="Grid-cell">
+
+<h3>The code</h3>
+<pre><code>&#x3C;p&#x3E;I would like to be &#x3C;b&#x3E;bold&#x3C;/b&#x3E; and &#x3C;i&#x3E;italize&#x3C;/i&#x3E; the &#x3C;strong&#x3E;strong&#x3C;/strong&#x3E; importance of creating a guide with &#x3C;em&#x3E;emphasis&#x3C;/em&#x3E; on the style by &#x3C;ins&#x3E;inserting&#x3C;/ins&#x3E; the &#x3C;code&#x3E;code&#x3C;/code&#x3E; that &#x3C;dfn&#x3E;defines&#x3C;/dfn&#x3E; the &#x3C;span&#x3E;span&#x3C;/span&#x3E; of the phrasing elements. With some of  these &#x3C;mark&#x3E;remarks&#x3C;/mark&#x3E;  breaking the flow&#x3C;br&#x3E;for this I would like to &#x3C;q&#x3E;quote&#x3C;/q&#x3E; a friend and &#x3C;cite&#x3E;cite&#x3C;/cite&#x3E; some references[^1]. No need of &#x3C;small&#x3E;small&#x3C;/small&#x3E; talk. Althoguht this can be very &#x3C;var&#x3E;$variable&#x3C;/var&#x3E; or &#x3C;u&#x3E;unarticulated&#x3C;/u&#x3E;, with&#x3C;sup&#x3E;ups&#x3C;/sup&#x3E; and&#x3C;sub&#x3E;downs&#x3C;/sub&#x3E;, the aim is to &#x3C;abbr&#x3E;abbr.&#x3C;/abbr&#x3E; a &#x3C;a href=&#x22;#&#x22;&#x3E;link&#x3C;/a&#x3E; between the &#x3C;kbd&#x3E;input&#x3C;/kbd&#x3E; content and the message, sometimes even if this means self-&#x3C;del&#x3E;censorship&#x3C;/p&#x3E;</code>
+</pre>
+</div>
+
+<p></div>
+one of other things to consider is the font properties like size, camily and color, as well as position and orientation 
+</div></p>
+<h3>Framed content</h3>
+
+<div class="bottom-bar"></div>
+
+<aside class="sidenote"><pre><code> &lt;p class="framed"&gt; &lt;/p&gt; </code></pre></aside>
+
+<p class="framed">In this article you can find a personal guide for the styling of my website</p>
+
+<aside class="sidenote"><pre><code> 
+&lt;div class="framed"&gt; 
+&lt;p&gt; 
+&lt;/p&gt; 
+&lt;/div&gt;
+
+</code></pre></aside>
+
+<div class="framed"><h4>With a heading</h4><p>which is different from this paragraph (notice the trailing line break)</p><p>that separaes this paragraph from the bottom</p></div>
+
+<p class="framed hlike h2like serif">Hä? <a href="https://www.w3.org/html/wg/wiki/PoeticSemantics">poetic semantics</a>?</p>
+
+<h1>Heading 1 <b>bold</b> and <i>italic</i></h1>
+
+<div class="bottom-bar"></div>
+
+<p>Some text
+<h2>Heading 2</h2>
+<h2 class="framed">Also framed</h2></p>
+<div class="bottom-bar wide"></div>
+
+<aside>&mdash;written on Saturday, October 22, 2017</aside>
+
+<aside class="meta"><p>The content is enclosed in this sandbox!, this element is enclosed in <pre><code>width:10rem;
+margin-left:-10.6rem;</code></pre></p></aside>
+
+<!--Table of Contents-->
+
+<nav class="toc sidenote">
+    <ol>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#setup">Assumptions <abbr title="and">&amp;</abbr> Setup</a></li>
+        <li><a href="#block">Class-based block styles</a>
+            <ol>
+                <li><a href="#callouts">Callouts</a></li>
+                <li><a href="#code">Code</a></li>
+            </ol>
+        </li>
+        <li><a href="#default-styles">Default element styles</a>
+            <ol>
+            <li><a href="#headings">Headings</a></li>
+            <li><a href="#table">Tables</a></li>
+            </ol>
+        </li>
+    </ol>
+</nav>
+
+<p style="margin-top: 2.2rem;">This is content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</p>
+
+<aside><p>This is aside wrapped in paragraph tags</p></aside>
+
+<p>This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</p>
+
+<h1>Heading 1 <b>bold</b> and <em>italic</em></h1>
+
+<p>This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</p>
+
+<div class="flexible">
+<p class="framed flexable f50 fit">
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</p>
+<div class="framed flexable f50 fit">
+<ul>
+<li>Item 1</li>
+<li>
+Item 2
+<ul>
+<li>Item 2.1</li>
+<li>Item 2.2</li>
+</ul>
+</li>
+<li>Item 3</li>
+</ul>
+<p>Bullets appear just right at the border, thereby aligning closer to the main content</p>
+</div>
+
+</div>
+
+<ul class="semantic flexible">
+<li class="flexable f100 fit">
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</li>
+<li class="flexable f100 fit">
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</li>
+<li class="flexable f100 fit">
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</li>
+
+</ul>
+
+<h2 class="framed">Heading2 <b>bold</b> and <em>italic</em></h2>
+
+<p>This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</p>
+
+<h3>Heading3 <b>bold</b> and <em>italic</em></h3>
+
+<p>This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</p>
+
+<h4>Heading4 <b>bold</b> and <em>italic</em></h4>
+
+<p>This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.</p>
+
+<div class="highlight"><pre><span></span>
+</pre></div>
+
+
+<p><!--Headings end--> 
+<!--Lists -->
+<h3>Lists Example</h3>
+<hr>
+<p>Both ordered and unordered list are seen below.</p>
+<ul>
+<li>Item 1</li>
+<li>
+Item 2
+<ul>
+<li>Item 2.1</li>
+<li>Item 2.2</li>
+</ul>
+</li>
+<li>Item 3</li>
+</ul>
+
+<ol>
+<li>Item 1</li>
+<li>
+Item 2
+<ol>
+<li>Item 2.1</li>
+<li>Item 2.2</li>
+</ol>
+</li>
+<li>Item 3</li>
+</ol>
+
+<h3>Definition lists</h3>
+
+<p><hr>
+<dl>
+<dt>Albert</dt>
+<dd>A Rhesus monkey who, riding on a V2 rocket to over 63 km on June 11, 1948, became the first monkey astronaut</dd>
+<dt>Albert II</dt>
+<dd>Attained the altitude of 134 km on June 14, 1949, becoming USA’s first space monkey</dd>
+<dd>The Kármán line of 100 km is considered the beginning of space</dd>
+</dl></p>
+<h2>Tables</h2>
+
+<p><hr>
+<div class="wide" style="overflow-y: auto;">
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Age</th>
+<th>Sex</th>
+<th>Location</th>
+<th>Name</th>
+<th>Age</th>
+<th>Sex</th>
+<th>Location</th>
+<th>Name</th>
+<th>Age</th>
+<th>Sex</th>
+<th>Location</th>
+<th>Name</th>
+<th>Age</th>
+<th>Sex</th>
+<th>Location</th></p>
+<p></tr>
+</thead>
+<tbody>
+<tr>
+<td>Dave Gamache</td>
+<td>26</td>
+<td>Male</td>
+<td>San Francisco</td>
+<td>Dave Gamache</td>
+<td>26</td>
+<td>Male</td>
+<td>San Francisco</td>
+<td>Dave Gamache</td>
+<td>26</td>
+<td>Male</td>
+<td>San Francisco</td>
+<td>Dave Gamache</td>
+<td>26</td>
+<td>Male</td>
+<td>San Francisco</td>
+</tr>
+<tr>
+<td>Dwayne Johnson</td>
+<td>42</td>
+<td>Male</td>
+<td>Hayward</td>
+<td>Dwayne Johnson</td>
+<td>42</td>
+<td>Male</td>
+<td>Hayward</td>
+<td>Dwayne Johnson</td>
+<td>42</td>
+<td>Male</td>
+<td>Hayward</td>
+<td>Dwayne Johnson</td>
+<td>42</td>
+<td>Male</td>
+<td>Hayward</td>
+</tr>
+</tbody>
+</table>
+</div></p>
+<h3>Blockquotes and Epigraphs</h3>
+
+<blockquote class="framed" cite="#">
+<q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nulla risus, dictum at dolor nec, pretium suscipit leo. Aliquam dapibus vehicula nisi id facilisis. Nunc mattis sed est sed iaculis. Phasellus laoreet, urna ut condimentum mattis, turpis mauris vehicula justo, a molestie tellus ligula id tortor. Cras non massa justo. Mauris sed libero a leo tincidunt bibendum a vitae leo. Donec fermentum est ut vestibulum volutpat. Ut efficitur vehicula condimentum. Aenean quis porta enim.</q>
+<footer><p>"Lorem ipsum", <cite>"lorem ipsum"</cite> ipsum</p></footer>
+</blockquote>
+
+<blockquote cite="#">
+<q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nulla risus, dictum at dolor nec, pretium suscipit leo. Aliquam dapibus vehicula nisi id facilisis. Nunc mattis sed est sed iaculis. Phasellus laoreet, urna ut condimentum mattis, turpis mauris vehicula justo, a molestie tellus ligula id tortor. Cras non massa justo. Mauris sed libero a leo tincidunt bibendum a vitae leo. Donec fermentum est ut vestibulum volutpat. Ut efficitur vehicula condimentum. Aenean quis porta enim.</q>
+<footer><p>"Lorem ipsum", <cite>"lorem ipsum"</cite> ipsum</p></footer>
+<div class="hzline"></div>
+</blockquote>
+
+<h2 id="figures">Figures</h2>
+
+<ol class="framed sidenote">
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#setup">Assumptions <abbr title="and">&amp;</abbr> Setup</a></li>
+<li><a href="#block">Class-based block styles</a>
+<ol>
+<li><a href="#callouts">Callouts</a></li>
+<li><a href="#code">Code</a></li>
+</ol>
+</li>
+<li><a href="#default-styles">Default element styles</a>
+<ol>
+<li><a href="#headings">Headings</a></li>
+<li><a href="#table">Tables</a></li>
+</ol>
+</li>
+</ol>
+
+<p>Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.</p>
+
+<p>Figures should try to use the <code>figure</code> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like above</p>
+
+<figure class="framed">
+<figcaption>
+<p>From Edward Tufte, <cite><em>Visual Display of Quantitative Information</em></cite>, page 92.
+Figures should try to use the <code>figure</code> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like this one.</p>
+</figcaption>
+<img id="Figure 1" src="/static/img/exports-imports.png" alt="First example figure" />
+</figure>
+
+<figure>
+<img src="/static/img/rhino.png" alt="Image of a Rhinoceros"/>
+<figcaption class="fig-counter framed">
+<p>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.</p>
+</figcaption>
+</figure>
+
+<h3 class="framed">Framed <mark>content</mark></h3>
+
+<p class="framed">Kitsch irony street art iceland gluten-free copper mug selvage, organic distillery plaid selfies pabst locavore. Glossier gluten-free locavore lumbersexual, health goth yr brunch ramps messenger bag migas photo booth prism cliche. Food truck YOLO pabst, etsy bushwick subway tile hashtag direct trade. 8-bit dreamcatcher migas heirloom, kombucha hoodie intelligentsia gochujang. Selfies deep v chicharrones, fashion axe mlkshk chia sriracha try-hard literally. Portland pok pok mixtape iPhone letterpress. Jianbing YOLO you probably haven't heard of them, marfa waistcoat kitsch flannel gluten-free pok pok franzen.</p>
+
+<div class="wide framed">
+<h3>Framed content</h3>
+<p>Kitsch irony street art iceland gluten-free copper mug selvage, organic distillery plaid selfies pabst locavore. Glossier gluten-free locavore lumbersexual, health goth yr brunch ramps messenger bag migas photo booth prism cliche. Food truck YOLO pabst, etsy bushwick subway tile hashtag direct trade. 8-bit dreamcatcher migas heirloom, kombucha hoodie intelligentsia gochujang. Selfies deep v chicharrones, fashion axe mlkshk chia sriracha try-hard literally. Portland pok pok mixtape iPhone letterpress. Jianbing YOLO you probably haven't heard of them, marfa waistcoat kitsch flannel gluten-free pok pok franzen.</p>
+</div>
+
+<p>If you need a full-width figure, give it the <code>fullwidth</code> class. Make sure that’s inside an <code>article</code>, and it will take up (almost) the full width of the screen. This approach is demonstrated below using Edward Tufte’s English translation of the Napoleon’s March data visualization. From <em>Beautiful Evidence</em>, page 122-124.</p>
+
+<figure>
+<img src="static/img/napoleons-march.png"/>
+</figure>
+
+<h3>Standalone images</h3>
+
+<p>A wide one</p>
+
+<div class="wide">
+<img src="static/img/paul-gauguin.jpg"/>
+</div>
+
+<p>and a narrow one</p>
+
+<div class="framed"><img src="/static/img/moby2.jpg"/></div>
+
+<h3>Phrasing styles <abbr title="and">&amp;</abbr> sundry items <a class="permalink" href="#phrasing">#</a></h3>
+
+<ul>
+<li><code>.amp</code> or <code>&lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt;</code> — <a href="http://simplebits.com/notebook/2008/08/14/ampersands-2/" title="SimpleBits  / Use the Best Available Ampersand">@simplebits ampersand</a> (<abbr title="and">&amp;</abbr>) (for headings; I use <code>&lt;abbr&gt;</code> ;-)</li>
+<li><code>.semantic-list</code> — this suppresses bullets/numbering (eg if you want a list without them)</li>
+</ul>
+
+<h4>Default phrasing styles <a class="permalink" href="#phrasing-default">#</a></h4>
+
+<p>First <a href="#">this is a link</a>. Going alphabetically we have <abbr title="abbr">an abbreviation</abbr>, then <b>the <code>&lt;b&gt;</code> element</b>, followed by a line break<br/> next a <cite>cite element (browser default)</cite>, then an inline <code>code example (<mark>&lt;code&gt;</mark>)</code> containing <code>&lt;mark&gt;</code>. Next <del>some deleted text</del>, followed by a <dfn>definition (no special styling)</dfn>. <em>Emphasised text</em> is semantically different from <i>italicised text</i>. Images inside <code>&lt;p&gt;</code> are automatically inline <img src="/static/img/styleguide/no.png" width="24" height="24" alt="" /> (outside they’re block). Some <ins>inserted text</ins> precedes text the user should enter (“enter the password <kbd>kronos</kbd>”) via the keyboard (<code>&lt;kbd&gt;</code>), and <mark>marked text (<code>&lt;mark&gt;</code>)</mark>. We then have <output>programming output using <code>&lt;output&gt;</code></output>, an <q>inline quote using <code>&lt;q&gt;</code>,</q> some <small>legalese using <code>&lt;small&gt;</code></small>, and <span>a <code>&lt;span&gt;</code> of text (obviously unstyled)</span>. For <strong>important content there’s <code>&lt;strong&gt;</code></strong>. Subscript text (<code>&lt;sub&gt;</code>) like H<sub>2</sub>O and superscript text (<code>&lt;sup&gt;</code>) such as M<sup>me</sup> Baker won’t break the measure. Mathematic variables (<code>&lt;var&gt;</code>) like <var>$monkey</var> use the default style. Finally there’s the poorly-supported <code>&lt;wbr&gt;</code> element for indicating acceptable break points in long words. It’s most useful in code samples, for example:</p>
+
+<ul>
+<li>Without <code>&lt;wbr&gt;</code>: <code>&lt;a href="http://www.whatwg.org/specs/webapps/currentwork/multipage/contentmodels.html#phrasingcontent0"&gt;</code></li>
+<li>With <code>&lt;wbr&gt;</code>: <code>&lt;a href="http://www.whatwg.org/<wbr>specs/webapps/currentwork/<wbr>multipage/contentmodels.html<wbr>#phrasingcontent0"&gt;</code></li>
+</ul>
+
+<div class="framed">
+<h3>Phrasing styles <abbr title="and">&amp;</abbr> sundry items <a class="permalink" href="#phrasing">#</a></h3>
+
+<ul>
+<li><code>.amp</code> or <code>&lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt;</code> — <a href="http://simplebits.com/notebook/2008/08/14/ampersands-2/" title="SimpleBits  / Use the Best Available Ampersand">@simplebits ampersand</a> (<abbr title="and">&amp;</abbr>) (for headings; I use <code>&lt;abbr&gt;</code> ;-)</li>
+<li><code>.semantic-list</code> — this suppresses bullets/numbering (eg if you want a list without them)</li>
+</ul>
+
+
+<h4>Default phrasing styles <a class="permalink" href="#phrasing-default">#</a></h4>
+
+<p>First <a href="#">this is a link</a>. Going alphabetically we have <abbr title="abbr">an abbreviation</abbr>, then <b>the <code>&lt;b&gt;</code> element</b>, followed by a line break<br/> next a <cite>cite element (browser default)</cite>, then an inline <code>code example (<mark>&lt;code&gt;</mark>)</code> containing <code>&lt;mark&gt;</code>. Next <del>some deleted text</del>, followed by a <dfn>definition (no special styling)</dfn>. <em>Emphasised text</em> is semantically different from <i>italicised text</i>. Images inside <code>&lt;p&gt;</code> are automatically inline <img src="/static/img/styleguide/no.png" width="24" height="24" alt="" /> (outside they’re block). Some <ins>inserted text</ins> precedes text the user should enter (“enter the password <kbd>kronos</kbd>”) via the keyboard (<code>&lt;kbd&gt;</code>), and <mark>marked text (<code>&lt;mark&gt;</code>)</mark>. We then have <output>programming output using <code>&lt;output&gt;</code></output>, an <q>inline quote using <code>&lt;q&gt;</code>,</q> some <small>legalese using <code>&lt;small&gt;</code></small>, and <span>a <code>&lt;span&gt;</code> of text (obviously unstyled)</span>. For <strong>important content there’s <code>&lt;strong&gt;</code></strong>. Subscript text (<code>&lt;sub&gt;</code>) like H<sub>2</sub>O and superscript text (<code>&lt;sup&gt;</code>) such as M<sup>me</sup> Baker won’t break the measure. Mathematic variables (<code>&lt;var&gt;</code>) like <var>$monkey</var> use the default style. Finally there’s the poorly-supported <code>&lt;wbr&gt;</code> element for indicating acceptable break points in long words. It’s most useful in code samples, for example:</p>
+
+<ul>
+<li>Without <code>&lt;wbr&gt;</code>: <code>&lt;a href="http://www.whatwg.org/specs/webapps/currentwork/multipage/contentmodels.html#phrasingcontent0"&gt;</code></li>
+<li>With <code>&lt;wbr&gt;</code>: <code>&lt;a href="http://www.whatwg.org/<wbr>specs/webapps/currentwork/<wbr>multipage/contentmodels.html<wbr>#phrasingcontent0"&gt;</code></li>
+</ul>
+</div>
+
+<pre class="framed"><code class="highlight">
+<span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">chartset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My creative title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;x-ua-compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;ie=edge&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Emiliano Izquierdo&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/style_screen.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;screen&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/style_print.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;print&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/vendor/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="c">&lt;!--Here we can put a lot more related to web browser support polyfill and such     --&gt;</span>
+<span class="c">&lt;!--Here we can put a lot more related to social media etc.--&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code>
+</pre>
+
+<pre class="wide">
+<code>
+<span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">chartset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My creative title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;x-ua-compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;ie=edge&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Emiliano Izquierdo&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/style_screen.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;screen&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;css/style_print.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media</span><span class="o">=</span><span class="s">&quot;print&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/main.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;js/vendor/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="c">&lt;!--Here we can put a lot more related to web browser support polyfill and such     --&gt;</span>
+<span class="c">&lt;!--Here we can put a lot more related to social media etc.--&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">aside</span><span class="p">&gt;&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre>
+
+<h3>A poem <mark>(haiku)</mark></h3>
+
+<pre>At an old calm pond
+
+- Suddenly a frog jumped in &gt; &lt;
+
+- A sound like a splash!</pre>
+
+<aside class="sidenote"><figure>
+<img src="/static/img/rhino.png" alt="Image of a Rhinoceros"/>
+<figcaption class="fig-counter framed">
+<p>F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span> But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a <code>p</code> tag, as seen to the right of this paragraph.</p>
+</figcaption>
+</figure></aside>
+
+<aside class="sidenote"><p class="framed">2.this is a second one.</p></aside>
+
+<p class="framed">3. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note <sup>1</sup>. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.</p>
+
+<aside class="meta framed">3.5 <mark>this is a third one.</mark></aside>
+
+<aside class="meta framed">3.5 this is a third one.</aside>
+
+<aside class="sidenote framed">3.5 this is a third one.</aside>
+
+<p>4. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note <sup>1</sup>. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.</p>
+
+<aside class="meta framed">3.5 <mark>this is a third one.</mark></aside>
+
+<aside class="sidenote framed">5. this is a third one.</aside>
+
+<p> 6. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note <sup>1</sup>. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.</p>
+
+<aside class="sidenote framed">7. this is a third one.</aside>
+
+<div style="display: block; float:right; height: 30px; width: 100px; background-color: #cf0;">8.lklk</div>
+
+<div style="display: block; float:right; height: 30px; width: 100px; background-color: #cf0;">9.lklk</div>
+
+<aside class="sidenote framed">10. this is a ... one.</aside>
+
+<div style="clear: both;"> </div>
+
+<h2>The second method</h2>
+
+<aside class="meta"> <pre>At an old calm pond
+
+- Suddenly a frog jumped in &gt; &lt;
+
+- A sound like a splash!</pre></aside>
+
+<p class="tofloat"> 1. The p FLOAT!The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note <sup>1</sup>. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.</p>
+
+<aside class="sidenote">2. Under sidenote This is a side note! shich is very very long in its content, in fact one can write here a lot! The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarci</aside>
+
+<aside class="sidenote"><p>2.5. This is a side note! shich is very very long in its content, in fact one can write here a lot! The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T.</p></aside>
+
+<p class="tofloat"> 3. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note <sup>1</sup>. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled .</p>
+
+<aside class="sidenote"> <figure class="framed">
+<figcaption>
+<p>From Edward Tufte, <cite><em>Visual Display of Quantitative Information</em></cite>, page 92.
+Figures should try to use the <code>figure</code> element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like this one.</p>
+</figcaption>
+<img id="Figure 1" src="/static/img/exports-imports.png" alt="First example figure" />
+</figure></aside>
+
+<p> 5. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note <sup>1</sup>. The first recorded use of the word marginalia is in 1819</p>
+
+<aside class="meta">
+<code>
+<span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">chartset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>My creative title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&quot;x-ua-compatible&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;ie=edge&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Emiliano Izquierdo&quot;</span><span class="p">&gt;</span></code></aside>
+
+<aside class="sidenote">6. sidenote</aside>
+
+<p> 8. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note <sup>1</sup>. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.</p>
+
+<div style="clear: both;"><b>Note that this element is a </b><mark><code><mark>clear: both;</mark></code></div>
+
+<p><hr>
+<p>This might be the arcticle footer</p>
+<hr class="wide"></p>
+
+	</article>
+			</main>
+			
+
+			
+
+
+		</div>
+		
+
+		<footer  class="content footer center hlike">
+			<p>sndbx.be &#169; <a href="#" title="Interested in learning more about this site?">2016</a> Emiliano Izquierdo <br> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a>
+		</footer>
+	</body>
+</html>
