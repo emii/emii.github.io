@@ -586,7 +586,7 @@ mark{background-color: #ffd32b;}/*#D5DF59, #F1A400, #CF0*/
 	mark a, mark a:link{
     /*     background: none;*/
          text-shadow: none;
-         color: #ffd32b;;/*#f74300;*/
+         /*color: #ffd32b;;/*#f74300;*/*/
 
 	}
 		mark a:hover{
