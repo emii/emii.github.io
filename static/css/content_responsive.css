@@ -814,8 +814,8 @@ display: inline;
     padding-left: 0;
     margin-left: 0;
     /*background-color: #F4F1EC;*/
-    left: -6rem;
-    width: 24rem;
+    left: -5rem;
+    width: 22rem;
     margin-top: 0.6rem;
 
 }
@@ -1108,7 +1108,7 @@ fieldset {
     right: -0.3rem;
     text-align: right;
     width: auto;
-    margin-top: -0.1rem;
+    margin-top: 0;
 }
 .dropdown-content li {
 display: block;
