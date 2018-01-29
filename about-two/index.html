@@ -129,6 +129,7 @@ var CommentSystem = {
                     + ':' + pad(tzo % 60) +'\n'
             + 'author: ' + $("#pcs-comment-form-input-name").val() + '\n';
 
+
         var url = $("#pcs-comment-form-input-website").val();
         if (url.length != 0)
         {
@@ -143,6 +144,11 @@ var CommentSystem = {
             + encodeURIComponent(subject)
             + "&body="
             + encodeURIComponent(body.replace(/\r?\n/g, "\r\n"));
+
+        $("#pcs-comment-form-input-name").val('');
+        $("#pcs-comment-form-input-website").val('');
+        $("#pcs-comment-form-input-textarea").val('');
+
         console.log(link)
         return link;
     }
