@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+	<title>sndbx.be is not science</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="icon" type="image/png" href="../static/img/favicon.png" />
+	<link rel="stylesheet" href="../static/css/third-party/sanitize.css">
+	<link rel="stylesheet" href="../static/css/content_responsive.css">
+	<link rel="stylesheet" href="../static/css/solarized_dark.css">
+	<link rel="stylesheet" href="../static/css/third-party/font-awesome.css">
+	<script src="../static/js/third-party/jquery.min.js"></script>
+	<script src="../static/js/main.js"></script>
+	<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+	<body>
+		<div class="page">
+				<div  class="masthead" style="position: fixed; top: 0; left:0; width: 100%; height: 5px; z-index: 1;"></div>
+				<header>
+				<nav  class="head content hlike center">
+					
+			
+							<div style="width: 47%; display: inline-block; text-align: left;">
+							
+  								<object type="image/svg+xml" data="http://localhost:8000/static/img/sndbx_logo.svg" class="logo" style="width: 5rem; height: 5rem; display: inline-block; padding: 0 0.6rem; margin:1em auto; vertical-align: middle;">
+  							
+								</object>
+							</div>
+		
+						<ul class="semantic" style="display: inline-block;">
+
+ 
+									<li class="h2like dropdown" style="border-left: none;">
+									<a  class=" dropbtn"  href="../">index<span style="color: #d33682; font-size: 1rem; border: none;"> +</span></a>
+										<ul class="semantic dropdown-content" id="index">
+											<li><a href=".." title="latest">latest</a></li>
+											<li><a href="../categories.html" title="categories">categories</a></li>
+											<li><a href="../tags.html" title="tags">tags</a></li>
+											<li><a href="../archives.html" title="archive">archive</a></li>
+										</ul>
+									</li>
+								
+								<li class="h2like">
+								<a  class="active"  href="../about/">about</a></li>
+								
+						</ul>
+					</nav>
+				</header>
+				<aside class="content menu-bar">
+				</aside>
+
+	
+			<main class="content">
+<article>
+<!-- 	<h1 class="toCenter">About</h1> -->
+	<p><span class="hlike h1like">EMILIANO IZQUIERDO<sup>*</sup></span></p>
+<p class="sidenote">*<code>(is‧kjer‧do)</code></p>
+<p class="sans framed"><strong>Hi _</strong> My name is <strong>Emiliano Izquierdo</strong><sup>*</sup>, currently a PhD fellow at <strong><a href="http://www.embl.de">EMBL</a></strong>. I am studying small living stuff &ndash;the one which is continously changing, varied in shape, beautiful&hellip; functionally superb. When I am not doing experiments in the <a href="https://www.embl.de/research/units/dev_biology/de_renzis/">lab</a>, I am outside getting some fresh air and ideas.</p>
+<p class="sans">I was born in Mexico City and rised in Guanajuato, learned about genomics in Cuernavaca, and tried my luck with yeast genetics in Irapuato. In 2011 I moved to Germany and apart from a breif stay in Utrecht (NL) I&rsquo;ve been happily living in Heidelberg ever since.</p>
+<p><img alt="oaxaca landscape" src="/static/img/oaxaca_landscape.jpg" /></p>
+<p class="mono">Apart from coffee, my everyday recipe inclides biology, some coding, and a bit of any kind of sport activity.</p>
+<p class="sans">I like simple things, like sandwiches and coffee (always nice opportunities to get to know people), I always squeeze up from the bottom on a tube of toothpaste, whatever that means.</p>
+<p class="sans">I am unlucky in cards.</p>
+<p><img alt="image2" src="https://dl.dropboxusercontent.com/s/6bd0ck2cs1w8raq/hello_world.png" /></p>
+<p>I tend to be verbose.</p>
+<h2 id="projects">Projects</h2>
+<h3 id="sndbxbe-is-not-science"><a href="http://cafeirreal.alicewhittenburg.com/review5.htm">sndbx.be is not science</a></h3>
+<blockquote>
+<p>Sinthetic is the future active tense of morphology</p>
+</blockquote>
+<p>I made <mark><a href="/">sndbx.be</a></mark> just as an experiment, a sandbox to draft and release thoughts to the outside, to find a place for this voice in the densely populated cloud of ideas. A creative outlet and a personal dominion.</p>
+<p>Behind the HTML/CSS, there are markdown archives processed by <a href="http://getpelican.com/">Pelican</a>, a static blog generator written in Python. The typefaces are Quicksand and Open Sans provided by Google fonts API.</p>
+<h2 id="get-in-touch">Get in touch</h2>
+<form id="pcs-comment-form" action="#">
+    <fieldset>
+
+        <label for="pcs-comment-form-input-textarea">Comment</label>
+            <textarea id="pcs-comment-form-input-textarea" rows="8" style="resize:vertical;" placeholder="Your Comment"></textarea>
+
+        <label for="pcs-comment-form-input-name">Name</label>
+            <input id="pcs-comment-form-input-name" type="text" placeholder="Your Name or Nickname">
+
+        <label for="pcs-comment-form-input-website">Website</label>
+            <input id="pcs-comment-form-input-website" type="text" placeholder="Your Website (optional)">
+
+    <div class="center">
+        <button  class="framed-gray hlike" type="submit" id="pcs-comment-form-button-submit" onclick="">Post via email</button>
+    </div>
+     </fieldset>
+</form>
+
+<h2 id="more">More</h2>
+<ul>
+<li><a href="https://twitter.com/emiizquierdo/">twitter</a></li>
+<li><a href="https://github.com/emii/">github</a></li>
+</ul>
+<script type="text/javascript">
+//requires jquery
+//From pelican comment system: Bernhard Scheirle
+//https://github.com/getpelican/pelican-plugins/tree/master/pelican_comment_system
+var CommentSystem = {   
+    email_user:   "not set",
+    email_domain: "not set",
+
+    getMailtoLink: function(slug) {
+        var subject = 'Comment from \'' + slug + '\'' ;
+
+        var now = new Date();
+        tzo = -now.getTimezoneOffset(),
+        dif = tzo >= 0 ? '+' : '-',
+        pad = function(num) {
+            norm = Math.abs(Math.floor(num));
+            return (norm < 10 ? '0' : '') + norm;
+        };
+
+        var body =  'Hi Emiliano,\n\n'+$("#pcs-comment-form-input-textarea").val() + '\n';
+
+        body += '\nGreetings,\n\n' + $("#pcs-comment-form-input-name").val()
+            + '\n----------------------------------------\n'
+            + 'date: ' + now.getFullYear()
+                    + '-' + pad(now.getMonth()+1)
+                    + '-' + pad(now.getDate())
+                    + 'T' + pad(now.getHours())
+                    + ':' + pad(now.getMinutes())
+                    + dif + pad(tzo / 60)
+                    + ':' + pad(tzo % 60) +'\n'
+            + 'author: ' + $("#pcs-comment-form-input-name").val() + '\n';
+
+        var url = $("#pcs-comment-form-input-website").val();
+        if (url.length != 0)
+        {
+            if(url.substr(0,7) != 'http://' && url.substr(0,8) != 'https://'){
+                url = 'http://' + url;
+            }
+            body += 'website: ' + url + '\n';
+        }
+
+
+        var link = 'mailto:' + this.email_user + '@' + this.email_domain + '?subject='
+            + encodeURIComponent(subject)
+            + "&body="
+            + encodeURIComponent(body.replace(/\r?\n/g, "\r\n"));
+        console.log(link)
+        return link;
+    }
+}
+
+</script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            CommentSystem.email_user   = "eizquierd";
+            CommentSystem.email_domain = "gmail.com";
+
+            $('#pcs-comment-form').on("submit",
+                function( event )
+                {
+                    event.preventDefault();
+                    $(location).attr('href', CommentSystem.getMailtoLink("sndbx.be"));
+                }
+            );
+        });
+</script>
+</article>
+			</main>
+			
+			
+
+
+		</div>
+		
+
+		<footer  class="content footer center hlike">
+			<p>sndbx.be &#169; <a href="#" title="Interested in learning more about this site?">2016</a> Emiliano Izquierdo <br> Powered by <a href="http://getpelican.com/" title="Pelican">Pelican</a>
+		</footer>
+	</body>
+</html>
