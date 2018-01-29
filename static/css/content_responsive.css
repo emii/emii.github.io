@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|PT+Serif');
+
+
 *{
 	box-sizing: inherit;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|PT+Serif');
+
 
 html, body {
   height: 100%;
