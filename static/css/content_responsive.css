@@ -332,22 +332,22 @@ main{
 
 h1 {
 	/*font-size: 2.2rem ;*/
-	font-size:1.4rem;
+	font-size:1.9rem;
 
 }
 h2 {
 	/*font-size: 1.4rem ;*/
-	font-size:1.2rem;
+	font-size:1.7rem;
 
 }
 h3 {
 	/*font-size: 1.4rem ;*/
-	font-size:1.1rem;
+	font-size:1.3rem;
 
 }
 h4 {
 	/*font-size: 1.4rem ;*/
-	font-size:1rem;
+	font-size:1.2rem;
 
 }
 h1,h2, h3, h4, dt, .toc:before{
@@ -494,9 +494,9 @@ blockquote q q:after {content: '”'; content: close-quote;}
 		font-weight: normal;
 }
 
-	.h1like{font-size:2.2rem;}
-	.h2like{font-size:1.4rem;}
-	.h3like{font-size:1.2rem;}
+	.h1like{font-size:1.9rem;}
+	.h2like{font-size:1.7rem;}
+	.h3like{font-size:1.3rem;}
 /*.h1like{font-size:1.4rem;}
 .h2like{font-size:1.2rem;}
 .h3like{font-size:1.1rem;}*/
@@ -712,11 +712,19 @@ hr:after, .hzline:after{
 	margin-bottom: 1.4rem;
 }
 
-h1 + .bottom-bar,h2 + .bottom-bar,h3 + .bottom-bar,h4 + .bottom-bar{
+h1 + .bottom-bar,h2 + .bottom-bar{
+margin-top: -1.4rem;
+}
+
+h3 + .bottom-bar,h4 + .bottom-bar{
 margin-top: -1rem;
 }
 
-h1 + hr,h2 + hr,h3 + hr,h4 + hr{
+h1 + hr,h2 + hr{
+margin-top: -1.4rem;
+}
+
+h3 + hr,h4 + hr{
 margin-top: -1rem;
 }
 
@@ -1068,10 +1076,10 @@ fieldset {
 /*_________Grid system end____________*/
 
 
-	h1 {font-size: 2.2rem ;}
+/*	h1 {font-size: 2.2rem ;}
 	h2 {font-size: 1.4rem ;}
 	h3 {font-size: 1.2rem ;}
-	h4 {font-size:1rem;}
+	h4 {font-size:1rem;}*/
 
 
 
