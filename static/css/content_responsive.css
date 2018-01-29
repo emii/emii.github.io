@@ -15,7 +15,7 @@ html, body {
   font-family: "PT Serif",	"Crimson Text",Georgia,serif;
   /*color:rgb(10,28,51);#111;*/
   color:rgb(24,35,51);/*#111;*/
-  font-size: 14px;
+  font-size: 15px;
 }
 
 
@@ -806,8 +806,9 @@ display: inline;
     padding-left: 0;
     margin-left: 0;
     /*background-color: #F4F1EC;*/
-    left: -9.5rem;
+    left: -6rem;
     width: 24rem;
+    margin-top: 0.6rem;
 
 }
 
@@ -1096,9 +1097,10 @@ fieldset {
 	}
 
 	.dropdown-content {
-    right: 0;
+    right: -0.3rem;
     text-align: right;
     width: auto;
+    margin-top: -0.1rem;
 }
 .dropdown-content li {
 display: block;
