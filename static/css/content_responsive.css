@@ -15,7 +15,7 @@ html, body {
   font-family: "PT Serif",	"Crimson Text",Georgia,serif;
   /*color:rgb(10,28,51);#111;*/
   color:rgb(24,35,51);/*#111;*/
-  font-size: 15px;
+  font-size: 17px;
 }
 
 
@@ -57,10 +57,11 @@ div{
 }
 .sidenote{
     /*padding:0.3rem 0.6rem 0.6rem;*/
-    line-height: 1.2em;
-    font-size: 0.875em ;
+    line-height: 1.2rem;
+    font-size: 0.875rem ;
     list-style-position: inside;
 }
+
 
 /*Table of contents*/
 .toc{text-align: center !important;
@@ -332,12 +333,12 @@ main{
 
 h1 {
 	/*font-size: 2.2rem ;*/
-	font-size:1.9rem;
+	font-size:1.7rem;
 
 }
 h2 {
 	/*font-size: 1.4rem ;*/
-	font-size:1.7rem;
+	font-size:1.5rem;
 
 }
 h3 {
@@ -494,8 +495,8 @@ blockquote q q:after {content: '”'; content: close-quote;}
 		font-weight: normal;
 }
 
-	.h1like{font-size:1.9rem;}
-	.h2like{font-size:1.7rem;}
+	.h1like{font-size:1.7rem;}
+	.h2like{font-size:1.5rem;}
 	.h3like{font-size:1.3rem;}
 	.h4like{font-size:1.1rem;}
 /*.h1like{font-size:1.4rem;}
