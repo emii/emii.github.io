@@ -715,19 +715,19 @@ hr:after, .hzline:after{
 }
 
 h1 + .bottom-bar,h2 + .bottom-bar{
-margin-top: -1.4rem;
+margin-top: -1rem;
 }
 
 h3 + .bottom-bar,h4 + .bottom-bar{
-margin-top: -1rem;
+margin-top: -0.6rem;
 }
 
 h1 + hr,h2 + hr{
-margin-top: -1.4rem;
+margin-top: -1rem;
 }
 
 h3 + hr,h4 + hr{
-margin-top: -1rem;
+margin-top: -0.6rem;
 }
 
 .menu-bar{
@@ -841,7 +841,7 @@ display: inline;
 
 .read_more_container
 {
-	padding: 0.3rem;
+	padding: 0.2rem;
 	width: 50%;
 	margin: 0 auto;
 }
@@ -994,7 +994,23 @@ fieldset {
 @media only screen and (min-width: 769px) {
 	html,body{
 		font-size: 16px;
-	}
+	}	
+
+/*1.8,1.6,1.4,1.2 */
+h1{font-size:1.8rem;}
+h2{font-size:1.6rem;}
+h3{font-size:1.4rem;}
+h4{font-size:1.2rem;}
+
+
+.h1like{font-size:1.8rem;
+		line-height: 2.1rem}
+.h2like{font-size:1.6rem;
+		line-height: 1.5}
+.h3like{font-size:1.4rem;}
+.h4like{font-size:1.2rem;}
+
+
 }
 
 @media (min-width: 732px) { /*732px*/
@@ -1045,6 +1061,8 @@ fieldset {
 .meta {
 	text-align: center;
 }
+
+
 
 
 
