@@ -31,7 +31,7 @@ div{
 	min-width: 21rem;/*25rem;*/
 	max-width: 36rem;
 	margin:0 auto;
-	padding:1.4rem 0.6rem 0rem;
+	padding:1.4rem 0.9rem 0rem;
 	counter-reset: figure;
 }
 
@@ -333,7 +333,7 @@ main{
 
 h1 {
 	/*font-size: 2.2rem ;*/
-	font-size:1.7rem;
+	font-size:1.6rem;
 
 }
 h2 {
@@ -495,7 +495,7 @@ blockquote q q:after {content: '”'; content: close-quote;}
 		font-weight: normal;
 }
 
-	.h1like{font-size:1.7rem;}
+	.h1like{font-size:1.6rem;}
 	.h2like{font-size:1.5rem;}
 	.h3like{font-size:1.3rem;}
 	.h4like{font-size:1.1rem;}
@@ -814,11 +814,13 @@ display: inline;
     display: none;
     position: absolute;
     padding-left: 0;
+    padding-right: 0;
     margin-left: 0;
     /*background-color: #F4F1EC;*/
     left: -5rem;
-    width: 22rem;
+    width: 20rem;
     margin-top: 0.6rem;
+    font-size: 1.2rem;
 
 }
 
@@ -1107,7 +1109,7 @@ fieldset {
 	}
 
 	.dropdown-content {
-    right: -0.3rem;
+    right: 0.9rem;
     text-align: right;
     width: auto;
     margin-top: 0;
