@@ -733,7 +733,8 @@ margin-top: -0.6rem;
 }
 
 .menu-bar{
-	padding-top: 0;
+	/*padding-top: 0;*/
+	padding-top: 3rem;
 }
 .browse li{
 display: inline;
@@ -819,9 +820,9 @@ display: inline;
     padding-right: 0;
     margin-left: 0;
     /*background-color: #F4F1EC;*/
-    left: -7.6rem;
+    left: -7.6rem; /*-8*/
     width: 20rem;
-    margin-top: 1.2rem;
+    margin-top: 1.2rem; /*0.3*/
     font-size: 1.2rem;
 
 }
