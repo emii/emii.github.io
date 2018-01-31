@@ -62,9 +62,7 @@ div{
     list-style-position: inside;
 }
 
-article:first-child{
-	padding-top: 3rem;
-}
+
 
 
 /*Table of contents*/
@@ -1029,6 +1027,10 @@ h4{font-size:1.2rem;}
 	.content > .content{
 	max-width: none;
 	padding-right:0;
+}
+
+article:first-child{
+	padding-top: 3rem;
 }
 	.sidenote{
     float: right;
