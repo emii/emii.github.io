@@ -733,8 +733,8 @@ margin-top: -0.6rem;
 }
 
 .menu-bar{
-	/*padding-top: 0;*/
-	padding-top: 3rem;
+	padding-top: 0;
+
 }
 .browse li{
 display: inline;
@@ -772,6 +772,7 @@ display: inline;
 .menu-link{
 	display: inline-block;
 	    border: solid 2px #333;
+	    margin-top: 2rem;
 
 }
       nav[role=navigation] {
