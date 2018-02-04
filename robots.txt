@@ -1,5 +1,5 @@
 User-agent: Google
-Disallow:
+Disallow: /
 
 User-agent: *
-Disallow: /
+Disallow:

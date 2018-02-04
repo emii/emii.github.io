@@ -56,7 +56,7 @@ div{
 	clear: both;
 }
 .sidenote{
-    /*padding:0.3rem 0.6rem 0.6rem;*/
+    padding:0.3rem 0.6rem 0.6rem !important;
     line-height: 1.2rem;
     font-size: 0.875rem ;
     list-style-position: inside;
@@ -661,7 +661,7 @@ float: left;
 }
 
 .toCenter{
-	margin:1.4rem auto 2.4rem;
+	margin:0 auto 2.4rem;
 /*	text-align: center;*/
 
 }
@@ -825,6 +825,7 @@ display: inline;
     width: 20rem;
     margin-top: 1.2rem; /*0.3*/
     font-size: 1.2rem;
+    line-height: 1.4rem;
 
 }
 
@@ -1000,6 +1001,22 @@ fieldset {
 		font-size: 16px;
 	}	
 
+}
+
+@media (min-width: 732px) { /*732px*/
+
+
+	.content{
+		max-width: 50.85rem;/*54.85*/
+		padding-right: 19.6rem;/*19.6*/
+	}
+
+
+	.content > .content{
+	max-width: none;
+	padding-right:0;
+}
+
 /*1.8,1.6,1.4,1.2 */
 h1{font-size:1.8rem;}
 h2{font-size:1.6rem;}
@@ -1008,28 +1025,13 @@ h4{font-size:1.2rem;}
 
 
 .h1like{font-size:1.8rem;
-		line-height: 2.1rem}
+		/*line-height: 2.1rem*/}
 .h2like{font-size:1.6rem;
-		line-height: 1.5}
-.h3like{font-size:1.4rem;}
-.h4like{font-size:1.2rem;}
-
-
-}
-
-@media (min-width: 732px) { /*732px*/
-
-
-	.content{
-		max-width: 50.85rem;/*54.85*/
-		padding-right: 19.6rem;
-	}
-
-
-	.content > .content{
-	max-width: none;
-	padding-right:0;
-}
+		/*line-height: 1.5rem*/}
+.h3like{font-size:1.4rem;
+		/*line-height: 1.4rem*/}
+.h4like{font-size:1.2rem;
+		/*line-height: 1.4rem;*/}
 
 article:first-child{
 	padding-top: 3rem;
@@ -1040,7 +1042,7 @@ article:first-child{
     word-wrap: break-word;
 
     padding:0.3rem 0.6rem 0.6rem;
-    margin: 0 -19rem 1.4rem 0;
+    margin: 0 -19rem 1.4rem 0; /*19rem*/
     clear: right;
 	}
 	.toc{
@@ -1058,7 +1060,7 @@ article:first-child{
 	
 	}
 	.wide{
-		margin-right: -19rem;
+		margin-right: -19rem; /*19rem*/
 	}
 
 	.wide.media-container {
@@ -1138,7 +1140,7 @@ article:first-child{
     right: 0.9rem;
     text-align: right;
     width: auto;
-    margin-top: 0;
+    margin-top: 0.4rem;
 }
 .dropdown-content li {
 display: block;
@@ -1156,10 +1158,10 @@ display: block;
 
 @media (min-width: 1174px) {
 
-		.head{
+	/*		.head{
 
-	padding-bottom: 5rem; 
-}
+		padding-bottom: 5rem; 
+	}*/
 
 	.content{
 	margin-left:19rem;
