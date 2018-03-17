@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>sndbx.be</title><link>http://sndbx.be/</link><description></description><lastBuildDate>Sat, 17 Mar 2018 11:40:01 +0100</lastBuildDate><item><title>Let there be pots</title><link>http://sndbx.be/htmlcss/let-there-be-pots/</link><description>&lt;div class="wide"&gt;
+    &lt;!-- &lt;p&gt; --&gt;
+    &lt;img src="/static/articles/image-post/img/04-DSC_0025.JPG"&gt;
+    &lt;!-- &lt;/p&gt; --&gt;
+&lt;/div&gt;
+
+&lt;p class="sidenote framed-gray"&gt;&lt;img alt="a link relative to the content root" src="http://sndbx.be/static/articles/image-post/img/04-DSC_0025.JPG" /&gt;
+this is my first pot!&lt;/p&gt;
+&lt;aside class="sidenote framed-gray"&gt;
+&lt;p&gt;
+    &lt;img src="/static/articles/image-post/img/04-DSC_0025.JPG"&gt;
+this is my first pot!&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;&lt;img alt="Photo" src="http://sndbx.be/htmlcss/let-there-be-pots/img/01-DSC_0014.JPG" /&gt;&lt;/p&gt;
+&lt;p&gt;This is my first post !&lt;/p&gt;
+&lt;p&gt;Hello world!&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;tot müde&lt;/li&gt;
+&lt;li&gt;arsch kalt&lt;/li&gt;
+&lt;li&gt;klatsch/patch nass&lt;/li&gt;
+&lt;li&gt;klitze klein&lt;/li&gt;
+&lt;li&gt;hell wach&lt;/li&gt;
+&lt;li&gt;hacke dicht&lt;/li&gt;
+&lt;li&gt;pot häslich&lt;/li&gt;
+&lt;li&gt;küh nacht/ zapen duster&lt;/li&gt;
+&lt;li&gt;sau schwer&lt;/li&gt;
+&lt;li&gt;kerzen gerade&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;glitz gesheit&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emiliano Izquierdo</dc:creator><pubDate>Sat, 17 Mar 2018 11:40:01 +0100</pubDate><guid isPermaLink="false">tag:sndbx.be,2018-03-17:htmlcss/let-there-be-pots/</guid><category>veyveryveryvery-longtag</category><category>test</category><category>html/css</category><category>try1</category><category>tagX</category><category>tag11</category><category>no-tag</category><category>pots</category><category>ceramics</category></item><item><title>Style guide ...</title><link>http://sndbx.be/leftovers/style-guide/</link><description>&lt;!--aside class="toCenter"&gt;&amp;mdash;written on Saturday, October 22, 2017&lt;/aside--&gt;
+
+&lt;blockquote cite="http://www.harpersbazaar.com/fashion/designers/a2818/50-famous-fashion-quotes-part-two/"&gt;&lt;p class="hlike h4like"&gt;&lt;em&gt;Style&lt;/em&gt; wasn't what you wore someplace anymore; it was the whole reason for going.&lt;/p&gt;
+&lt;footer&gt;&lt;p&gt;&lt;i&gt; - Andy Warhol&lt;/i&gt;&lt;/p&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;This is a condensed guide for the styling, semantics, and flow of elements within this website. In a sense I try to orient with the help of the &lt;a href="https://developers.whatwg.org/"&gt;WHATWG specification&lt;/a&gt; for the different &lt;a href="https://html.spec.whatwg.org/dev/dom.html#kinds-of-content"&gt;kinds of content&lt;/a&gt;. One of the motivations is mainly to be used as a personal reference; a bit is inspired by other &lt;a href="http://oli.jp/2011/style-guide/"&gt;style guides&lt;/a&gt; around. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="leo" src="/static/img/source.gif" /&gt;&lt;/p&gt;
+&lt;h2&gt;The layout, scaffolding and breakpoints&lt;/h2&gt;
+
+&lt;div class="bottom-bar"&gt;&lt;/div&gt;
+
+&lt;aside class="sidenote"&gt;
+&lt;p&gt;Broadly, the different kinds of content are:
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#metadata-content"&gt;Metadata&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#flow-content"&gt;Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#sectioning-content"&gt;Sectioning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#heading-content"&gt;Heading&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content"&gt;Phrasing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#embedded-content-2"&gt;Embedded&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#interactive-content"&gt;Interactive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Because HTML conveys meaning, rather than presentation, the same page can also be used by a small browser on a mobile phone, without any change to the page. Instead of headings being in large letters as on the desktop, for example, the browser on the mobile phone might use the same size text for the whole page, but with the headings in bold. [&amp;hellip;]&lt;/em&gt;&lt;footer&gt;&lt;p&gt;&lt;i&gt;&lt;a href="https://html.spec.whatwg.org/dev/dom.html#elements"&gt; - WHATWG&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;&lt;/footer&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="the-layout"&gt;The layout&lt;/h3&gt;
+&lt;aside class="meta framed-border"&gt;&lt;p&gt;This is a metadata marginal note&lt;pre&gt;&lt;code&gt;width:11rem;
+margin-left:-11.6rem;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;
+&lt;/aside&gt;
+
+&lt;aside class="sidenote framed-border"&gt;&lt;p&gt;This is a sidenote marginal note&lt;pre&gt;&lt;code&gt;width:18rem;
+margin-rigth:-18.5rem;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;&lt;/aside&gt;
+
+&lt;p class="framed-border"&gt;The layout is composed of one main central column of &lt;code&gt;54.85rem&lt;/code&gt;. It maintains a left margin of &lt;code&gt;16rem&lt;/code&gt; and a right padding of &lt;code&gt;18.6rem&lt;/code&gt;. The measures used here are based on rems (&lt;a href="https://j.eremy.net/confused-about-rem-and-em/"&gt;confused about rem and em?&lt;/a&gt;), and allows for the easy rescaling of the whole page by changing a single parameter, namely the font size of the root element &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt;. This configuration allows to have room for marginalia; &lt;em&gt;metadata&lt;/em&gt; to the left and &lt;em&gt;sidenotes&lt;/em&gt; right.&lt;/p&gt;
+&lt;p class="wide framed-gray"&gt;This is a wide container that spans the whole width of the &lt;code&gt;content&lt;/code&gt; container: &lt;code&gt;margin-rigth: -18rem&lt;/code&gt;&lt;/p&gt;
+&lt;p class="sans"&gt;&lt;strong&gt;These four elements are dynamic, and respond to a change in the viewport or the screen width of the divice. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The breakpoints are the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;732: main changes for appearance, from centered to main and sidenote&lt;/li&gt;
+&lt;li&gt;769: only a change in font size&lt;/li&gt;
+&lt;li&gt;1292: change content margin, and place meta to the left&lt;/li&gt;
+&lt;li&gt;1600: only centering the main content&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--Table of Contents end--&gt;
+
+&lt;!--Headings--&gt;
+
+&lt;h2&gt;Phrasing content&lt;/h2&gt;
+
+&lt;div class="bottom-bar wide"&gt;&lt;/div&gt;
+
+&lt;p class="wide mono"&gt;In this section I just kind of ennumerate the prasing elements that could possibly appear in a text, next to it, its corresponding code.&lt;/p&gt;
+
+&lt;div class="wide"&gt;
+&lt;div class="Grid Grid--gutters Grid--full large-Grid--fit"&gt;
+&lt;div class="Grid-cell"&gt;
+
+    &lt;h3&gt;The input&lt;/h3&gt;
+&lt;div class="framed"&gt;
+    &lt;p&gt;I would like to be &lt;b&gt;bold&lt;/b&gt; and &lt;i&gt;italize&lt;/i&gt; the &lt;strong&gt;strong&lt;/strong&gt; importance of creating a guide with &lt;em&gt;emphasis&lt;/em&gt; on the style by &lt;ins&gt;inserting&lt;/ins&gt; the &lt;code&gt;code&lt;/code&gt; that &lt;dfn&gt;defines&lt;/dfn&gt; the &lt;span&gt;span&lt;/span&gt; of the phrasing elements. With some of  these &lt;mark&gt;remarks&lt;/mark&gt;  breaking the flow&lt;br&gt;for this I would like to &lt;q&gt;quote&lt;/q&gt; a friend and &lt;cite&gt;cite&lt;/cite&gt; some references[^1]. No need of &lt;small&gt;small&lt;/small&gt; talk. Althoguht this can be very &lt;var&gt;$variable&lt;/var&gt; or &lt;u&gt;unarticulated&lt;/u&gt;, with&lt;sup&gt;ups&lt;/sup&gt; and&lt;sub&gt;downs&lt;/sub&gt;, the aim is to &lt;abbr title="abbreviation"&gt;abbr.&lt;/abbr&gt; a &lt;a href="#"&gt;link&lt;/a&gt; between the &lt;kbd&gt;input&lt;/kbd&gt; content and the message, sometimes even if this means self-&lt;del&gt;censorship&lt;/del&gt; [^1]: [This reference](#)&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="Grid-cell"&gt;
+
+&lt;h3&gt;The code&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#x3C;p&amp;#x3E;I would like to be &amp;#x3C;b&amp;#x3E;bold&amp;#x3C;/b&amp;#x3E; and &amp;#x3C;i&amp;#x3E;italize&amp;#x3C;/i&amp;#x3E; the &amp;#x3C;strong&amp;#x3E;strong&amp;#x3C;/strong&amp;#x3E; importance of creating a guide with &amp;#x3C;em&amp;#x3E;emphasis&amp;#x3C;/em&amp;#x3E; on the style by &amp;#x3C;ins&amp;#x3E;inserting&amp;#x3C;/ins&amp;#x3E; the &amp;#x3C;code&amp;#x3E;code&amp;#x3C;/code&amp;#x3E; that &amp;#x3C;dfn&amp;#x3E;defines&amp;#x3C;/dfn&amp;#x3E; the &amp;#x3C;span&amp;#x3E;span&amp;#x3C;/span&amp;#x3E; of the phrasing elements. With some of  these &amp;#x3C;mark&amp;#x3E;remarks&amp;#x3C;/mark&amp;#x3E;  breaking the flow&amp;#x3C;br&amp;#x3E;for this I would like to &amp;#x3C;q&amp;#x3E;quote&amp;#x3C;/q&amp;#x3E; a friend and &amp;#x3C;cite&amp;#x3E;cite&amp;#x3C;/cite&amp;#x3E; some references[^1]. No need of &amp;#x3C;small&amp;#x3E;small&amp;#x3C;/small&amp;#x3E; talk. Althoguht this can be very &amp;#x3C;var&amp;#x3E;$variable&amp;#x3C;/var&amp;#x3E; or &amp;#x3C;u&amp;#x3E;unarticulated&amp;#x3C;/u&amp;#x3E;, with&amp;#x3C;sup&amp;#x3E;ups&amp;#x3C;/sup&amp;#x3E; and&amp;#x3C;sub&amp;#x3E;downs&amp;#x3C;/sub&amp;#x3E;, the aim is to &amp;#x3C;abbr&amp;#x3E;abbr.&amp;#x3C;/abbr&amp;#x3E; a &amp;#x3C;a href=&amp;#x22;#&amp;#x22;&amp;#x3E;link&amp;#x3C;/a&amp;#x3E; between the &amp;#x3C;kbd&amp;#x3E;input&amp;#x3C;/kbd&amp;#x3E; content and the message, sometimes even if this means self-&amp;#x3C;del&amp;#x3E;censorship&amp;#x3C;/p&amp;#x3E;&lt;/code&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;/div&gt;
+one of other things to consider is the font properties like size, camily and color, as well as position and orientation 
+&lt;/div&gt;&lt;/p&gt;
+&lt;h3&gt;Framed content&lt;/h3&gt;
+
+&lt;div class="bottom-bar"&gt;&lt;/div&gt;
+
+&lt;aside class="sidenote"&gt;&lt;pre&gt;&lt;code&gt; &amp;lt;p class="framed"&amp;gt; &amp;lt;/p&amp;gt; &lt;/code&gt;&lt;/pre&gt;&lt;/aside&gt;
+
+&lt;p class="framed"&gt;In this article you can find a personal guide for the styling of my website&lt;/p&gt;
+
+&lt;aside class="sidenote"&gt;&lt;pre&gt;&lt;code&gt; 
+&amp;lt;div class="framed"&amp;gt; 
+&amp;lt;p&amp;gt; 
+&amp;lt;/p&amp;gt; 
+&amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/aside&gt;
+
+&lt;div class="framed"&gt;&lt;h4&gt;With a heading&lt;/h4&gt;&lt;p&gt;which is different from this paragraph (notice the trailing line break)&lt;/p&gt;&lt;p&gt;that separaes this paragraph from the bottom&lt;/p&gt;&lt;/div&gt;
+
+&lt;p class="framed hlike h2like serif"&gt;Hä? &lt;a href="https://www.w3.org/html/wg/wiki/PoeticSemantics"&gt;poetic semantics&lt;/a&gt;?&lt;/p&gt;
+
+&lt;h1&gt;Heading 1 &lt;b&gt;bold&lt;/b&gt; and &lt;i&gt;italic&lt;/i&gt;&lt;/h1&gt;
+
+&lt;div class="bottom-bar"&gt;&lt;/div&gt;
+
+&lt;p&gt;Some text
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h2 class="framed"&gt;Also framed&lt;/h2&gt;&lt;/p&gt;
+&lt;div class="bottom-bar wide"&gt;&lt;/div&gt;
+
+&lt;aside&gt;&amp;mdash;written on Saturday, October 22, 2017&lt;/aside&gt;
+
+&lt;aside class="meta"&gt;&lt;p&gt;The content is enclosed in this sandbox!, this element is enclosed in &lt;pre&gt;&lt;code&gt;width:10rem;
+margin-left:-10.6rem;&lt;/code&gt;&lt;/pre&gt;&lt;/p&gt;&lt;/aside&gt;
+
+&lt;!--Table of Contents--&gt;
+
+&lt;nav class="toc sidenote"&gt;
+    &lt;ol&gt;
+        &lt;li&gt;&lt;a href="#intro"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#setup"&gt;Assumptions &lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt; Setup&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#block"&gt;Class-based block styles&lt;/a&gt;
+            &lt;ol&gt;
+                &lt;li&gt;&lt;a href="#callouts"&gt;Callouts&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#code"&gt;Code&lt;/a&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+        &lt;li&gt;&lt;a href="#default-styles"&gt;Default element styles&lt;/a&gt;
+            &lt;ol&gt;
+            &lt;li&gt;&lt;a href="#headings"&gt;Headings&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#table"&gt;Tables&lt;/a&gt;&lt;/li&gt;
+            &lt;/ol&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/nav&gt;
+
+&lt;p style="margin-top: 2.2rem;"&gt;This is content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/p&gt;
+
+&lt;aside&gt;&lt;p&gt;This is aside wrapped in paragraph tags&lt;/p&gt;&lt;/aside&gt;
+
+&lt;p&gt;This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/p&gt;
+
+&lt;h1&gt;Heading 1 &lt;b&gt;bold&lt;/b&gt; and &lt;em&gt;italic&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/p&gt;
+
+&lt;div class="flexible"&gt;
+&lt;p class="framed flexable f50 fit"&gt;
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/p&gt;
+&lt;div class="framed flexable f50 fit"&gt;
+&lt;ul&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;
+Item 2
+&lt;ul&gt;
+&lt;li&gt;Item 2.1&lt;/li&gt;
+&lt;li&gt;Item 2.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bullets appear just right at the border, thereby aligning closer to the main content&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;ul class="semantic flexible"&gt;
+&lt;li class="flexable f100 fit"&gt;
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/li&gt;
+&lt;li class="flexable f100 fit"&gt;
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/li&gt;
+&lt;li class="flexable f100 fit"&gt;
+This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;h2 class="framed"&gt;Heading2 &lt;b&gt;bold&lt;/b&gt; and &lt;em&gt;italic&lt;/em&gt;&lt;/h2&gt;
+
+&lt;p&gt;This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/p&gt;
+
+&lt;h3&gt;Heading3 &lt;b&gt;bold&lt;/b&gt; and &lt;em&gt;italic&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/p&gt;
+
+&lt;h4&gt;Heading4 &lt;b&gt;bold&lt;/b&gt; and &lt;em&gt;italic&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;This is paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla tempor auctor. Mauris tempus, massa sed ornare venenatis, nulla sapien vestibulum sem, non molestie urna urna vitae tortor.&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;!--Headings end--&gt; 
+&lt;!--Lists --&gt;
+&lt;h3&gt;Lists Example&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Both ordered and unordered list are seen below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;
+Item 2
+&lt;ul&gt;
+&lt;li&gt;Item 2.1&lt;/li&gt;
+&lt;li&gt;Item 2.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Item 1&lt;/li&gt;
+&lt;li&gt;
+Item 2
+&lt;ol&gt;
+&lt;li&gt;Item 2.1&lt;/li&gt;
+&lt;li&gt;Item 2.2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3&gt;Definition lists&lt;/h3&gt;
+
+&lt;p&gt;&lt;hr&gt;
+&lt;dl&gt;
+&lt;dt&gt;Albert&lt;/dt&gt;
+&lt;dd&gt;A Rhesus monkey who, riding on a V2 rocket to over 63 km on June 11, 1948, became the first monkey astronaut&lt;/dd&gt;
+&lt;dt&gt;Albert II&lt;/dt&gt;
+&lt;dd&gt;Attained the altitude of 134 km on June 14, 1949, becoming USA’s first space monkey&lt;/dd&gt;
+&lt;dd&gt;The Kármán line of 100 km is considered the beginning of space&lt;/dd&gt;
+&lt;/dl&gt;&lt;/p&gt;
+&lt;h2&gt;Tables&lt;/h2&gt;
+
+&lt;p&gt;&lt;hr&gt;
+&lt;div class="wide" style="overflow-y: auto;"&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;th&gt;Sex&lt;/th&gt;
+&lt;th&gt;Location&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;th&gt;Sex&lt;/th&gt;
+&lt;th&gt;Location&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;th&gt;Sex&lt;/th&gt;
+&lt;th&gt;Location&lt;/th&gt;
+&lt;th&gt;Name&lt;/th&gt;
+&lt;th&gt;Age&lt;/th&gt;
+&lt;th&gt;Sex&lt;/th&gt;
+&lt;th&gt;Location&lt;/th&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Dave Gamache&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;San Francisco&lt;/td&gt;
+&lt;td&gt;Dave Gamache&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;San Francisco&lt;/td&gt;
+&lt;td&gt;Dave Gamache&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;San Francisco&lt;/td&gt;
+&lt;td&gt;Dave Gamache&lt;/td&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;San Francisco&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dwayne Johnson&lt;/td&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;Hayward&lt;/td&gt;
+&lt;td&gt;Dwayne Johnson&lt;/td&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;Hayward&lt;/td&gt;
+&lt;td&gt;Dwayne Johnson&lt;/td&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;Hayward&lt;/td&gt;
+&lt;td&gt;Dwayne Johnson&lt;/td&gt;
+&lt;td&gt;42&lt;/td&gt;
+&lt;td&gt;Male&lt;/td&gt;
+&lt;td&gt;Hayward&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;h3&gt;Blockquotes and Epigraphs&lt;/h3&gt;
+
+&lt;blockquote class="framed" cite="#"&gt;
+&lt;q&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nulla risus, dictum at dolor nec, pretium suscipit leo. Aliquam dapibus vehicula nisi id facilisis. Nunc mattis sed est sed iaculis. Phasellus laoreet, urna ut condimentum mattis, turpis mauris vehicula justo, a molestie tellus ligula id tortor. Cras non massa justo. Mauris sed libero a leo tincidunt bibendum a vitae leo. Donec fermentum est ut vestibulum volutpat. Ut efficitur vehicula condimentum. Aenean quis porta enim.&lt;/q&gt;
+&lt;footer&gt;&lt;p&gt;"Lorem ipsum", &lt;cite&gt;"lorem ipsum"&lt;/cite&gt; ipsum&lt;/p&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote cite="#"&gt;
+&lt;q&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nulla risus, dictum at dolor nec, pretium suscipit leo. Aliquam dapibus vehicula nisi id facilisis. Nunc mattis sed est sed iaculis. Phasellus laoreet, urna ut condimentum mattis, turpis mauris vehicula justo, a molestie tellus ligula id tortor. Cras non massa justo. Mauris sed libero a leo tincidunt bibendum a vitae leo. Donec fermentum est ut vestibulum volutpat. Ut efficitur vehicula condimentum. Aenean quis porta enim.&lt;/q&gt;
+&lt;footer&gt;&lt;p&gt;"Lorem ipsum", &lt;cite&gt;"lorem ipsum"&lt;/cite&gt; ipsum&lt;/p&gt;&lt;/footer&gt;
+&lt;div class="hzline"&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id="figures"&gt;Figures&lt;/h2&gt;
+
+&lt;ol class="framed sidenote"&gt;
+&lt;li&gt;&lt;a href="#intro"&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#setup"&gt;Assumptions &lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt; Setup&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#block"&gt;Class-based block styles&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="#callouts"&gt;Callouts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#code"&gt;Code&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#default-styles"&gt;Default element styles&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="#headings"&gt;Headings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#table"&gt;Tables&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Tufte emphasizes tight integration of graphics with text. Data, graphs, and figures are kept with the text that discusses them. In print, this means they are not relegated to a separate page. On the web, that means readability of graphics and their accompanying text without extra clicks, tab-switching, or scrolling.&lt;/p&gt;
+
+&lt;p&gt;Figures should try to use the &lt;code&gt;figure&lt;/code&gt; element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like above&lt;/p&gt;
+
+&lt;figure class="framed"&gt;
+&lt;figcaption&gt;
+&lt;p&gt;From Edward Tufte, &lt;cite&gt;&lt;em&gt;Visual Display of Quantitative Information&lt;/em&gt;&lt;/cite&gt;, page 92.
+Figures should try to use the &lt;code&gt;figure&lt;/code&gt; element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like this one.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;img id="Figure 1" src="/static/img/exports-imports.png" alt="First example figure" /&gt;
+&lt;/figure&gt;
+
+&lt;figure&gt;
+&lt;img src="/static/img/rhino.png" alt="Image of a Rhinoceros"/&gt;
+&lt;figcaption class="fig-counter framed"&gt;
+&lt;p&gt;F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” &lt;em&gt;Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice&lt;/em&gt; (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s &lt;em&gt;Visual Explanations&lt;/em&gt;.&lt;/span&gt; But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a &lt;code&gt;p&lt;/code&gt; tag, as seen to the right of this paragraph.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h3 class="framed"&gt;Framed &lt;mark&gt;content&lt;/mark&gt;&lt;/h3&gt;
+
+&lt;p class="framed"&gt;Kitsch irony street art iceland gluten-free copper mug selvage, organic distillery plaid selfies pabst locavore. Glossier gluten-free locavore lumbersexual, health goth yr brunch ramps messenger bag migas photo booth prism cliche. Food truck YOLO pabst, etsy bushwick subway tile hashtag direct trade. 8-bit dreamcatcher migas heirloom, kombucha hoodie intelligentsia gochujang. Selfies deep v chicharrones, fashion axe mlkshk chia sriracha try-hard literally. Portland pok pok mixtape iPhone letterpress. Jianbing YOLO you probably haven't heard of them, marfa waistcoat kitsch flannel gluten-free pok pok franzen.&lt;/p&gt;
+
+&lt;div class="wide framed"&gt;
+&lt;h3&gt;Framed content&lt;/h3&gt;
+&lt;p&gt;Kitsch irony street art iceland gluten-free copper mug selvage, organic distillery plaid selfies pabst locavore. Glossier gluten-free locavore lumbersexual, health goth yr brunch ramps messenger bag migas photo booth prism cliche. Food truck YOLO pabst, etsy bushwick subway tile hashtag direct trade. 8-bit dreamcatcher migas heirloom, kombucha hoodie intelligentsia gochujang. Selfies deep v chicharrones, fashion axe mlkshk chia sriracha try-hard literally. Portland pok pok mixtape iPhone letterpress. Jianbing YOLO you probably haven't heard of them, marfa waistcoat kitsch flannel gluten-free pok pok franzen.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you need a full-width figure, give it the &lt;code&gt;fullwidth&lt;/code&gt; class. Make sure that’s inside an &lt;code&gt;article&lt;/code&gt;, and it will take up (almost) the full width of the screen. This approach is demonstrated below using Edward Tufte’s English translation of the Napoleon’s March data visualization. From &lt;em&gt;Beautiful Evidence&lt;/em&gt;, page 122-124.&lt;/p&gt;
+
+&lt;figure&gt;
+&lt;img src="static/img/napoleons-march.png"/&gt;
+&lt;/figure&gt;
+
+&lt;h3&gt;Standalone images&lt;/h3&gt;
+
+&lt;p&gt;A wide one&lt;/p&gt;
+
+&lt;div class="wide"&gt;
+&lt;img src="static/img/paul-gauguin.jpg"/&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and a narrow one&lt;/p&gt;
+
+&lt;div class="framed"&gt;&lt;img src="/static/img/moby2.jpg"/&gt;&lt;/div&gt;
+
+&lt;h3&gt;Phrasing styles &lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt; sundry items &lt;a class="permalink" href="#phrasing"&gt;#&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.amp&lt;/code&gt; or &lt;code&gt;&amp;lt;abbr title="and"&amp;gt;&amp;amp;amp;&amp;lt;/abbr&amp;gt;&lt;/code&gt; — &lt;a href="http://simplebits.com/notebook/2008/08/14/ampersands-2/" title="SimpleBits  / Use the Best Available Ampersand"&gt;@simplebits ampersand&lt;/a&gt; (&lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt;) (for headings; I use &lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; ;-)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.semantic-list&lt;/code&gt; — this suppresses bullets/numbering (eg if you want a list without them)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Default phrasing styles &lt;a class="permalink" href="#phrasing-default"&gt;#&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;First &lt;a href="#"&gt;this is a link&lt;/a&gt;. Going alphabetically we have &lt;abbr title="abbr"&gt;an abbreviation&lt;/abbr&gt;, then &lt;b&gt;the &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt; element&lt;/b&gt;, followed by a line break&lt;br/&gt; next a &lt;cite&gt;cite element (browser default)&lt;/cite&gt;, then an inline &lt;code&gt;code example (&lt;mark&gt;&amp;lt;code&amp;gt;&lt;/mark&gt;)&lt;/code&gt; containing &lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;. Next &lt;del&gt;some deleted text&lt;/del&gt;, followed by a &lt;dfn&gt;definition (no special styling)&lt;/dfn&gt;. &lt;em&gt;Emphasised text&lt;/em&gt; is semantically different from &lt;i&gt;italicised text&lt;/i&gt;. Images inside &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; are automatically inline &lt;img src="/static/img/styleguide/no.png" width="24" height="24" alt="" /&gt; (outside they’re block). Some &lt;ins&gt;inserted text&lt;/ins&gt; precedes text the user should enter (“enter the password &lt;kbd&gt;kronos&lt;/kbd&gt;”) via the keyboard (&lt;code&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt;), and &lt;mark&gt;marked text (&lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;)&lt;/mark&gt;. We then have &lt;output&gt;programming output using &lt;code&gt;&amp;lt;output&amp;gt;&lt;/code&gt;&lt;/output&gt;, an &lt;q&gt;inline quote using &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt;,&lt;/q&gt; some &lt;small&gt;legalese using &lt;code&gt;&amp;lt;small&amp;gt;&lt;/code&gt;&lt;/small&gt;, and &lt;span&gt;a &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; of text (obviously unstyled)&lt;/span&gt;. For &lt;strong&gt;important content there’s &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;. Subscript text (&lt;code&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;) like H&lt;sub&gt;2&lt;/sub&gt;O and superscript text (&lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt;) such as M&lt;sup&gt;me&lt;/sup&gt; Baker won’t break the measure. Mathematic variables (&lt;code&gt;&amp;lt;var&amp;gt;&lt;/code&gt;) like &lt;var&gt;$monkey&lt;/var&gt; use the default style. Finally there’s the poorly-supported &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; element for indicating acceptable break points in long words. It’s most useful in code samples, for example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Without &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt;: &lt;code&gt;&amp;lt;a href="http://www.whatwg.org/specs/webapps/currentwork/multipage/contentmodels.html#phrasingcontent0"&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;With &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt;: &lt;code&gt;&amp;lt;a href="http://www.whatwg.org/&lt;wbr&gt;specs/webapps/currentwork/&lt;wbr&gt;multipage/contentmodels.html&lt;wbr&gt;#phrasingcontent0"&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="framed"&gt;
+&lt;h3&gt;Phrasing styles &lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt; sundry items &lt;a class="permalink" href="#phrasing"&gt;#&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.amp&lt;/code&gt; or &lt;code&gt;&amp;lt;abbr title="and"&amp;gt;&amp;amp;amp;&amp;lt;/abbr&amp;gt;&lt;/code&gt; — &lt;a href="http://simplebits.com/notebook/2008/08/14/ampersands-2/" title="SimpleBits  / Use the Best Available Ampersand"&gt;@simplebits ampersand&lt;/a&gt; (&lt;abbr title="and"&gt;&amp;amp;&lt;/abbr&gt;) (for headings; I use &lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt; ;-)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.semantic-list&lt;/code&gt; — this suppresses bullets/numbering (eg if you want a list without them)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h4&gt;Default phrasing styles &lt;a class="permalink" href="#phrasing-default"&gt;#&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;First &lt;a href="#"&gt;this is a link&lt;/a&gt;. Going alphabetically we have &lt;abbr title="abbr"&gt;an abbreviation&lt;/abbr&gt;, then &lt;b&gt;the &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt; element&lt;/b&gt;, followed by a line break&lt;br/&gt; next a &lt;cite&gt;cite element (browser default)&lt;/cite&gt;, then an inline &lt;code&gt;code example (&lt;mark&gt;&amp;lt;code&amp;gt;&lt;/mark&gt;)&lt;/code&gt; containing &lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;. Next &lt;del&gt;some deleted text&lt;/del&gt;, followed by a &lt;dfn&gt;definition (no special styling)&lt;/dfn&gt;. &lt;em&gt;Emphasised text&lt;/em&gt; is semantically different from &lt;i&gt;italicised text&lt;/i&gt;. Images inside &lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt; are automatically inline &lt;img src="/static/img/styleguide/no.png" width="24" height="24" alt="" /&gt; (outside they’re block). Some &lt;ins&gt;inserted text&lt;/ins&gt; precedes text the user should enter (“enter the password &lt;kbd&gt;kronos&lt;/kbd&gt;”) via the keyboard (&lt;code&gt;&amp;lt;kbd&amp;gt;&lt;/code&gt;), and &lt;mark&gt;marked text (&lt;code&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;)&lt;/mark&gt;. We then have &lt;output&gt;programming output using &lt;code&gt;&amp;lt;output&amp;gt;&lt;/code&gt;&lt;/output&gt;, an &lt;q&gt;inline quote using &lt;code&gt;&amp;lt;q&amp;gt;&lt;/code&gt;,&lt;/q&gt; some &lt;small&gt;legalese using &lt;code&gt;&amp;lt;small&amp;gt;&lt;/code&gt;&lt;/small&gt;, and &lt;span&gt;a &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; of text (obviously unstyled)&lt;/span&gt;. For &lt;strong&gt;important content there’s &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;&lt;/strong&gt;. Subscript text (&lt;code&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;) like H&lt;sub&gt;2&lt;/sub&gt;O and superscript text (&lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt;) such as M&lt;sup&gt;me&lt;/sup&gt; Baker won’t break the measure. Mathematic variables (&lt;code&gt;&amp;lt;var&amp;gt;&lt;/code&gt;) like &lt;var&gt;$monkey&lt;/var&gt; use the default style. Finally there’s the poorly-supported &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt; element for indicating acceptable break points in long words. It’s most useful in code samples, for example:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Without &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt;: &lt;code&gt;&amp;lt;a href="http://www.whatwg.org/specs/webapps/currentwork/multipage/contentmodels.html#phrasingcontent0"&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;With &lt;code&gt;&amp;lt;wbr&amp;gt;&lt;/code&gt;: &lt;code&gt;&amp;lt;a href="http://www.whatwg.org/&lt;wbr&gt;specs/webapps/currentwork/&lt;wbr&gt;multipage/contentmodels.html&lt;wbr&gt;#phrasingcontent0"&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;pre class="framed"&gt;&lt;code class="highlight"&gt;
+&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;chartset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;My creative title&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;http-equiv&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x-ua-compatible&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ie=edge&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Emiliano Izquierdo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width=device-width,initial-scale=1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;css/style_screen.css&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;media&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;screen&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;css/style_print.css&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;media&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;print&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;js/main.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;js/vendor/jquery.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--Here we can put a lot more related to web browser support polyfill and such     --&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--Here we can put a lot more related to social media etc.--&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;nav&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;nav&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;main&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;section&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;section&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;main&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;aside&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;aside&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;pre class="wide"&gt;
+&lt;code&gt;
+&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;chartset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;My creative title&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;http-equiv&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x-ua-compatible&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ie=edge&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Emiliano Izquierdo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width=device-width,initial-scale=1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;css/style_screen.css&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;media&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;screen&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;css/style_print.css&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;media&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;print&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;js/main.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;js/vendor/jquery.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--Here we can put a lot more related to web browser support polyfill and such     --&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--Here we can put a lot more related to social media etc.--&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;header&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;nav&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;nav&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;main&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;section&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;article&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;section&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;main&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;aside&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;aside&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;footer&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3&gt;A poem &lt;mark&gt;(haiku)&lt;/mark&gt;&lt;/h3&gt;
+
+&lt;pre&gt;At an old calm pond
+
+- Suddenly a frog jumped in &amp;gt; &amp;lt;
+
+- A sound like a splash!&lt;/pre&gt;
+
+&lt;aside class="sidenote"&gt;&lt;figure&gt;
+&lt;img src="/static/img/rhino.png" alt="Image of a Rhinoceros"/&gt;
+&lt;figcaption class="fig-counter framed"&gt;
+&lt;p&gt;F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zooological Literature,” &lt;em&gt;Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice&lt;/em&gt; (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s &lt;em&gt;Visual Explanations&lt;/em&gt;.&lt;/span&gt; But tight integration of graphics with text is central to Tufte’s work even when those graphics are ancillary to the main body of a text. In many of those cases, a margin figure may be most appropriate. To place figures in the margin, just wrap an image (or whatever) in a margin note inside a &lt;code&gt;p&lt;/code&gt; tag, as seen to the right of this paragraph.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;&lt;/aside&gt;
+
+&lt;aside class="sidenote"&gt;&lt;p class="framed"&gt;2.this is a second one.&lt;/p&gt;&lt;/aside&gt;
+
+&lt;p class="framed"&gt;3. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note &lt;sup&gt;1&lt;/sup&gt;. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.&lt;/p&gt;
+
+&lt;aside class="meta framed"&gt;3.5 &lt;mark&gt;this is a third one.&lt;/mark&gt;&lt;/aside&gt;
+
+&lt;aside class="meta framed"&gt;3.5 this is a third one.&lt;/aside&gt;
+
+&lt;aside class="sidenote framed"&gt;3.5 this is a third one.&lt;/aside&gt;
+
+&lt;p&gt;4. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note &lt;sup&gt;1&lt;/sup&gt;. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.&lt;/p&gt;
+
+&lt;aside class="meta framed"&gt;3.5 &lt;mark&gt;this is a third one.&lt;/mark&gt;&lt;/aside&gt;
+
+&lt;aside class="sidenote framed"&gt;5. this is a third one.&lt;/aside&gt;
+
+&lt;p&gt; 6. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note &lt;sup&gt;1&lt;/sup&gt;. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.&lt;/p&gt;
+
+&lt;aside class="sidenote framed"&gt;7. this is a third one.&lt;/aside&gt;
+
+&lt;div style="display: block; float:right; height: 30px; width: 100px; background-color: #cf0;"&gt;8.lklk&lt;/div&gt;
+
+&lt;div style="display: block; float:right; height: 30px; width: 100px; background-color: #cf0;"&gt;9.lklk&lt;/div&gt;
+
+&lt;aside class="sidenote framed"&gt;10. this is a ... one.&lt;/aside&gt;
+
+&lt;div style="clear: both;"&gt; &lt;/div&gt;
+
+&lt;h2&gt;The second method&lt;/h2&gt;
+
+&lt;aside class="meta"&gt; &lt;pre&gt;At an old calm pond
+
+- Suddenly a frog jumped in &amp;gt; &amp;lt;
+
+- A sound like a splash!&lt;/pre&gt;&lt;/aside&gt;
+
+&lt;p class="tofloat"&gt; 1. The p FLOAT!The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note &lt;sup&gt;1&lt;/sup&gt;. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.&lt;/p&gt;
+
+&lt;aside class="sidenote"&gt;2. Under sidenote This is a side note! shich is very very long in its content, in fact one can write here a lot! The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarci&lt;/aside&gt;
+
+&lt;aside class="sidenote"&gt;&lt;p&gt;2.5. This is a side note! shich is very very long in its content, in fact one can write here a lot! The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T.&lt;/p&gt;&lt;/aside&gt;
+
+&lt;p class="tofloat"&gt; 3. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note &lt;sup&gt;1&lt;/sup&gt;. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled .&lt;/p&gt;
+
+&lt;aside class="sidenote"&gt; &lt;figure class="framed"&gt;
+&lt;figcaption&gt;
+&lt;p&gt;From Edward Tufte, &lt;cite&gt;&lt;em&gt;Visual Display of Quantitative Information&lt;/em&gt;&lt;/cite&gt;, page 92.
+Figures should try to use the &lt;code&gt;figure&lt;/code&gt; element, which by default are constrained to the main column. Don’t wrap figures in a paragraph tag. Any label or margin note goes in a regular margin note inside the figure. For example, most of the time one should introduce a figure directly into the main flow of discussion, like this one.&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;img id="Figure 1" src="/static/img/exports-imports.png" alt="First example figure" /&gt;
+&lt;/figure&gt;&lt;/aside&gt;
+
+&lt;p&gt; 5. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note &lt;sup&gt;1&lt;/sup&gt;. The first recorded use of the word marginalia is in 1819&lt;/p&gt;
+
+&lt;aside class="meta"&gt;
+&lt;code&gt;
+&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;chartset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;My creative title&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;http-equiv&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;x-ua-compatible&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ie=edge&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;author&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Emiliano Izquierdo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/aside&gt;
+
+&lt;aside class="sidenote"&gt;6. sidenote&lt;/aside&gt;
+
+&lt;p&gt; 8. The scholia on classical manuscripts are the earliest known form of marginalia. Fermat's last theorem is the most famous mathematical marginal note &lt;sup&gt;1&lt;/sup&gt;. The first recorded use of the word marginalia is in 1819 in Blackwood's Magazine. From 1845 to 1849 Edgar Allan Poe titled some of his reflections and fragmentary material "Marginalia." Five volumes of Samuel T. Coleridge's marginalia have been published. Some famous marginalia were serious works, or drafts thereof, written in margins due to scarcity of paper. Voltaire composed in book margins while in prison, and Sir Walter Raleigh wrote a personal statement in margins just before his execution. Beginning in the 1990s, attempts have been made to design and market e-book devices permitting a limited form of marginalia.&lt;/p&gt;
+
+&lt;div style="clear: both;"&gt;&lt;b&gt;Note that this element is a &lt;/b&gt;&lt;mark&gt;&lt;code&gt;&lt;mark&gt;clear: both;&lt;/mark&gt;&lt;/code&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;hr&gt;
+&lt;p&gt;This might be the arcticle footer&lt;/p&gt;
+&lt;hr class="wide"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emiliano Izquierdo</dc:creator><pubDate>Sun, 04 Feb 2018 02:26:24 +0100</pubDate><guid isPermaLink="false">tag:sndbx.be,2018-02-04:leftovers/style-guide/</guid></item></channel></rss>

@@ -56,7 +56,7 @@ div{
 	clear: both;
 }
 .sidenote{
-    padding:0.3rem 0.6rem 0.6rem !important;
+    padding:0.3rem 0.6rem 0.3rem;
     line-height: 1.2rem;
     font-size: 0.875rem ;
     list-style-position: inside;
@@ -510,15 +510,13 @@ blockquote q q:after {content: '”'; content: close-quote;}
 	.hlike a, .hlike a:link{
          background: none;
          text-shadow: none;
-         color: #16738F;/*#f74300;*/
+         color: #16738F;/*#f74300; #008CBA */
 
 	}
 		.hlike a:hover{
          /*background-color: #cf0;*/
          color: #d33682;/*#f74300;*/
          border:none;
-
-
 	}
 
 
@@ -552,10 +550,9 @@ img { max-width: 100%;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-			margin-bottom: 0.6rem;
 	}
 
-p img {display: inline; padding: 0 .25em; vertical-align: middle;}
+p img {display: inline; padding: 0 0.3rem; vertical-align: middle; margin-bottom: 0.6rem;}
 
 .img-circle {
 	border:3px solid #000;
@@ -683,9 +680,9 @@ hr{
 
 }
 
-hr:after, .hzline:after{
+/*hr:after, .hzline:after{
 	text-align: center;
-	/*content: "* * *";*/
+	content: "* * *";
 	color:#ccc;
 	font-size: 0.5rem;	
 }*/
@@ -734,8 +731,8 @@ margin-top: -0.6rem;
 
 .menu-bar{
 	padding-top: 0;
-
 }
+
 .browse li{
 display: inline;
 }
@@ -802,8 +799,6 @@ display: inline;
 
   /* Dropdown Button */
 .dropbtn {
-
-
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -821,7 +816,7 @@ display: inline;
     padding-right: 0;
     margin-left: 0;
     /*background-color: #F4F1EC;*/
-    left: -7.6rem; /*-8*/
+    left: -6.6rem; /*-7.6*/
     width: 20rem;
     margin-top: 1.2rem; /*0.3*/
     font-size: 1.2rem;
@@ -846,7 +841,7 @@ display: inline;
 
 .read_more_container
 {
-	padding: 0.2rem;
+	padding: 0.2rem 0.2rem 0.3rem;
 	width: 50%;
 	margin: 0 auto;
 }
@@ -982,7 +977,6 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
-
   button,
 .button {
   margin-bottom: 1rem; }
@@ -1041,7 +1035,7 @@ article:first-child{
     width: 18.3rem;
     word-wrap: break-word;
 
-    padding:0.3rem 0.6rem 0.6rem;
+    padding:0.3rem 0.6rem 0.3rem;
     margin: 0 -19rem 1.4rem 0; /*19rem*/
     clear: right;
 	}
@@ -1132,10 +1126,10 @@ article:first-child{
 	text-align: center;
 
 	}
-	nav.center{
+/*	nav.center{
 		text-align: right;
 	}
-
+*/
 	.dropdown-content {
     right: 0.9rem;
     text-align: right;
@@ -1183,13 +1177,13 @@ display: block;
 	margin-bottom: 0.3rem;
 	}
 
-/*	.tags li{
+	.tags li{
 		display:block;
 	}
 
 	.social li{
 		display:inline-block;
-	}*/
+	}
 
 	.tofloatRight{
 	float: right;
