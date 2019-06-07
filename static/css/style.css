@@ -607,7 +607,8 @@ overflow: auto;
 
 header{
 	margin-bottom: 2.4rem;
-	margin-top: 1.4rem;
+	margin-top: 0rem;
+	/*margin-top: 1.4rem;*/
 }
 
 .masthead{
