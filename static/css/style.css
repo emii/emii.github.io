@@ -272,7 +272,7 @@ p > .drop-cap{
     float: left;
     margin-top: 0.2em;
     margin-right: 0.1em;
-    line-height: 0.6;
+    line-height: 0.4em;
 }
 
 
@@ -646,6 +646,10 @@ header{
 	.footer{
 		font-size: 1rem;
 	}
+	p > .drop-cap{
+
+    line-height: 0.5em;
+}
 
 }
 
