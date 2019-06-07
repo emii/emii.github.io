@@ -135,6 +135,7 @@ html, body {
 	overflow: hidden;
 	/*border-top: solid 0.2rem rgb(24,35,51);*/
 	padding-top: 2.2rem;
+	font-size: 0.9rem;
 }
 
 .logo{
@@ -606,8 +607,9 @@ overflow: auto;
 }
 
 header{
-	margin-bottom: 2.4rem;
+	margin-bottom: 0.5rem;
 	margin-top: 0rem;
+	/*margin-bottom: 2.4rem;*/
 	/*margin-top: 1.4rem;*/
 }
 
@@ -639,6 +641,10 @@ header{
 	}	
 	.toCenter{
 		/*text-align: center;*/
+	}
+
+	.footer{
+		font-size: 1rem;
 	}
 
 }
