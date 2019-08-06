@@ -89,8 +89,8 @@ html, body {
 
 	.sidenote	{
     float: right;
-    width: calc(809px - 500px - 2 * 0.94rem);
-    margin-right:  calc(500px - 809px + 0.94rem); /*19rem*/
+    width: calc(900px - 556px - 2 * 0.94rem);
+    margin-right:  calc(556px - 900px + 0.94rem); /*19rem*/
     clear: right;
 	}
 }
@@ -234,7 +234,7 @@ hr{
 }
 
 .hl{
-	border-bottom: solid 3px #445;
+	border-bottom: solid 2px #445;
 }
 
 .framed.hl{
@@ -316,6 +316,7 @@ mark{
 
 ins{color: #4b9b85; text-decoration: none;}
 del {text-decoration: line-through; color: #777;}
+.small{font-size: smaller;}
 
 .highlight,pre {
 	tab-size: 2;
