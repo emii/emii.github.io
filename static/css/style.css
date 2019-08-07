@@ -268,7 +268,7 @@ p,pre,ul,ol,dl,.plike,.semantic{
 
 
 p > .drop-cap{
-	font-size: 5em;
+	font-size: 5rem;
     float: left;
     margin-top: 0.2em;
     margin-right: 0.1em;
@@ -649,7 +649,8 @@ header{
 	}
 	p > .drop-cap{
 
-    line-height: 0.5em;
+    /*line-height: 0.5em;*/
+    font-size: 6em;
 }
 
 }
