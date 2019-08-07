@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|PT+Serif|Inconsolata');
 
 
 @color-bg-main:#F4F1EC;
@@ -290,7 +290,7 @@ figcaption:last-child p,
 
 
 pre, code, samp, kbd, var{ /* http://perishablepress.com/press/2010/06/01/wrapping-content/ */
-	font-family: monospace, monospace;
+	font-family: "Inconsolata", monospace;
 	font-size: 0.9em;
 	overflow-wrap: break-word;
 	white-space: pre-wrap;} 
@@ -485,7 +485,7 @@ margin: 0.6rem;
 
 .sans{font-family: "PT-Sans",sans-serif;}
 .serif{font-family: "PT-Serif",serif;}
-.mono{font-family: monospace;}
+.mono{font-family: "Inconsolata",monospace;}
 
 .pad-03{padding: 0.3rem;}
 .pad-06{padding: 0.6rem;}
