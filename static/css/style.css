@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|PT+Sans|PT+Serif|Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed|PT+Serif|Inconsolata');
 
 
 @color-bg-main:#F4F1EC;
@@ -483,8 +483,8 @@ margin: 0.6rem;
 
 /*Font*/
 
-.sans{font-family: "PT-Sans",sans-serif;}
-.serif{font-family: "PT-Serif",serif;}
+.sans{font-family: "PT Sans",sans-serif;}
+.serif{font-family: "PT Serif",serif;}
 .mono{font-family: "Inconsolata",monospace;}
 
 .pad-03{padding: 0.3rem;}
