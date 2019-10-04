@@ -10,7 +10,7 @@
 
 
 
-.Grid > .framed {
+.Grid > .framed, .Grid-cell img{
   margin-bottom: 0;
 }
 
@@ -18,9 +18,19 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: 0;
+  margin-bottom: 0;
+/*  padding: 0;*/
+}
+
+.Grid > .framed, .Grid-cell > img {
+  margin-bottom: 0;
+}
+
+ul.Grid{
   padding: 0;
 }
+
+
 
 .Grid-cell {
   flex: 1;
@@ -144,7 +154,7 @@
 }
 
 .Grid--gutters {
-  margin: -0.3em 0 0.3em -0.3em;
+  /*margin: -0.3em 0 0.3em -0.3em;*/
 }
 .Grid--gutters > .Grid-cell {
   padding: 0.3em 0 0 0.3em;
