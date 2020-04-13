@@ -8,8 +8,6 @@
 
 }
 
-
-
 .Grid > .framed, .Grid-cell img{
   margin-bottom: 0;
 }
@@ -24,6 +22,10 @@
 
 .Grid > .framed, .Grid-cell > img {
   margin-bottom: 0;
+}
+
+.Grid + p {
+  margin-top: 0.3em;
 }
 
 ul.Grid{
@@ -155,6 +157,7 @@ ul.Grid{
 
 .Grid--gutters {
   /*margin: -0.3em 0 0.3em -0.3em;*/
+  margin-left: -0.3em;
 }
 .Grid--gutters > .Grid-cell {
   padding: 0.3em 0 0 0.3em;
