@@ -321,7 +321,7 @@ mark{
 
 ins{color: #4b9b85; text-decoration: none;}
 del {text-decoration: line-through; color: #777;}
-.small{font-size: smaller;}
+.small{font-size: smaller; line-height: 1.4;}
 
 .highlight,pre {
 	tab-size: 2;
